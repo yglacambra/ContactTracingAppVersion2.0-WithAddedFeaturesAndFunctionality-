@@ -1,8 +1,8 @@
 namespace ContactTracingApp
 {
-    public partial class Form1 : Form
+    public partial class ContactTracingAppForm : Form
     {
-        public Form1()
+        public ContactTracingAppForm()
         {
             InitializeComponent();
         }

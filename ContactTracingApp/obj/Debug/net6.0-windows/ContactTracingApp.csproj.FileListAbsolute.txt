@@ -1,0 +1,17 @@
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\ContactTracingApp.exe
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\ContactTracingApp.deps.json
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\ContactTracingApp.runtimeconfig.json
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\ContactTracingApp.dll
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\ContactTracingApp.pdb
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.csproj.AssemblyReference.cache
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.ContactTracingAppForm.resources
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.csproj.GenerateResource.cache
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.AssemblyInfoInputs.cache
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.AssemblyInfo.cs
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.csproj.CoreCompileInputs.cache
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.dll
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\refint\ContactTracingApp.dll
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.pdb
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.genruntimeconfig.cache
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ref\ContactTracingApp.dll
