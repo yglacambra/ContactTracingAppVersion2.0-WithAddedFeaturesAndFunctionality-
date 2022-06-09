@@ -58,9 +58,15 @@
             this.RdioButtonQ1No = new System.Windows.Forms.RadioButton();
             this.LblQuestion1 = new System.Windows.Forms.Label();
             this.LblQuestion2 = new System.Windows.Forms.Label();
-            this.RdioButtonQ2Yes = new System.Windows.Forms.RadioButton();
-            this.RdioButtonQ2No = new System.Windows.Forms.RadioButton();
             this.BtnSubmit = new System.Windows.Forms.Button();
+            this.PnlGender = new System.Windows.Forms.Panel();
+            this.PnlQ1YesNo = new System.Windows.Forms.Panel();
+            this.PnlQ2YesNo = new System.Windows.Forms.Panel();
+            this.RdioButtonQ2No = new System.Windows.Forms.RadioButton();
+            this.RdioButtonQ2Yes = new System.Windows.Forms.RadioButton();
+            this.PnlGender.SuspendLayout();
+            this.PnlQ1YesNo.SuspendLayout();
+            this.PnlQ2YesNo.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblName
@@ -219,6 +225,7 @@
             this.BtnMonthVisited.TabIndex = 17;
             this.BtnMonthVisited.Text = "January";
             this.BtnMonthVisited.UseVisualStyleBackColor = true;
+            this.BtnMonthVisited.Click += new System.EventHandler(this.BtnMonthVisited_Click);
             // 
             // LblComma
             // 
@@ -237,7 +244,7 @@
             this.BtnDayVisited.Name = "BtnDayVisited";
             this.BtnDayVisited.Size = new System.Drawing.Size(36, 29);
             this.BtnDayVisited.TabIndex = 19;
-            this.BtnDayVisited.Text = "00";
+            this.BtnDayVisited.Text = "01";
             this.BtnDayVisited.UseVisualStyleBackColor = true;
             // 
             // TxtBoxYearVisited
@@ -262,7 +269,7 @@
             // 
             this.RdioBtnMale.AutoSize = true;
             this.RdioBtnMale.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioBtnMale.Location = new System.Drawing.Point(23, 253);
+            this.RdioBtnMale.Location = new System.Drawing.Point(4, 2);
             this.RdioBtnMale.Name = "RdioBtnMale";
             this.RdioBtnMale.Size = new System.Drawing.Size(60, 23);
             this.RdioBtnMale.TabIndex = 24;
@@ -274,7 +281,7 @@
             // 
             this.RdioBtnFemale.AutoSize = true;
             this.RdioBtnFemale.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioBtnFemale.Location = new System.Drawing.Point(23, 282);
+            this.RdioBtnFemale.Location = new System.Drawing.Point(4, 31);
             this.RdioBtnFemale.Name = "RdioBtnFemale";
             this.RdioBtnFemale.Size = new System.Drawing.Size(74, 23);
             this.RdioBtnFemale.TabIndex = 25;
@@ -286,18 +293,18 @@
             // 
             this.RdioBttonOtherGenders.AutoSize = true;
             this.RdioBttonOtherGenders.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioBttonOtherGenders.Location = new System.Drawing.Point(23, 311);
+            this.RdioBttonOtherGenders.Location = new System.Drawing.Point(4, 60);
             this.RdioBttonOtherGenders.Name = "RdioBttonOtherGenders";
             this.RdioBttonOtherGenders.Size = new System.Drawing.Size(75, 23);
             this.RdioBttonOtherGenders.TabIndex = 28;
             this.RdioBttonOtherGenders.TabStop = true;
-            this.RdioBttonOtherGenders.Text = "Others,";
+            this.RdioBttonOtherGenders.Text = "Others:";
             this.RdioBttonOtherGenders.UseVisualStyleBackColor = true;
             // 
             // TxtBoxOtherGenders
             // 
             this.TxtBoxOtherGenders.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxOtherGenders.Location = new System.Drawing.Point(195, 311);
+            this.TxtBoxOtherGenders.Location = new System.Drawing.Point(133, 83);
             this.TxtBoxOtherGenders.Name = "TxtBoxOtherGenders";
             this.TxtBoxOtherGenders.Size = new System.Drawing.Size(89, 27);
             this.TxtBoxOtherGenders.TabIndex = 29;
@@ -306,17 +313,18 @@
             // 
             this.LblSpecify.AutoSize = true;
             this.LblSpecify.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblSpecify.Location = new System.Drawing.Point(92, 313);
+            this.LblSpecify.Location = new System.Drawing.Point(21, 86);
             this.LblSpecify.Name = "LblSpecify";
             this.LblSpecify.Size = new System.Drawing.Size(106, 19);
             this.LblSpecify.TabIndex = 30;
             this.LblSpecify.Text = "Please Specify:";
+            this.LblSpecify.Click += new System.EventHandler(this.LblSpecify_Click);
             // 
             // RdioButtonQ1Yes
             // 
             this.RdioButtonQ1Yes.AutoSize = true;
             this.RdioButtonQ1Yes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioButtonQ1Yes.Location = new System.Drawing.Point(425, 253);
+            this.RdioButtonQ1Yes.Location = new System.Drawing.Point(13, 2);
             this.RdioButtonQ1Yes.Name = "RdioButtonQ1Yes";
             this.RdioButtonQ1Yes.Size = new System.Drawing.Size(49, 23);
             this.RdioButtonQ1Yes.TabIndex = 31;
@@ -328,7 +336,7 @@
             // 
             this.RdioButtonQ1No.AutoSize = true;
             this.RdioButtonQ1No.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioButtonQ1No.Location = new System.Drawing.Point(425, 282);
+            this.RdioButtonQ1No.Location = new System.Drawing.Point(13, 31);
             this.RdioButtonQ1No.Name = "RdioButtonQ1No";
             this.RdioButtonQ1No.Size = new System.Drawing.Size(45, 23);
             this.RdioButtonQ1No.TabIndex = 32;
@@ -356,30 +364,6 @@
             this.LblQuestion2.TabIndex = 34;
             this.LblQuestion2.Text = "Are you experiencing COVID-like symptoms for the past 13 days?";
             // 
-            // RdioButtonQ2Yes
-            // 
-            this.RdioButtonQ2Yes.AutoSize = true;
-            this.RdioButtonQ2Yes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioButtonQ2Yes.Location = new System.Drawing.Point(425, 341);
-            this.RdioButtonQ2Yes.Name = "RdioButtonQ2Yes";
-            this.RdioButtonQ2Yes.Size = new System.Drawing.Size(49, 23);
-            this.RdioButtonQ2Yes.TabIndex = 35;
-            this.RdioButtonQ2Yes.TabStop = true;
-            this.RdioButtonQ2Yes.Text = "Yes";
-            this.RdioButtonQ2Yes.UseVisualStyleBackColor = true;
-            // 
-            // RdioButtonQ2No
-            // 
-            this.RdioButtonQ2No.AutoSize = true;
-            this.RdioButtonQ2No.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioButtonQ2No.Location = new System.Drawing.Point(425, 370);
-            this.RdioButtonQ2No.Name = "RdioButtonQ2No";
-            this.RdioButtonQ2No.Size = new System.Drawing.Size(45, 23);
-            this.RdioButtonQ2No.TabIndex = 36;
-            this.RdioButtonQ2No.TabStop = true;
-            this.RdioButtonQ2No.Text = "No";
-            this.RdioButtonQ2No.UseVisualStyleBackColor = true;
-            // 
             // BtnSubmit
             // 
             this.BtnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -392,23 +376,72 @@
             this.BtnSubmit.Text = "Submit";
             this.BtnSubmit.UseVisualStyleBackColor = false;
             // 
+            // PnlGender
+            // 
+            this.PnlGender.Controls.Add(this.LblSpecify);
+            this.PnlGender.Controls.Add(this.TxtBoxOtherGenders);
+            this.PnlGender.Controls.Add(this.RdioBttonOtherGenders);
+            this.PnlGender.Controls.Add(this.RdioBtnFemale);
+            this.PnlGender.Controls.Add(this.RdioBtnMale);
+            this.PnlGender.Location = new System.Drawing.Point(19, 251);
+            this.PnlGender.Name = "PnlGender";
+            this.PnlGender.Size = new System.Drawing.Size(284, 113);
+            this.PnlGender.TabIndex = 38;
+            // 
+            // PnlQ1YesNo
+            // 
+            this.PnlQ1YesNo.Controls.Add(this.RdioButtonQ1No);
+            this.PnlQ1YesNo.Controls.Add(this.RdioButtonQ1Yes);
+            this.PnlQ1YesNo.Location = new System.Drawing.Point(417, 251);
+            this.PnlQ1YesNo.Name = "PnlQ1YesNo";
+            this.PnlQ1YesNo.Size = new System.Drawing.Size(65, 63);
+            this.PnlQ1YesNo.TabIndex = 39;
+            // 
+            // PnlQ2YesNo
+            // 
+            this.PnlQ2YesNo.BackColor = System.Drawing.SystemColors.Control;
+            this.PnlQ2YesNo.Controls.Add(this.RdioButtonQ2No);
+            this.PnlQ2YesNo.Controls.Add(this.RdioButtonQ2Yes);
+            this.PnlQ2YesNo.Location = new System.Drawing.Point(417, 346);
+            this.PnlQ2YesNo.Name = "PnlQ2YesNo";
+            this.PnlQ2YesNo.Size = new System.Drawing.Size(65, 63);
+            this.PnlQ2YesNo.TabIndex = 40;
+            // 
+            // RdioButtonQ2No
+            // 
+            this.RdioButtonQ2No.AutoSize = true;
+            this.RdioButtonQ2No.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioButtonQ2No.Location = new System.Drawing.Point(8, 34);
+            this.RdioButtonQ2No.Name = "RdioButtonQ2No";
+            this.RdioButtonQ2No.Size = new System.Drawing.Size(45, 23);
+            this.RdioButtonQ2No.TabIndex = 38;
+            this.RdioButtonQ2No.TabStop = true;
+            this.RdioButtonQ2No.Text = "No";
+            this.RdioButtonQ2No.UseVisualStyleBackColor = true;
+            // 
+            // RdioButtonQ2Yes
+            // 
+            this.RdioButtonQ2Yes.AutoSize = true;
+            this.RdioButtonQ2Yes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioButtonQ2Yes.Location = new System.Drawing.Point(8, 5);
+            this.RdioButtonQ2Yes.Name = "RdioButtonQ2Yes";
+            this.RdioButtonQ2Yes.Size = new System.Drawing.Size(49, 23);
+            this.RdioButtonQ2Yes.TabIndex = 37;
+            this.RdioButtonQ2Yes.TabStop = true;
+            this.RdioButtonQ2Yes.Text = "Yes";
+            this.RdioButtonQ2Yes.UseVisualStyleBackColor = true;
+            // 
             // ContactTracingAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 459);
+            this.Controls.Add(this.PnlQ2YesNo);
+            this.Controls.Add(this.PnlQ1YesNo);
+            this.Controls.Add(this.PnlGender);
             this.Controls.Add(this.BtnSubmit);
-            this.Controls.Add(this.RdioButtonQ2No);
-            this.Controls.Add(this.RdioButtonQ2Yes);
             this.Controls.Add(this.LblQuestion2);
             this.Controls.Add(this.LblQuestion1);
-            this.Controls.Add(this.RdioButtonQ1No);
-            this.Controls.Add(this.RdioButtonQ1Yes);
-            this.Controls.Add(this.LblSpecify);
-            this.Controls.Add(this.TxtBoxOtherGenders);
-            this.Controls.Add(this.RdioBttonOtherGenders);
-            this.Controls.Add(this.RdioBtnFemale);
-            this.Controls.Add(this.RdioBtnMale);
             this.Controls.Add(this.LblGender);
             this.Controls.Add(this.TxtBoxYearVisited);
             this.Controls.Add(this.BtnDayVisited);
@@ -433,6 +466,12 @@
             this.MaximizeBox = false;
             this.Name = "ContactTracingAppForm";
             this.Text = "YGL Mall Contact Tracing Form";
+            this.PnlGender.ResumeLayout(false);
+            this.PnlGender.PerformLayout();
+            this.PnlQ1YesNo.ResumeLayout(false);
+            this.PnlQ1YesNo.PerformLayout();
+            this.PnlQ2YesNo.ResumeLayout(false);
+            this.PnlQ2YesNo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,8 +508,11 @@
         private RadioButton RdioButtonQ1No;
         private Label LblQuestion1;
         private Label LblQuestion2;
-        private RadioButton RdioButtonQ2Yes;
-        private RadioButton RdioButtonQ2No;
         private Button BtnSubmit;
+        private Panel PnlGender;
+        private Panel PnlQ1YesNo;
+        private Panel PnlQ2YesNo;
+        private RadioButton RdioButtonQ2No;
+        private RadioButton RdioButtonQ2Yes;
     }
 }
