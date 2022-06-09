@@ -70,10 +70,37 @@ namespace ContactTracingApp
                 ++MonthVisited;
             }
         }
-
-        private void LblSpecify_Click(object sender, EventArgs e)
+        private int Day = 0;
+        private void BtnDayVisited_Click(object sender, EventArgs e)
         {
+            if (BtnDayVisited.Text != "31" || BtnDayVisited.Text == "0")
+            {
+                Day++;
+                BtnDayVisited.Text = Day.ToString();
+            }
+            else
+            {
+                BtnDayVisited.Text = "0";
+                Day = 0;
+            }
+        }
 
+        private void TxtBoxYearVisited_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtBoxYearVisited.TextLength > 4)
+            {
+                string TooManyCharactersMsg = "The year that you inputted has too many characters. Please change it.";
+                MessageBox.Show(TooManyCharactersMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtBoxYearVisited.Text = "";
+            }
+        }
+        private void TxtBoxYearVisited_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsDigit(e.KeyChar))
+            {
+                string InvalidCharactersInputtedMsg = "The year that you inputted has characters that are not numbers. Please change it.";
+                MessageBox.Show(InvalidCharactersInputtedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

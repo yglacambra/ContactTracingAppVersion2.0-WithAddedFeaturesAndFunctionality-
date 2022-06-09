@@ -37,16 +37,11 @@
             this.TxtBoxContactNum = new System.Windows.Forms.TextBox();
             this.LblTimeEntered = new System.Windows.Forms.Label();
             this.LbllTEColon = new System.Windows.Forms.Label();
-            this.BtnHourTimeEntered = new System.Windows.Forms.Button();
-            this.BtnMinuteTimeEntered = new System.Windows.Forms.Button();
             this.LblTimeLeft = new System.Windows.Forms.Label();
-            this.BtnMinuteTimeLeft = new System.Windows.Forms.Button();
-            this.BtnHourTimeLeft = new System.Windows.Forms.Button();
             this.LblTLColon = new System.Windows.Forms.Label();
             this.LblDateVisited = new System.Windows.Forms.Label();
             this.BtnMonthVisited = new System.Windows.Forms.Button();
             this.LblComma = new System.Windows.Forms.Label();
-            this.BtnDayVisited = new System.Windows.Forms.Button();
             this.TxtBoxYearVisited = new System.Windows.Forms.TextBox();
             this.LblGender = new System.Windows.Forms.Label();
             this.RdioBtnMale = new System.Windows.Forms.RadioButton();
@@ -64,6 +59,12 @@
             this.PnlQ2YesNo = new System.Windows.Forms.Panel();
             this.RdioButtonQ2No = new System.Windows.Forms.RadioButton();
             this.RdioButtonQ2Yes = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtBoxHourEntered = new System.Windows.Forms.TextBox();
+            this.BtnDayVisited = new System.Windows.Forms.Button();
             this.PnlGender.SuspendLayout();
             this.PnlQ1YesNo.SuspendLayout();
             this.PnlQ2YesNo.SuspendLayout();
@@ -145,26 +146,6 @@
             this.LbllTEColon.TabIndex = 9;
             this.LbllTEColon.Text = ":";
             // 
-            // BtnHourTimeEntered
-            // 
-            this.BtnHourTimeEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnHourTimeEntered.Location = new System.Drawing.Point(449, 116);
-            this.BtnHourTimeEntered.Name = "BtnHourTimeEntered";
-            this.BtnHourTimeEntered.Size = new System.Drawing.Size(36, 29);
-            this.BtnHourTimeEntered.TabIndex = 10;
-            this.BtnHourTimeEntered.Text = "00";
-            this.BtnHourTimeEntered.UseVisualStyleBackColor = true;
-            // 
-            // BtnMinuteTimeEntered
-            // 
-            this.BtnMinuteTimeEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMinuteTimeEntered.Location = new System.Drawing.Point(512, 116);
-            this.BtnMinuteTimeEntered.Name = "BtnMinuteTimeEntered";
-            this.BtnMinuteTimeEntered.Size = new System.Drawing.Size(36, 29);
-            this.BtnMinuteTimeEntered.TabIndex = 11;
-            this.BtnMinuteTimeEntered.Text = "00";
-            this.BtnMinuteTimeEntered.UseVisualStyleBackColor = true;
-            // 
             // LblTimeLeft
             // 
             this.LblTimeLeft.AutoSize = true;
@@ -174,26 +155,6 @@
             this.LblTimeLeft.Size = new System.Drawing.Size(107, 23);
             this.LblTimeLeft.TabIndex = 12;
             this.LblTimeLeft.Text = "Time Left:";
-            // 
-            // BtnMinuteTimeLeft
-            // 
-            this.BtnMinuteTimeLeft.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMinuteTimeLeft.Location = new System.Drawing.Point(512, 182);
-            this.BtnMinuteTimeLeft.Name = "BtnMinuteTimeLeft";
-            this.BtnMinuteTimeLeft.Size = new System.Drawing.Size(36, 29);
-            this.BtnMinuteTimeLeft.TabIndex = 15;
-            this.BtnMinuteTimeLeft.Text = "00";
-            this.BtnMinuteTimeLeft.UseVisualStyleBackColor = true;
-            // 
-            // BtnHourTimeLeft
-            // 
-            this.BtnHourTimeLeft.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnHourTimeLeft.Location = new System.Drawing.Point(449, 180);
-            this.BtnHourTimeLeft.Name = "BtnHourTimeLeft";
-            this.BtnHourTimeLeft.Size = new System.Drawing.Size(36, 29);
-            this.BtnHourTimeLeft.TabIndex = 14;
-            this.BtnHourTimeLeft.Text = "00";
-            this.BtnHourTimeLeft.UseVisualStyleBackColor = true;
             // 
             // LblTLColon
             // 
@@ -219,7 +180,7 @@
             // 
             this.BtnMonthVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMonthVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMonthVisited.Location = new System.Drawing.Point(449, 50);
+            this.BtnMonthVisited.Location = new System.Drawing.Point(436, 52);
             this.BtnMonthVisited.Name = "BtnMonthVisited";
             this.BtnMonthVisited.Size = new System.Drawing.Size(101, 29);
             this.BtnMonthVisited.TabIndex = 17;
@@ -231,29 +192,21 @@
             // 
             this.LblComma.AutoSize = true;
             this.LblComma.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblComma.Location = new System.Drawing.Point(586, 56);
+            this.LblComma.Location = new System.Drawing.Point(581, 55);
             this.LblComma.Name = "LblComma";
-            this.LblComma.Size = new System.Drawing.Size(15, 23);
+            this.LblComma.Size = new System.Drawing.Size(18, 23);
             this.LblComma.TabIndex = 18;
-            this.LblComma.Text = ",";
-            // 
-            // BtnDayVisited
-            // 
-            this.BtnDayVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnDayVisited.Location = new System.Drawing.Point(556, 50);
-            this.BtnDayVisited.Name = "BtnDayVisited";
-            this.BtnDayVisited.Size = new System.Drawing.Size(36, 29);
-            this.BtnDayVisited.TabIndex = 19;
-            this.BtnDayVisited.Text = "01";
-            this.BtnDayVisited.UseVisualStyleBackColor = true;
+            this.LblComma.Text = "/";
             // 
             // TxtBoxYearVisited
             // 
             this.TxtBoxYearVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxYearVisited.Location = new System.Drawing.Point(606, 50);
+            this.TxtBoxYearVisited.Location = new System.Drawing.Point(597, 54);
             this.TxtBoxYearVisited.Name = "TxtBoxYearVisited";
             this.TxtBoxYearVisited.Size = new System.Drawing.Size(59, 27);
             this.TxtBoxYearVisited.TabIndex = 20;
+            this.TxtBoxYearVisited.TextChanged += new System.EventHandler(this.TxtBoxYearVisited_TextChanged);
+            this.TxtBoxYearVisited.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxYearVisited_KeyPress);
             // 
             // LblGender
             // 
@@ -318,7 +271,6 @@
             this.LblSpecify.Size = new System.Drawing.Size(106, 19);
             this.LblSpecify.TabIndex = 30;
             this.LblSpecify.Text = "Please Specify:";
-            this.LblSpecify.Click += new System.EventHandler(this.LblSpecify_Click);
             // 
             // RdioButtonQ1Yes
             // 
@@ -352,7 +304,7 @@
             this.LblQuestion1.Name = "LblQuestion1";
             this.LblQuestion1.Size = new System.Drawing.Size(449, 19);
             this.LblQuestion1.TabIndex = 33;
-            this.LblQuestion1.Text = "Are you experiencing COVID-like symptoms for the past 13 days?";
+            this.LblQuestion1.Text = "Are you experiencing COVID-like symptoms for the past 14 days?";
             // 
             // LblQuestion2
             // 
@@ -360,9 +312,9 @@
             this.LblQuestion2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LblQuestion2.Location = new System.Drawing.Point(417, 319);
             this.LblQuestion2.Name = "LblQuestion2";
-            this.LblQuestion2.Size = new System.Drawing.Size(449, 19);
+            this.LblQuestion2.Size = new System.Drawing.Size(496, 19);
             this.LblQuestion2.TabIndex = 34;
-            this.LblQuestion2.Text = "Are you experiencing COVID-like symptoms for the past 13 days?";
+            this.LblQuestion2.Text = "Did you have contact with a COVID-positive person in the past 14 days?";
             // 
             // BtnSubmit
             // 
@@ -431,11 +383,72 @@
             this.RdioButtonQ2Yes.Text = "Yes";
             this.RdioButtonQ2Yes.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(536, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 23);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "/";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(512, 182);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(29, 27);
+            this.textBox2.TabIndex = 43;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(456, 182);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(29, 27);
+            this.textBox1.TabIndex = 44;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.Location = new System.Drawing.Point(512, 114);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(29, 27);
+            this.textBox3.TabIndex = 45;
+            // 
+            // TxtBoxHourEntered
+            // 
+            this.TxtBoxHourEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxHourEntered.Location = new System.Drawing.Point(456, 114);
+            this.TxtBoxHourEntered.Name = "TxtBoxHourEntered";
+            this.TxtBoxHourEntered.Size = new System.Drawing.Size(29, 27);
+            this.TxtBoxHourEntered.TabIndex = 46;
+            // 
+            // BtnDayVisited
+            // 
+            this.BtnDayVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnDayVisited.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnDayVisited.Location = new System.Drawing.Point(549, 53);
+            this.BtnDayVisited.Name = "BtnDayVisited";
+            this.BtnDayVisited.Size = new System.Drawing.Size(35, 29);
+            this.BtnDayVisited.TabIndex = 47;
+            this.BtnDayVisited.Text = "0";
+            this.BtnDayVisited.UseVisualStyleBackColor = true;
+            this.BtnDayVisited.Click += new System.EventHandler(this.BtnDayVisited_Click);
+            // 
             // ContactTracingAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 459);
+            this.ClientSize = new System.Drawing.Size(918, 459);
+            this.Controls.Add(this.BtnDayVisited);
+            this.Controls.Add(this.TxtBoxHourEntered);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.PnlQ2YesNo);
             this.Controls.Add(this.PnlQ1YesNo);
             this.Controls.Add(this.PnlGender);
@@ -444,16 +457,11 @@
             this.Controls.Add(this.LblQuestion1);
             this.Controls.Add(this.LblGender);
             this.Controls.Add(this.TxtBoxYearVisited);
-            this.Controls.Add(this.BtnDayVisited);
             this.Controls.Add(this.LblComma);
             this.Controls.Add(this.BtnMonthVisited);
             this.Controls.Add(this.LblDateVisited);
-            this.Controls.Add(this.BtnMinuteTimeLeft);
-            this.Controls.Add(this.BtnHourTimeLeft);
             this.Controls.Add(this.LblTLColon);
             this.Controls.Add(this.LblTimeLeft);
-            this.Controls.Add(this.BtnMinuteTimeEntered);
-            this.Controls.Add(this.BtnHourTimeEntered);
             this.Controls.Add(this.LbllTEColon);
             this.Controls.Add(this.LblTimeEntered);
             this.Controls.Add(this.TxtBoxContactNum);
@@ -487,16 +495,11 @@
         private TextBox TxtBoxContactNum;
         private Label LblTimeEntered;
         private Label LbllTEColon;
-        private Button BtnHourTimeEntered;
-        private Button BtnMinuteTimeEntered;
         private Label LblTimeLeft;
-        private Button BtnMinuteTimeLeft;
-        private Button BtnHourTimeLeft;
         private Label LblTLColon;
         private Label LblDateVisited;
         private Button BtnMonthVisited;
         private Label LblComma;
-        private Button BtnDayVisited;
         private TextBox TxtBoxYearVisited;
         private Label LblGender;
         private RadioButton RdioBtnMale;
@@ -514,5 +517,11 @@
         private Panel PnlQ2YesNo;
         private RadioButton RdioButtonQ2No;
         private RadioButton RdioButtonQ2Yes;
+        private Label label1;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private TextBox textBox3;
+        private TextBox TxtBoxHourEntered;
+        private Button BtnDayVisited;
     }
 }
