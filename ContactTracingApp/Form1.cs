@@ -328,7 +328,6 @@ namespace ContactTracingApp
             CheckIfMonthOnlyHas28Days();
             CheckIfTheYearIsInThe21stCentury();
             CheckIfEverythingHasBeenFilledUp();
-            WriteTheInfoCollectedOnTheTextFile();
         }
         private void CheckIfEverythingHasBeenFilledUp()
         {
@@ -363,15 +362,17 @@ namespace ContactTracingApp
             }
             // to reset the form after a submission has been done
             if(EverythingHasBeenFilledUp == true)
-            {
+            { 
                 string ConfirmationMsg = "Are you sure that everything you inputted in the form is correct?";
                 string ConfirmationMsgTitle = "Confirmation Message";
                 DialogResult ConfirmationMsgResult = MessageBox.Show (ConfirmationMsg,ConfirmationMsgTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (ConfirmationMsgResult == DialogResult.Yes)
                 {
+                    bool NoCorrections = false;
                     ContactTracingAppForm ResettedForm = new ContactTracingAppForm();
                     ResettedForm.Show();
                     this.Dispose(false);
+                    WriteTheInfoCollectedOnTheTextFile();
                 }
             }
         }
