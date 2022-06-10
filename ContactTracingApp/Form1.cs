@@ -326,14 +326,15 @@ namespace ContactTracingApp
             CheckIfMonthOnlyHas28Days();
             CheckIfTheYearIsInThe21stCentury();
             CheckIfEverythingHasBeenFilledUp();
+            WriteTheInfoOnATextFile();
         }
         private void CheckIfEverythingHasBeenFilledUp()
         {
             bool GenderRadioButtonsChecked = false;
             bool Q1RadioButtonsChecked = false;
             bool Q2RadioButtonsChecked = false;
-            if (RdioBtnMale.Checked == true || RdioBtnFemale.Checked == true || RdioBttonOtherGenders.Checked == true 
-                || RdioBtnDidntDisclose.Checked == true)
+            if (RdioBtnMale.Checked == true || RdioBtnFemale.Checked == true || (RdioBtnOtherGenders.Checked == true &&
+                TxtBoxOtherGenders.Text != "")|| RdioBtnDidntDisclose.Checked == true)
             {
                 GenderRadioButtonsChecked = true;
             }
@@ -380,6 +381,32 @@ namespace ContactTracingApp
         {
             TxtBoxOtherGenders.Enabled = false;
         }
+        private void WriteTheInfoOnATextFile()
+        {
+            StreamWriter ContactTracingFormInfoFile = new StreamWriter(@"C:\Users\Public\Documents\Contact Tracing Info.txt", true);
+            ContactTracingFormInfoFile.WriteLine("Name: " + TxtBoxName.Text);
+            ContactTracingFormInfoFile.WriteLine("Address: " + TxtBoxHomeAddress.Text); 
+            ContactTracingFormInfoFile.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
+            // to determine what gender is to be inputted on the text file
+            if (RdioBtnMale.Checked == true)
+            {
+                ContactTracingFormInfoFile.WriteLine("Gender: " + RdioBtnMale.Text);
+            }
+            else if (RdioBtnFemale.Checked == true)
+            {
+                ContactTracingFormInfoFile.WriteLine("Gender: " + RdioBtnFemale.Text);
+            }
+            else if (RdioBtnOtherGenders.Checked == true)
+            {
+                ContactTracingFormInfoFile.WriteLine("Gender: " + TxtBoxOtherGenders.Text);
+            }
+            else if (RdioBtnDidntDisclose.Checked == true)
+            {
+                ContactTracingFormInfoFile.WriteLine("Gender: Didn't Disclose");
+            }
+            ContactTracingFormInfoFile.Close();
+        }
+      
     }
 }
 

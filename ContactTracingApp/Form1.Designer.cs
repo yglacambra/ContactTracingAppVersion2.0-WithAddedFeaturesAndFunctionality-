@@ -46,7 +46,7 @@
             this.LblGender = new System.Windows.Forms.Label();
             this.RdioBtnMale = new System.Windows.Forms.RadioButton();
             this.RdioBtnFemale = new System.Windows.Forms.RadioButton();
-            this.RdioBttonOtherGenders = new System.Windows.Forms.RadioButton();
+            this.RdioBtnOtherGenders = new System.Windows.Forms.RadioButton();
             this.TxtBoxOtherGenders = new System.Windows.Forms.TextBox();
             this.LblSpecify = new System.Windows.Forms.Label();
             this.RdioButtonQ1Yes = new System.Windows.Forms.RadioButton();
@@ -253,18 +253,18 @@
             this.RdioBtnFemale.UseVisualStyleBackColor = true;
             this.RdioBtnFemale.CheckedChanged += new System.EventHandler(this.RdioBtnFemale_CheckedChanged);
             // 
-            // RdioBttonOtherGenders
+            // RdioBtnOtherGenders
             // 
-            this.RdioBttonOtherGenders.AutoSize = true;
-            this.RdioBttonOtherGenders.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioBttonOtherGenders.Location = new System.Drawing.Point(4, 60);
-            this.RdioBttonOtherGenders.Name = "RdioBttonOtherGenders";
-            this.RdioBttonOtherGenders.Size = new System.Drawing.Size(75, 23);
-            this.RdioBttonOtherGenders.TabIndex = 28;
-            this.RdioBttonOtherGenders.TabStop = true;
-            this.RdioBttonOtherGenders.Text = "Others:";
-            this.RdioBttonOtherGenders.UseVisualStyleBackColor = true;
-            this.RdioBttonOtherGenders.CheckedChanged += new System.EventHandler(this.RdioBttonOtherGenders_CheckedChanged);
+            this.RdioBtnOtherGenders.AutoSize = true;
+            this.RdioBtnOtherGenders.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnOtherGenders.Location = new System.Drawing.Point(4, 60);
+            this.RdioBtnOtherGenders.Name = "RdioBtnOtherGenders";
+            this.RdioBtnOtherGenders.Size = new System.Drawing.Size(75, 23);
+            this.RdioBtnOtherGenders.TabIndex = 28;
+            this.RdioBtnOtherGenders.TabStop = true;
+            this.RdioBtnOtherGenders.Text = "Others:";
+            this.RdioBtnOtherGenders.UseVisualStyleBackColor = true;
+            this.RdioBtnOtherGenders.CheckedChanged += new System.EventHandler(this.RdioBttonOtherGenders_CheckedChanged);
             // 
             // TxtBoxOtherGenders
             // 
@@ -346,7 +346,7 @@
             this.PnlGender.Controls.Add(this.RdioBtnDidntDisclose);
             this.PnlGender.Controls.Add(this.LblSpecify);
             this.PnlGender.Controls.Add(this.TxtBoxOtherGenders);
-            this.PnlGender.Controls.Add(this.RdioBttonOtherGenders);
+            this.PnlGender.Controls.Add(this.RdioBtnOtherGenders);
             this.PnlGender.Controls.Add(this.RdioBtnFemale);
             this.PnlGender.Controls.Add(this.RdioBtnMale);
             this.PnlGender.Location = new System.Drawing.Point(19, 327);
@@ -600,7 +600,7 @@
         private Label LblGender;
         private RadioButton RdioBtnMale;
         private RadioButton RdioBtnFemale;
-        private RadioButton RdioBttonOtherGenders;
+        private RadioButton RdioBtnOtherGenders;
         private TextBox TxtBoxOtherGenders;
         private Label LblSpecify;
         private RadioButton RdioButtonQ1Yes;
