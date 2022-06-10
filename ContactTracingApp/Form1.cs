@@ -293,6 +293,8 @@ namespace ContactTracingApp
         }
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
+            // message box that will appear when press is submitted and everything has been filled up
+           
             //to ensure that no date gets submitted that has a day that is 0
             if (BtnDayVisited.Text == "0")
             {
@@ -330,6 +332,7 @@ namespace ContactTracingApp
         }
         private void CheckIfEverythingHasBeenFilledUp()
         {
+            bool EverythingHasBeenFilledUp = false;
             bool GenderRadioButtonsChecked = false;
             bool Q1RadioButtonsChecked = false;
             bool Q2RadioButtonsChecked = false;
@@ -350,9 +353,26 @@ namespace ContactTracingApp
                 || TxtBoxYearVisited.Text == "" || GenderRadioButtonsChecked == false || Q1RadioButtonsChecked == false
                 || Q2RadioButtonsChecked == false)
             {
-               
+                EverythingHasBeenFilledUp = false;
                 string NotEverythingIsFilledUpMsg = "You haven't answered everything on the form. Please kindly answer them.";
                 MessageBox.Show (NotEverythingIsFilledUpMsg, "Check the Form",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                EverythingHasBeenFilledUp = true;
+            }
+            // to reset the form after a submission has been done
+            if(EverythingHasBeenFilledUp == true)
+            {
+                string ConfirmationMsg = "Are you sure that everything you inputted in the form is correct?";
+                string ConfirmationMsgTitle = "Confirmation Message";
+                DialogResult ConfirmationMsgResult = MessageBox.Show (ConfirmationMsg,ConfirmationMsgTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (ConfirmationMsgResult == DialogResult.Yes)
+                {
+                    ContactTracingAppForm ResettedForm = new ContactTracingAppForm();
+                    ResettedForm.Show();
+                    this.Dispose(false);
+                }
             }
         }
         
