@@ -8,7 +8,6 @@ namespace ContactTracingApp
         }
         private void BtnMonthVisited_Click(object sender, EventArgs e)
         {
-            BtnDayVisited.Enabled = true;
             byte MonthVisited = 1;
             if (BtnMonthVisited.Text == "January")
             {
@@ -90,14 +89,14 @@ namespace ContactTracingApp
             if (Day >= 29 && BtnMonthVisited.Text == "February" && !(Year % 4 == 0))
             {
                 string DateWrongMsg = "The date you inputted is invalid. Please change it.";
-                MessageBox.Show(DateWrongMsg, "Check the Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(DateWrongMsg, "Check The Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 BtnDayVisited.Text = "28";
                 Day = 28;
             }
             else if (Day >= 30 && BtnMonthVisited.Text == "February" && (Year % 4 == 0))
             {
                 string DateWroongMsg = "The date you inputted is invalid. Please change it.";
-                MessageBox.Show(DateWroongMsg, "Check the Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(DateWroongMsg, "Check The Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 BtnDayVisited.Text = "29";
                 Day = 29;
             }
@@ -109,11 +108,11 @@ namespace ContactTracingApp
             if (Year <= 1999 || Year >= 2100)
             {
                 string InvalidYearInputtedMsg = "The year that you inputted is not in the 21st Century. Please change it.";
-                MessageBox.Show(InvalidYearInputtedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(InvalidYearInputtedMsg, "Check The Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtBoxYearVisited.Text = "";
             }
         }
-        
+     
         private byte Day = 0;
         private void BtnDayVisited_Click(object sender, EventArgs e)
         {
@@ -132,8 +131,9 @@ namespace ContactTracingApp
         {
             if (TxtBoxYearVisited.TextLength > 4)
             {
-                string TooManyCharactersMsg = "The year that you inputted has too many characters. Please change it.";
-                MessageBox.Show(TooManyCharactersMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string TooManyCharactersMsg = "You inputted too many characters.";
+                string TooManyCharactersMsgBoxTitle = "Maximum Amount Of Characters Reached";
+                MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtBoxYearVisited.Text = "";
             }
         }
@@ -142,8 +142,8 @@ namespace ContactTracingApp
         {
             if (e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                string InvalidCharactersInputtedMsg = "The year that you inputted has characters that are not numbers. Please change it.";
-                MessageBox.Show(InvalidCharactersInputtedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string InvalidCharactersInputtedMsg = "You inputted characters that are not numbers.";
+                MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -256,13 +256,18 @@ namespace ContactTracingApp
             if (BtnDayVisited.Text == "0")
             {
                 string DateWrongMsg = "The date you inputted is invalid. Please change it.";
-                MessageBox.Show(DateWrongMsg, "Check the Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(DateWrongMsg, "Check The Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 BtnDayVisited.Text = "0";
                 Day = 0;
             }
             CheckIfMonthOnlyHas30Days();
             CheckIfMonthOnlyHas28Days();
             CheckIfTheYearIsInThe21stCentury();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

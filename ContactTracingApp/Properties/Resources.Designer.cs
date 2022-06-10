@@ -63,6 +63,36 @@ namespace ContactTracingApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _81_816989_cartoon_coconut_tree_png_sun_and_palm_tree_png {
+            get {
+                object obj = ResourceManager.GetObject("81-816989_cartoon-coconut-tree-png-sun-and-palm-tree-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _81_816989_cartoon_coconut_tree_png_sun_and_palm_tree_png1 {
+            get {
+                object obj = ResourceManager.GetObject("81-816989_cartoon-coconut-tree-png-sun-and-palm-tree-png1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fd6323c1bde78172ef5f9c3b509e0b2f {
+            get {
+                object obj = ResourceManager.GetObject("fd6323c1bde78172ef5f9c3b509e0b2f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Idyllic_Background {
             get {
                 object obj = ResourceManager.GetObject("Idyllic Background", resourceCulture);
