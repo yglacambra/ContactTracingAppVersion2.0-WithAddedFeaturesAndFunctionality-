@@ -8,6 +8,7 @@ namespace ContactTracingApp
         }
         private void BtnMonthVisited_Click(object sender, EventArgs e)
         {
+            BtnDayVisited.Enabled = true;
             byte MonthVisited = 1;
             if (BtnMonthVisited.Text == "January")
             {
@@ -70,10 +71,53 @@ namespace ContactTracingApp
                 ++MonthVisited;
             }
         }
+
+        private void CheckIfMonthOnlyHas30Days()
+        {
+            if (BtnDayVisited.Text == "31" && (BtnMonthVisited.Text == "April" || BtnMonthVisited.Text == "June" 
+                || BtnMonthVisited.Text == "September" || BtnMonthVisited.Text == "November"))
+            {
+                string DateWrongMsg = "The date you inputted is invalid. Please change it.";
+                MessageBox.Show (DateWrongMsg,"Check the Form",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BtnDayVisited.Text = "30";
+                Day = 30;
+            }
+        }
+
+        private void CheckIfMonthOnlyHas28Days()
+        {
+            short Year = short.Parse(TxtBoxYearVisited.Text);
+            if (Day >= 29 && BtnMonthVisited.Text == "February" && !(Year % 4 == 0))
+            {
+                string DateWrongMsg = "The date you inputted is invalid. Please change it.";
+                MessageBox.Show(DateWrongMsg, "Check the Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BtnDayVisited.Text = "28";
+                Day = 28;
+            }
+            else if (Day >= 30 && BtnMonthVisited.Text == "February" && (Year % 4 == 0))
+            {
+                string DateWroongMsg = "The date you inputted is invalid. Please change it.";
+                MessageBox.Show(DateWroongMsg, "Check the Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BtnDayVisited.Text = "29";
+                Day = 29;
+            }
+        }
+
+        private void CheckIfTheYearIsInThe21stCentury()
+        {
+            short Year = short.Parse(TxtBoxYearVisited.Text);
+            if (Year <= 1999 || Year >= 2100)
+            {
+                string InvalidYearInputtedMsg = "The year that you inputted is not in the 21st Century. Please change it.";
+                MessageBox.Show(InvalidYearInputtedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtBoxYearVisited.Text = "";
+            }
+        }
+        
         private byte Day = 0;
         private void BtnDayVisited_Click(object sender, EventArgs e)
         {
-            if (BtnDayVisited.Text != "31" || BtnDayVisited.Text == "0")
+            if (Day < 31)
             {
                 Day++;
                 BtnDayVisited.Text = Day.ToString();
@@ -84,7 +128,6 @@ namespace ContactTracingApp
                 Day = 0;
             }
         }
-
         private void TxtBoxYearVisited_TextChanged(object sender, EventArgs e)
         {
             if (TxtBoxYearVisited.TextLength > 4)
@@ -94,14 +137,16 @@ namespace ContactTracingApp
                 TxtBoxYearVisited.Text = "";
             }
         }
+
         private void TxtBoxYearVisited_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.Handled = !char.IsDigit(e.KeyChar))
+            if (e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 string InvalidCharactersInputtedMsg = "The year that you inputted has characters that are not numbers. Please change it.";
                 MessageBox.Show(InvalidCharactersInputtedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         private byte HourEntered = 0;
         private void BtnHourEntered_Click(object sender, EventArgs e)
         {
@@ -121,6 +166,7 @@ namespace ContactTracingApp
                 HourEntered = 1;
             }
         }
+
         private byte MinuteEntered = 0;
         private void BtnMinuteEntered_Click(object sender, EventArgs e)
         {
@@ -140,6 +186,7 @@ namespace ContactTracingApp
                 BtnMinuteEntered.Text = "00";
             }
         }
+
         private byte HourDeparted = 0;
         private void BtnHourDeparted_Click(object sender, EventArgs e)
         {
@@ -159,6 +206,7 @@ namespace ContactTracingApp
                 HourDeparted = 1;
             }
         }
+
         private byte MinuteDeparted = 0;
         private void BtnMinuteDeparted_Click(object sender, EventArgs e)
         {
@@ -177,6 +225,44 @@ namespace ContactTracingApp
                 MinuteDeparted = 0;
                 BtnMinuteDeparted.Text = "00";
             }
+        }
+
+        private void BtnTimeEnteredAMPM_Click(object sender, EventArgs e)
+        {
+            if (BtnTimeEnteredAMPM.Text == "AM")
+            {
+                BtnTimeEnteredAMPM.Text = "PM";
+            }
+            else
+            {
+                BtnTimeEnteredAMPM.Text = "AM";
+            }
+        }
+        private void BtnTimeDepartedAMPM_Click(object sender, EventArgs e)
+        {
+            if (BtnTimeDepartedAMPM.Text == "AM")
+            {
+                BtnTimeDepartedAMPM.Text = "PM";
+            }
+            else
+            {
+                BtnTimeDepartedAMPM.Text = "AM";
+            }
+        }
+
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            //to ensure that no date gets submitted that has a day that is 0
+            if (BtnDayVisited.Text == "0")
+            {
+                string DateWrongMsg = "The date you inputted is invalid. Please change it.";
+                MessageBox.Show(DateWrongMsg, "Check the Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BtnDayVisited.Text = "0";
+                Day = 0;
+            }
+            CheckIfMonthOnlyHas30Days();
+            CheckIfMonthOnlyHas28Days();
+            CheckIfTheYearIsInThe21stCentury();
         }
     }
 }

@@ -323,12 +323,13 @@
             this.BtnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BtnSubmit.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnSubmit.ForeColor = System.Drawing.Color.White;
-            this.BtnSubmit.Location = new System.Drawing.Point(363, 415);
+            this.BtnSubmit.Location = new System.Drawing.Point(393, 415);
             this.BtnSubmit.Name = "BtnSubmit";
             this.BtnSubmit.Size = new System.Drawing.Size(113, 36);
             this.BtnSubmit.TabIndex = 37;
             this.BtnSubmit.Text = "Submit";
             this.BtnSubmit.UseVisualStyleBackColor = false;
+            this.BtnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // PnlGender
             // 
@@ -466,17 +467,19 @@
             this.BtnTimeEnteredAMPM.TabIndex = 52;
             this.BtnTimeEnteredAMPM.Text = "AM";
             this.BtnTimeEnteredAMPM.UseVisualStyleBackColor = true;
+            this.BtnTimeEnteredAMPM.Click += new System.EventHandler(this.BtnTimeEnteredAMPM_Click);
             // 
             // BtnTimeDepartedAMPM
             // 
             this.BtnTimeDepartedAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnTimeDepartedAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(553, 180);
+            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(553, 182);
             this.BtnTimeDepartedAMPM.Name = "BtnTimeDepartedAMPM";
             this.BtnTimeDepartedAMPM.Size = new System.Drawing.Size(46, 29);
             this.BtnTimeDepartedAMPM.TabIndex = 54;
             this.BtnTimeDepartedAMPM.Text = "AM";
             this.BtnTimeDepartedAMPM.UseVisualStyleBackColor = true;
+            this.BtnTimeDepartedAMPM.Click += new System.EventHandler(this.BtnTimeDepartedAMPM_Click);
             // 
             // ContactTracingAppForm
             // 
