@@ -102,6 +102,44 @@ namespace ContactTracingApp
                 MessageBox.Show(InvalidCharactersInputtedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private byte Hour = 1;
+        private void BtnHourEntered_Click(object sender, EventArgs e)
+        {
+            if (Hour < 9)
+            {
+                Hour++;
+                BtnHourEntered.Text = "0" + Hour.ToString();
+            }
+            else if (Hour <= 11 && !(Hour < 9))
+            {
+                Hour++;
+                BtnHourEntered.Text = Hour.ToString();
+            }
+            else if (Hour == 12)
+            {
+                BtnHourEntered.Text = "01";
+                Hour = 1;
+            }
+        }
+        private byte Minute = 0;
+        private void BtnMinuteEntered_Click(object sender, EventArgs e)
+        {
+            if (Minute < 9)
+            {
+                Minute++;
+                BtnMinuteEntered.Text = "0" + Minute.ToString();
+            }
+            else if (Minute < 59)
+            {
+                Minute++;
+                BtnMinuteEntered.Text = Minute.ToString();
+            }
+            else
+            {
+                Minute = 0;
+                BtnMinuteEntered.Text = "00";
+            }
+        }
     }
 }
 
