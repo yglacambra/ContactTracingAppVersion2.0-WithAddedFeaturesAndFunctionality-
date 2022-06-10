@@ -41,7 +41,7 @@
             this.LblTLColon = new System.Windows.Forms.Label();
             this.LblDateVisited = new System.Windows.Forms.Label();
             this.BtnMonthVisited = new System.Windows.Forms.Button();
-            this.LblComma = new System.Windows.Forms.Label();
+            this.LblForwardSlash2 = new System.Windows.Forms.Label();
             this.TxtBoxYearVisited = new System.Windows.Forms.TextBox();
             this.LblGender = new System.Windows.Forms.Label();
             this.RdioBtnMale = new System.Windows.Forms.RadioButton();
@@ -59,12 +59,14 @@
             this.PnlQ2YesNo = new System.Windows.Forms.Panel();
             this.RdioButtonQ2No = new System.Windows.Forms.RadioButton();
             this.RdioButtonQ2Yes = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblForwardSlash1 = new System.Windows.Forms.Label();
             this.BtnDayVisited = new System.Windows.Forms.Button();
             this.BtnHourEntered = new System.Windows.Forms.Button();
             this.BtnHourDeparted = new System.Windows.Forms.Button();
             this.BtnMinuteDeparted = new System.Windows.Forms.Button();
             this.BtnMinuteEntered = new System.Windows.Forms.Button();
+            this.BtnTimeEnteredAMPM = new System.Windows.Forms.Button();
+            this.BtnTimeDepartedAMPM = new System.Windows.Forms.Button();
             this.PnlGender.SuspendLayout();
             this.PnlQ1YesNo.SuspendLayout();
             this.PnlQ2YesNo.SuspendLayout();
@@ -188,15 +190,15 @@
             this.BtnMonthVisited.UseVisualStyleBackColor = true;
             this.BtnMonthVisited.Click += new System.EventHandler(this.BtnMonthVisited_Click);
             // 
-            // LblComma
+            // LblForwardSlash2
             // 
-            this.LblComma.AutoSize = true;
-            this.LblComma.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblComma.Location = new System.Drawing.Point(581, 55);
-            this.LblComma.Name = "LblComma";
-            this.LblComma.Size = new System.Drawing.Size(18, 23);
-            this.LblComma.TabIndex = 18;
-            this.LblComma.Text = "/";
+            this.LblForwardSlash2.AutoSize = true;
+            this.LblForwardSlash2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblForwardSlash2.Location = new System.Drawing.Point(581, 55);
+            this.LblForwardSlash2.Name = "LblForwardSlash2";
+            this.LblForwardSlash2.Size = new System.Drawing.Size(18, 23);
+            this.LblForwardSlash2.TabIndex = 18;
+            this.LblForwardSlash2.Text = "/";
             // 
             // TxtBoxYearVisited
             // 
@@ -383,16 +385,16 @@
             this.RdioButtonQ2Yes.Text = "Yes";
             this.RdioButtonQ2Yes.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // LblForwardSlash1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(536, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 23);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "/";
+            this.LblForwardSlash1.AutoSize = true;
+            this.LblForwardSlash1.BackColor = System.Drawing.Color.Transparent;
+            this.LblForwardSlash1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblForwardSlash1.Location = new System.Drawing.Point(536, 55);
+            this.LblForwardSlash1.Name = "LblForwardSlash1";
+            this.LblForwardSlash1.Size = new System.Drawing.Size(18, 23);
+            this.LblForwardSlash1.TabIndex = 41;
+            this.LblForwardSlash1.Text = "/";
             // 
             // BtnDayVisited
             // 
@@ -428,6 +430,7 @@
             this.BtnHourDeparted.TabIndex = 49;
             this.BtnHourDeparted.Text = "00";
             this.BtnHourDeparted.UseVisualStyleBackColor = true;
+            this.BtnHourDeparted.Click += new System.EventHandler(this.BtnHourDeparted_Click);
             // 
             // BtnMinuteDeparted
             // 
@@ -439,6 +442,7 @@
             this.BtnMinuteDeparted.TabIndex = 50;
             this.BtnMinuteDeparted.Text = "00";
             this.BtnMinuteDeparted.UseVisualStyleBackColor = true;
+            this.BtnMinuteDeparted.Click += new System.EventHandler(this.BtnMinuteDeparted_Click);
             // 
             // BtnMinuteEntered
             // 
@@ -452,17 +456,41 @@
             this.BtnMinuteEntered.UseVisualStyleBackColor = true;
             this.BtnMinuteEntered.Click += new System.EventHandler(this.BtnMinuteEntered_Click);
             // 
+            // BtnTimeEnteredAMPM
+            // 
+            this.BtnTimeEnteredAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnTimeEnteredAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnTimeEnteredAMPM.Location = new System.Drawing.Point(553, 118);
+            this.BtnTimeEnteredAMPM.Name = "BtnTimeEnteredAMPM";
+            this.BtnTimeEnteredAMPM.Size = new System.Drawing.Size(46, 29);
+            this.BtnTimeEnteredAMPM.TabIndex = 52;
+            this.BtnTimeEnteredAMPM.Text = "AM";
+            this.BtnTimeEnteredAMPM.UseVisualStyleBackColor = true;
+            // 
+            // BtnTimeDepartedAMPM
+            // 
+            this.BtnTimeDepartedAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnTimeDepartedAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(553, 180);
+            this.BtnTimeDepartedAMPM.Name = "BtnTimeDepartedAMPM";
+            this.BtnTimeDepartedAMPM.Size = new System.Drawing.Size(46, 29);
+            this.BtnTimeDepartedAMPM.TabIndex = 54;
+            this.BtnTimeDepartedAMPM.Text = "AM";
+            this.BtnTimeDepartedAMPM.UseVisualStyleBackColor = true;
+            // 
             // ContactTracingAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 459);
+            this.Controls.Add(this.BtnTimeDepartedAMPM);
+            this.Controls.Add(this.BtnTimeEnteredAMPM);
             this.Controls.Add(this.BtnMinuteEntered);
             this.Controls.Add(this.BtnMinuteDeparted);
             this.Controls.Add(this.BtnHourDeparted);
             this.Controls.Add(this.BtnHourEntered);
             this.Controls.Add(this.BtnDayVisited);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblForwardSlash1);
             this.Controls.Add(this.PnlQ2YesNo);
             this.Controls.Add(this.PnlQ1YesNo);
             this.Controls.Add(this.PnlGender);
@@ -471,7 +499,7 @@
             this.Controls.Add(this.LblQuestion1);
             this.Controls.Add(this.LblGender);
             this.Controls.Add(this.TxtBoxYearVisited);
-            this.Controls.Add(this.LblComma);
+            this.Controls.Add(this.LblForwardSlash2);
             this.Controls.Add(this.BtnMonthVisited);
             this.Controls.Add(this.LblDateVisited);
             this.Controls.Add(this.LblTLColon);
@@ -513,7 +541,7 @@
         private Label LblTLColon;
         private Label LblDateVisited;
         private Button BtnMonthVisited;
-        private Label LblComma;
+        private Label LblForwardSlash2;
         private TextBox TxtBoxYearVisited;
         private Label LblGender;
         private RadioButton RdioBtnMale;
@@ -531,11 +559,13 @@
         private Panel PnlQ2YesNo;
         private RadioButton RdioButtonQ2No;
         private RadioButton RdioButtonQ2Yes;
-        private Label label1;
+        private Label LblForwardSlash1;
         private Button BtnDayVisited;
         private Button BtnHourEntered;
         private Button BtnHourDeparted;
         private Button BtnMinuteDeparted;
         private Button BtnMinuteEntered;
+        private Button BtnTimeEnteredAMPM;
+        private Button BtnTimeDepartedAMPM;
     }
 }

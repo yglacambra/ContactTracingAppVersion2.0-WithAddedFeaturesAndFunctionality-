@@ -70,7 +70,7 @@ namespace ContactTracingApp
                 ++MonthVisited;
             }
         }
-        private int Day = 0;
+        private byte Day = 0;
         private void BtnDayVisited_Click(object sender, EventArgs e)
         {
             if (BtnDayVisited.Text != "31" || BtnDayVisited.Text == "0")
@@ -102,42 +102,80 @@ namespace ContactTracingApp
                 MessageBox.Show(InvalidCharactersInputtedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private byte Hour = 1;
+        private byte HourEntered = 0;
         private void BtnHourEntered_Click(object sender, EventArgs e)
         {
-            if (Hour < 9)
+            if (HourEntered < 9)
             {
-                Hour++;
-                BtnHourEntered.Text = "0" + Hour.ToString();
+                HourEntered++;
+                BtnHourEntered.Text = "0" + HourEntered.ToString();
             }
-            else if (Hour <= 11 && !(Hour < 9))
+            else if (HourEntered <= 11 && !(HourEntered < 9))
             {
-                Hour++;
-                BtnHourEntered.Text = Hour.ToString();
+                HourEntered++;
+                BtnHourEntered.Text = HourEntered.ToString();
             }
-            else if (Hour == 12)
+            else if (HourEntered == 12)
             {
                 BtnHourEntered.Text = "01";
-                Hour = 1;
+                HourEntered = 1;
             }
         }
-        private byte Minute = 0;
+        private byte MinuteEntered = 0;
         private void BtnMinuteEntered_Click(object sender, EventArgs e)
         {
-            if (Minute < 9)
+            if (MinuteEntered < 9)
             {
-                Minute++;
-                BtnMinuteEntered.Text = "0" + Minute.ToString();
+                MinuteEntered++;
+                BtnMinuteEntered.Text = "0" + MinuteEntered.ToString();
             }
-            else if (Minute < 59)
+            else if (MinuteEntered < 59)
             {
-                Minute++;
-                BtnMinuteEntered.Text = Minute.ToString();
+                MinuteEntered++;
+                BtnMinuteEntered.Text = MinuteEntered.ToString();
             }
             else
             {
-                Minute = 0;
+                MinuteEntered = 0;
                 BtnMinuteEntered.Text = "00";
+            }
+        }
+        private byte HourDeparted = 0;
+        private void BtnHourDeparted_Click(object sender, EventArgs e)
+        {
+            if (HourDeparted < 9)
+            {
+                HourDeparted++;
+                BtnHourDeparted.Text = "0" + HourDeparted.ToString();
+            }
+            else if (HourDeparted <= 11 && !(HourDeparted < 9))
+            {
+                HourDeparted++;
+                BtnHourDeparted.Text = HourDeparted.ToString();
+            }
+            else if (HourDeparted == 12)
+            {
+                BtnHourDeparted.Text = "01";
+                HourDeparted = 1;
+            }
+        }
+        private byte MinuteDeparted = 0;
+        private void BtnMinuteDeparted_Click(object sender, EventArgs e)
+        {
+            if (MinuteDeparted < 9)
+            {
+                MinuteDeparted++;
+                BtnMinuteDeparted.Text = "0" + MinuteDeparted.ToString();
+            }
+            else if (MinuteDeparted < 59)
+            {
+                MinuteDeparted++;
+                BtnMinuteDeparted.Text = MinuteDeparted.ToString();
+            }
+            else
+            {
+                MinuteDeparted = 0;
+                BtnMinuteDeparted.Text = "00";
             }
         }
     }
