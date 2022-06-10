@@ -6,6 +6,7 @@ namespace ContactTracingApp
         {
             InitializeComponent();
         }
+        //changes the month (in ascending order) when the button is pressed
         private void BtnMonthVisited_Click(object sender, EventArgs e)
         {
             byte MonthVisited = 1;
@@ -112,7 +113,7 @@ namespace ContactTracingApp
                 TxtBoxYearVisited.Text = "";
             }
         }
-     
+        //changing the day when the button is pressed
         private byte Day = 0;
         private void BtnDayVisited_Click(object sender, EventArgs e)
         {
@@ -127,6 +128,7 @@ namespace ContactTracingApp
                 Day = 0;
             }
         }
+        //restricts the input on the yar textbox
         private void TxtBoxYearVisited_TextChanged(object sender, EventArgs e)
         {
             if (TxtBoxYearVisited.TextLength > 4)
@@ -146,8 +148,8 @@ namespace ContactTracingApp
                 MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private byte HourEntered = 0;
+        //changes the hour when the button is pressed
+        private byte HourEntered = 1;
         private void BtnHourEntered_Click(object sender, EventArgs e)
         {
             if (HourEntered < 9)
@@ -166,7 +168,7 @@ namespace ContactTracingApp
                 HourEntered = 1;
             }
         }
-
+        //changes the minute when the button is pressed
         private byte MinuteEntered = 0;
         private void BtnMinuteEntered_Click(object sender, EventArgs e)
         {
@@ -187,7 +189,7 @@ namespace ContactTracingApp
             }
         }
 
-        private byte HourDeparted = 0;
+        private byte HourDeparted = 1;
         private void BtnHourDeparted_Click(object sender, EventArgs e)
         {
             if (HourDeparted < 9)
@@ -226,7 +228,7 @@ namespace ContactTracingApp
                 BtnMinuteDeparted.Text = "00";
             }
         }
-
+        //changes Am to Pm and vice versa when the button is pressed
         private void BtnTimeEnteredAMPM_Click(object sender, EventArgs e)
         {
             if (BtnTimeEnteredAMPM.Text == "AM")
@@ -260,14 +262,60 @@ namespace ContactTracingApp
                 BtnDayVisited.Text = "0";
                 Day = 0;
             }
+            //restricts input on the name textbox
+            if (TxtBoxName.TextLength >= 40)
+            {
+                string TooManyCharactersMsg = "You inputted too many characters on the name textbox.";
+                string TooManyCharactersMsgBoxTitle = "Check The Form";
+                MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //restricts the input on the address textbox
+            if (TxtBoxHomeAddress.TextLength >= 50)
+            {
+                string TooManyCharactersMsg = "You inputted too many characters on the address textbox.";
+                string TooManyCharactersMsgBoxTitle = "Check The Form";
+                MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            //restricts the input on the other genders textbox
+            if (TxtBoxOtherGenders.TextLength >= 30)
+            {
+                string TooManyCharactersMsg = "You inputted too many characters on the other genders textbox.";
+                string TooManyCharactersMsgBoxTitle = "Check The Form";
+                MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             CheckIfMonthOnlyHas30Days();
             CheckIfMonthOnlyHas28Days();
             CheckIfTheYearIsInThe21stCentury();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        //restricts the input on thw contact number textbox
+        private void TxtBoxContactNum_TextChanged(object sender, EventArgs e)
         {
+            if (TxtBoxContactNum.TextLength > 11)
+            {
+                string TooManyCharactersMsg = "You inputted too many characters.";
+                string TooManyCharactersMsgBoxTitle = "Maximum Amount Of Characters Reached. Only mobile numbers are accepted.";
+                MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtBoxContactNum.Text = "";
+            }
+        }
 
+        private void TxtBoxContactNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                string InvalidCharactersInputtedMsg = "You inputted characters that are not numbers.";
+                MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        //restricts input on the name textbox
+        private void TxtBoxName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) 
+                && e.KeyChar != '.' && e.KeyChar != ' ')
+            {
+                string InvalidCharactersInputtedMsg = "You inputted characters that are not letters or dots.";
+                MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

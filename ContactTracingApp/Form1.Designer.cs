@@ -55,6 +55,7 @@
             this.LblQuestion2 = new System.Windows.Forms.Label();
             this.BtnSubmit = new System.Windows.Forms.Button();
             this.PnlGender = new System.Windows.Forms.Panel();
+            this.RdioBtnDidntDisclose = new System.Windows.Forms.RadioButton();
             this.PnlQ1YesNo = new System.Windows.Forms.Panel();
             this.PnlQ2YesNo = new System.Windows.Forms.Panel();
             this.RdioButtonQ2No = new System.Windows.Forms.RadioButton();
@@ -68,11 +69,11 @@
             this.BtnTimeEnteredAMPM = new System.Windows.Forms.Button();
             this.BtnTimeDepartedAMPM = new System.Windows.Forms.Button();
             this.LblMallName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PicBoxPalmTree = new System.Windows.Forms.PictureBox();
             this.PnlGender.SuspendLayout();
             this.PnlQ1YesNo.SuspendLayout();
             this.PnlQ2YesNo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBoxPalmTree)).BeginInit();
             this.SuspendLayout();
             // 
             // LblName
@@ -94,6 +95,7 @@
             this.TxtBoxName.Name = "TxtBoxName";
             this.TxtBoxName.Size = new System.Drawing.Size(283, 27);
             this.TxtBoxName.TabIndex = 1;
+            this.TxtBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxName_KeyPress);
             // 
             // LblHomeAddress
             // 
@@ -130,6 +132,8 @@
             this.TxtBoxContactNum.Name = "TxtBoxContactNum";
             this.TxtBoxContactNum.Size = new System.Drawing.Size(283, 27);
             this.TxtBoxContactNum.TabIndex = 5;
+            this.TxtBoxContactNum.TextChanged += new System.EventHandler(this.TxtBoxContactNum_TextChanged);
+            this.TxtBoxContactNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxContactNum_KeyPress);
             // 
             // LblTimeEntered
             // 
@@ -336,6 +340,7 @@
             // 
             // PnlGender
             // 
+            this.PnlGender.Controls.Add(this.RdioBtnDidntDisclose);
             this.PnlGender.Controls.Add(this.LblSpecify);
             this.PnlGender.Controls.Add(this.TxtBoxOtherGenders);
             this.PnlGender.Controls.Add(this.RdioBttonOtherGenders);
@@ -343,8 +348,20 @@
             this.PnlGender.Controls.Add(this.RdioBtnMale);
             this.PnlGender.Location = new System.Drawing.Point(19, 327);
             this.PnlGender.Name = "PnlGender";
-            this.PnlGender.Size = new System.Drawing.Size(284, 113);
+            this.PnlGender.Size = new System.Drawing.Size(284, 140);
             this.PnlGender.TabIndex = 38;
+            // 
+            // RdioBtnDidntDisclose
+            // 
+            this.RdioBtnDidntDisclose.AutoSize = true;
+            this.RdioBtnDidntDisclose.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnDidntDisclose.Location = new System.Drawing.Point(4, 114);
+            this.RdioBtnDidntDisclose.Name = "RdioBtnDidntDisclose";
+            this.RdioBtnDidntDisclose.Size = new System.Drawing.Size(165, 23);
+            this.RdioBtnDidntDisclose.TabIndex = 31;
+            this.RdioBtnDidntDisclose.TabStop = true;
+            this.RdioBtnDidntDisclose.Text = "Prefer not to disclose";
+            this.RdioBtnDidntDisclose.UseVisualStyleBackColor = true;
             // 
             // PnlQ1YesNo
             // 
@@ -420,7 +437,7 @@
             this.BtnHourEntered.Name = "BtnHourEntered";
             this.BtnHourEntered.Size = new System.Drawing.Size(35, 29);
             this.BtnHourEntered.TabIndex = 48;
-            this.BtnHourEntered.Text = "00";
+            this.BtnHourEntered.Text = "01";
             this.BtnHourEntered.UseVisualStyleBackColor = true;
             this.BtnHourEntered.Click += new System.EventHandler(this.BtnHourEntered_Click);
             // 
@@ -432,7 +449,7 @@
             this.BtnHourDeparted.Name = "BtnHourDeparted";
             this.BtnHourDeparted.Size = new System.Drawing.Size(35, 29);
             this.BtnHourDeparted.TabIndex = 49;
-            this.BtnHourDeparted.Text = "00";
+            this.BtnHourDeparted.Text = "01";
             this.BtnHourDeparted.UseVisualStyleBackColor = true;
             this.BtnHourDeparted.Click += new System.EventHandler(this.BtnHourDeparted_Click);
             // 
@@ -495,17 +512,16 @@
             this.LblMallName.TabIndex = 55;
             this.LblMallName.Text = "YGL Mall";
             // 
-            // pictureBox1
+            // PicBoxPalmTree
             // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::ContactTracingApp.Properties.Resources.fd6323c1bde78172ef5f9c3b509e0b2f;
-            this.pictureBox1.Location = new System.Drawing.Point(238, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 56;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PicBoxPalmTree.Enabled = false;
+            this.PicBoxPalmTree.Image = global::ContactTracingApp.Properties.Resources.fd6323c1bde78172ef5f9c3b509e0b2f;
+            this.PicBoxPalmTree.Location = new System.Drawing.Point(238, 12);
+            this.PicBoxPalmTree.Name = "PicBoxPalmTree";
+            this.PicBoxPalmTree.Size = new System.Drawing.Size(84, 71);
+            this.PicBoxPalmTree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBoxPalmTree.TabIndex = 56;
+            this.PicBoxPalmTree.TabStop = false;
             // 
             // ContactTracingAppForm
             // 
@@ -513,7 +529,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(918, 552);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PicBoxPalmTree);
             this.Controls.Add(this.LblMallName);
             this.Controls.Add(this.BtnTimeDepartedAMPM);
             this.Controls.Add(this.BtnTimeEnteredAMPM);
@@ -554,7 +570,7 @@
             this.PnlQ1YesNo.PerformLayout();
             this.PnlQ2YesNo.ResumeLayout(false);
             this.PnlQ2YesNo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBoxPalmTree)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,6 +617,7 @@
         private Button BtnTimeEnteredAMPM;
         private Button BtnTimeDepartedAMPM;
         private Label LblMallName;
-        private PictureBox pictureBox1;
+        private PictureBox PicBoxPalmTree;
+        private RadioButton RdioBtnDidntDisclose;
     }
 }
