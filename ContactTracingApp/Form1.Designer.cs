@@ -49,8 +49,8 @@
             this.RdioBtnOtherGenders = new System.Windows.Forms.RadioButton();
             this.TxtBoxOtherGenders = new System.Windows.Forms.TextBox();
             this.LblSpecify = new System.Windows.Forms.Label();
-            this.RdioButtonQ1Yes = new System.Windows.Forms.RadioButton();
-            this.RdioButtonQ1No = new System.Windows.Forms.RadioButton();
+            this.RdioBtnQ1Yes = new System.Windows.Forms.RadioButton();
+            this.RdioBtnQ1No = new System.Windows.Forms.RadioButton();
             this.LblQuestion1 = new System.Windows.Forms.Label();
             this.LblQuestion2 = new System.Windows.Forms.Label();
             this.BtnSubmit = new System.Windows.Forms.Button();
@@ -58,8 +58,8 @@
             this.RdioBtnDidntDisclose = new System.Windows.Forms.RadioButton();
             this.PnlQ1YesNo = new System.Windows.Forms.Panel();
             this.PnlQ2YesNo = new System.Windows.Forms.Panel();
-            this.RdioButtonQ2No = new System.Windows.Forms.RadioButton();
-            this.RdioButtonQ2Yes = new System.Windows.Forms.RadioButton();
+            this.RdioBtnQ2No = new System.Windows.Forms.RadioButton();
+            this.RdioBtnQ2Yes = new System.Windows.Forms.RadioButton();
             this.LblForwardSlash1 = new System.Windows.Forms.Label();
             this.BtnDayVisited = new System.Windows.Forms.Button();
             this.BtnHourEntered = new System.Windows.Forms.Button();
@@ -284,29 +284,29 @@
             this.LblSpecify.TabIndex = 30;
             this.LblSpecify.Text = "Please Specify:";
             // 
-            // RdioButtonQ1Yes
+            // RdioBtnQ1Yes
             // 
-            this.RdioButtonQ1Yes.AutoSize = true;
-            this.RdioButtonQ1Yes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioButtonQ1Yes.Location = new System.Drawing.Point(13, 2);
-            this.RdioButtonQ1Yes.Name = "RdioButtonQ1Yes";
-            this.RdioButtonQ1Yes.Size = new System.Drawing.Size(49, 23);
-            this.RdioButtonQ1Yes.TabIndex = 31;
-            this.RdioButtonQ1Yes.TabStop = true;
-            this.RdioButtonQ1Yes.Text = "Yes";
-            this.RdioButtonQ1Yes.UseVisualStyleBackColor = true;
+            this.RdioBtnQ1Yes.AutoSize = true;
+            this.RdioBtnQ1Yes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnQ1Yes.Location = new System.Drawing.Point(8, 3);
+            this.RdioBtnQ1Yes.Name = "RdioBtnQ1Yes";
+            this.RdioBtnQ1Yes.Size = new System.Drawing.Size(49, 23);
+            this.RdioBtnQ1Yes.TabIndex = 31;
+            this.RdioBtnQ1Yes.TabStop = true;
+            this.RdioBtnQ1Yes.Text = "Yes";
+            this.RdioBtnQ1Yes.UseVisualStyleBackColor = true;
             // 
-            // RdioButtonQ1No
+            // RdioBtnQ1No
             // 
-            this.RdioButtonQ1No.AutoSize = true;
-            this.RdioButtonQ1No.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioButtonQ1No.Location = new System.Drawing.Point(13, 31);
-            this.RdioButtonQ1No.Name = "RdioButtonQ1No";
-            this.RdioButtonQ1No.Size = new System.Drawing.Size(45, 23);
-            this.RdioButtonQ1No.TabIndex = 32;
-            this.RdioButtonQ1No.TabStop = true;
-            this.RdioButtonQ1No.Text = "No";
-            this.RdioButtonQ1No.UseVisualStyleBackColor = true;
+            this.RdioBtnQ1No.AutoSize = true;
+            this.RdioBtnQ1No.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnQ1No.Location = new System.Drawing.Point(8, 32);
+            this.RdioBtnQ1No.Name = "RdioBtnQ1No";
+            this.RdioBtnQ1No.Size = new System.Drawing.Size(45, 23);
+            this.RdioBtnQ1No.TabIndex = 32;
+            this.RdioBtnQ1No.TabStop = true;
+            this.RdioBtnQ1No.Text = "No";
+            this.RdioBtnQ1No.UseVisualStyleBackColor = true;
             // 
             // LblQuestion1
             // 
@@ -369,8 +369,8 @@
             // 
             // PnlQ1YesNo
             // 
-            this.PnlQ1YesNo.Controls.Add(this.RdioButtonQ1No);
-            this.PnlQ1YesNo.Controls.Add(this.RdioButtonQ1Yes);
+            this.PnlQ1YesNo.Controls.Add(this.RdioBtnQ1No);
+            this.PnlQ1YesNo.Controls.Add(this.RdioBtnQ1Yes);
             this.PnlQ1YesNo.Location = new System.Drawing.Point(410, 327);
             this.PnlQ1YesNo.Name = "PnlQ1YesNo";
             this.PnlQ1YesNo.Size = new System.Drawing.Size(65, 63);
@@ -379,36 +379,36 @@
             // PnlQ2YesNo
             // 
             this.PnlQ2YesNo.BackColor = System.Drawing.Color.LightSalmon;
-            this.PnlQ2YesNo.Controls.Add(this.RdioButtonQ2No);
-            this.PnlQ2YesNo.Controls.Add(this.RdioButtonQ2Yes);
+            this.PnlQ2YesNo.Controls.Add(this.RdioBtnQ2No);
+            this.PnlQ2YesNo.Controls.Add(this.RdioBtnQ2Yes);
             this.PnlQ2YesNo.Location = new System.Drawing.Point(410, 422);
             this.PnlQ2YesNo.Name = "PnlQ2YesNo";
             this.PnlQ2YesNo.Size = new System.Drawing.Size(65, 63);
             this.PnlQ2YesNo.TabIndex = 40;
             // 
-            // RdioButtonQ2No
+            // RdioBtnQ2No
             // 
-            this.RdioButtonQ2No.AutoSize = true;
-            this.RdioButtonQ2No.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioButtonQ2No.Location = new System.Drawing.Point(8, 34);
-            this.RdioButtonQ2No.Name = "RdioButtonQ2No";
-            this.RdioButtonQ2No.Size = new System.Drawing.Size(45, 23);
-            this.RdioButtonQ2No.TabIndex = 38;
-            this.RdioButtonQ2No.TabStop = true;
-            this.RdioButtonQ2No.Text = "No";
-            this.RdioButtonQ2No.UseVisualStyleBackColor = true;
+            this.RdioBtnQ2No.AutoSize = true;
+            this.RdioBtnQ2No.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnQ2No.Location = new System.Drawing.Point(8, 34);
+            this.RdioBtnQ2No.Name = "RdioBtnQ2No";
+            this.RdioBtnQ2No.Size = new System.Drawing.Size(45, 23);
+            this.RdioBtnQ2No.TabIndex = 38;
+            this.RdioBtnQ2No.TabStop = true;
+            this.RdioBtnQ2No.Text = "No";
+            this.RdioBtnQ2No.UseVisualStyleBackColor = true;
             // 
-            // RdioButtonQ2Yes
+            // RdioBtnQ2Yes
             // 
-            this.RdioButtonQ2Yes.AutoSize = true;
-            this.RdioButtonQ2Yes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RdioButtonQ2Yes.Location = new System.Drawing.Point(8, 5);
-            this.RdioButtonQ2Yes.Name = "RdioButtonQ2Yes";
-            this.RdioButtonQ2Yes.Size = new System.Drawing.Size(49, 23);
-            this.RdioButtonQ2Yes.TabIndex = 37;
-            this.RdioButtonQ2Yes.TabStop = true;
-            this.RdioButtonQ2Yes.Text = "Yes";
-            this.RdioButtonQ2Yes.UseVisualStyleBackColor = true;
+            this.RdioBtnQ2Yes.AutoSize = true;
+            this.RdioBtnQ2Yes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnQ2Yes.Location = new System.Drawing.Point(8, 5);
+            this.RdioBtnQ2Yes.Name = "RdioBtnQ2Yes";
+            this.RdioBtnQ2Yes.Size = new System.Drawing.Size(49, 23);
+            this.RdioBtnQ2Yes.TabIndex = 37;
+            this.RdioBtnQ2Yes.TabStop = true;
+            this.RdioBtnQ2Yes.Text = "Yes";
+            this.RdioBtnQ2Yes.UseVisualStyleBackColor = true;
             // 
             // LblForwardSlash1
             // 
@@ -603,16 +603,16 @@
         private RadioButton RdioBtnOtherGenders;
         private TextBox TxtBoxOtherGenders;
         private Label LblSpecify;
-        private RadioButton RdioButtonQ1Yes;
-        private RadioButton RdioButtonQ1No;
+        private RadioButton RdioBtnQ1Yes;
+        private RadioButton RdioBtnQ1No;
         private Label LblQuestion1;
         private Label LblQuestion2;
         private Button BtnSubmit;
         private Panel PnlGender;
         private Panel PnlQ1YesNo;
         private Panel PnlQ2YesNo;
-        private RadioButton RdioButtonQ2No;
-        private RadioButton RdioButtonQ2Yes;
+        private RadioButton RdioBtnQ2No;
+        private RadioButton RdioBtnQ2Yes;
         private Label LblForwardSlash1;
         private Button BtnDayVisited;
         private Button BtnHourEntered;

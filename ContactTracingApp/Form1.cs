@@ -302,14 +302,14 @@ namespace ContactTracingApp
                 Day = 0;
             }
             //restricts input on the name textbox
-            if (TxtBoxName.TextLength >= 40)
+            if (TxtBoxName.TextLength >= 45)
             {
                 string TooManyCharactersMsg = "You inputted too many characters on the name textbox.";
                 string TooManyCharactersMsgBoxTitle = "Check The Form";
                 MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //restricts the input on the address textbox
-            if (TxtBoxHomeAddress.TextLength >= 50)
+            if (TxtBoxHomeAddress.TextLength >= 70)
             {
                 string TooManyCharactersMsg = "You inputted too many characters on the address textbox.";
                 string TooManyCharactersMsgBoxTitle = "Check The Form";
@@ -326,7 +326,7 @@ namespace ContactTracingApp
             CheckIfMonthOnlyHas28Days();
             CheckIfTheYearIsInThe21stCentury();
             CheckIfEverythingHasBeenFilledUp();
-            WriteTheInfoOnATextFile();
+            WriteTheInfoCollectedOnTheTextFile();
         }
         private void CheckIfEverythingHasBeenFilledUp()
         {
@@ -338,11 +338,11 @@ namespace ContactTracingApp
             {
                 GenderRadioButtonsChecked = true;
             }
-            if (RdioButtonQ1No.Checked == true || RdioButtonQ1Yes.Checked == true)
+            if (RdioBtnQ1No.Checked == true || RdioBtnQ1Yes.Checked == true)
             {
                 Q1RadioButtonsChecked = true;
             }
-            if (RdioButtonQ2No.Checked == true || RdioButtonQ2Yes.Checked == true)
+            if (RdioBtnQ2No.Checked == true || RdioBtnQ2Yes.Checked == true)
             {
                 Q2RadioButtonsChecked = true;
             }
@@ -381,12 +381,15 @@ namespace ContactTracingApp
         {
             TxtBoxOtherGenders.Enabled = false;
         }
-        private void WriteTheInfoOnATextFile()
+        private void WriteTheInfoCollectedOnTheTextFile()
         {
             StreamWriter ContactTracingFormInfoFile = new StreamWriter(@"C:\Users\Public\Documents\Contact Tracing Info.txt", true);
             ContactTracingFormInfoFile.WriteLine("Name: " + TxtBoxName.Text);
             ContactTracingFormInfoFile.WriteLine("Address: " + TxtBoxHomeAddress.Text); 
             ContactTracingFormInfoFile.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
+            ContactTracingFormInfoFile.WriteLine("Date Visited: " + BtnMonthVisited.Text + " " + BtnDayVisited.Text + "," + TxtBoxYearVisited.Text);
+            ContactTracingFormInfoFile.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text);
+            ContactTracingFormInfoFile.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text);
             // to determine what gender is to be inputted on the text file
             if (RdioBtnMale.Checked == true)
             {
@@ -403,6 +406,24 @@ namespace ContactTracingApp
             else if (RdioBtnDidntDisclose.Checked == true)
             {
                 ContactTracingFormInfoFile.WriteLine("Gender: Didn't Disclose");
+            }
+            // to determine what the user answered in question 1
+            if (RdioBtnQ1Yes.Checked == true)
+            {
+                ContactTracingFormInfoFile.WriteLine("Has COVID symptoms: Yes");
+            }
+            else if (RdioBtnQ1No.Checked == true)
+            {
+                ContactTracingFormInfoFile.WriteLine("Has COVID symptoms: No");
+            }
+            // to determine what the user answered in question 2
+            if (RdioBtnQ2Yes.Checked == true)
+            {
+                ContactTracingFormInfoFile.WriteLine("Had contact with a COVID positive person: Yes");
+            }
+            else if (RdioBtnQ2No.Checked == true)
+            {
+                ContactTracingFormInfoFile.WriteLine("Had contact with a COVID positive person: No");
             }
             ContactTracingFormInfoFile.Close();
         }
