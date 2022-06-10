@@ -86,7 +86,11 @@ namespace ContactTracingApp
 
         private void CheckIfMonthOnlyHas28Days()
         {
-            short Year = short.Parse(TxtBoxYearVisited.Text);
+            short Year = 0;
+            if (TxtBoxYearVisited.Text != "")
+            {
+                Year = short.Parse(TxtBoxYearVisited.Text); ;
+            }
             if (Day >= 29 && BtnMonthVisited.Text == "February" && !(Year % 4 == 0))
             {
                 string DateWrongMsg = "The date you inputted is invalid. Please change it.";
@@ -101,11 +105,16 @@ namespace ContactTracingApp
                 BtnDayVisited.Text = "29";
                 Day = 29;
             }
+           
         }
 
         private void CheckIfTheYearIsInThe21stCentury()
         {
-            short Year = short.Parse(TxtBoxYearVisited.Text);
+            short Year = 0;
+            if (TxtBoxYearVisited.Text != "")
+            {
+                Year = short.Parse(TxtBoxYearVisited.Text); ;
+            }
             if (Year <= 1999 || Year >= 2100)
             {
                 string InvalidYearInputtedMsg = "The year that you inputted is not in the 21st Century. Please change it.";
@@ -252,6 +261,36 @@ namespace ContactTracingApp
             }
         }
 
+        //restricts the input on thw contact number textbox
+        private void TxtBoxContactNum_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtBoxContactNum.TextLength > 11)
+            {
+                string TooManyCharactersMsg = "You inputted too many characters.";
+                string TooManyCharactersMsgBoxTitle = "Maximum Amount Of Characters Reached. Only mobile numbers are accepted.";
+                MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtBoxContactNum.Text = "";
+            }
+        }
+
+        private void TxtBoxContactNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                string InvalidCharactersInputtedMsg = "You inputted characters that are not numbers.";
+                MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        //restricts input on the name textbox
+        private void TxtBoxName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) 
+                && e.KeyChar != '.' && e.KeyChar != ' ')
+            {
+                string InvalidCharactersInputtedMsg = "You inputted characters that are not letters or dots.";
+                MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
             //to ensure that no date gets submitted that has a day that is 0
@@ -286,36 +325,60 @@ namespace ContactTracingApp
             CheckIfMonthOnlyHas30Days();
             CheckIfMonthOnlyHas28Days();
             CheckIfTheYearIsInThe21stCentury();
+            CheckIfEverythingHasBeenFilledUp();
         }
-        //restricts the input on thw contact number textbox
-        private void TxtBoxContactNum_TextChanged(object sender, EventArgs e)
+        private void CheckIfEverythingHasBeenFilledUp()
         {
-            if (TxtBoxContactNum.TextLength > 11)
+            bool GenderRadioButtonsChecked = false;
+            bool Q1RadioButtonsChecked = false;
+            bool Q2RadioButtonsChecked = false;
+            if (RdioBtnMale.Checked == true || RdioBtnFemale.Checked == true || RdioBttonOtherGenders.Checked == true 
+                || RdioBtnDidntDisclose.Checked == true)
             {
-                string TooManyCharactersMsg = "You inputted too many characters.";
-                string TooManyCharactersMsgBoxTitle = "Maximum Amount Of Characters Reached. Only mobile numbers are accepted.";
-                MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                TxtBoxContactNum.Text = "";
+                GenderRadioButtonsChecked = true;
             }
+            if (RdioButtonQ1No.Checked == true || RdioButtonQ1Yes.Checked == true)
+            {
+                Q1RadioButtonsChecked = true;
+            }
+            if (RdioButtonQ2No.Checked == true || RdioButtonQ2Yes.Checked == true)
+            {
+                Q2RadioButtonsChecked = true;
+            }
+            if (TxtBoxName.Text == "" || TxtBoxHomeAddress.Text == "" || TxtBoxContactNum.Text == ""
+                || TxtBoxYearVisited.Text == "" || GenderRadioButtonsChecked == false || Q1RadioButtonsChecked == false
+                || Q2RadioButtonsChecked == false)
+            {
+               
+                string NotEverythingIsFilledUpMsg = "You haven't answered everything on the form. Please kindly answer them.";
+                MessageBox.Show (NotEverythingIsFilledUpMsg, "Check the Form",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        
+        //locks out the other gender buttons textbox if the other genders radio button is not checked
+        private void ContactTracingAppForm_Load(object sender, EventArgs e)
+        {
+            TxtBoxOtherGenders.Enabled = false;
         }
 
-        private void TxtBoxContactNum_KeyPress(object sender, KeyPressEventArgs e)
+        private void RdioBttonOtherGenders_CheckedChanged(object sender, EventArgs e)
         {
-            if (e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                string InvalidCharactersInputtedMsg = "You inputted characters that are not numbers.";
-                MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            TxtBoxOtherGenders.Enabled = true;
         }
-        //restricts input on the name textbox
-        private void TxtBoxName_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void RdioBtnMale_CheckedChanged(object sender, EventArgs e)
         {
-            if (e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) 
-                && e.KeyChar != '.' && e.KeyChar != ' ')
-            {
-                string InvalidCharactersInputtedMsg = "You inputted characters that are not letters or dots.";
-                MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            TxtBoxOtherGenders.Enabled = false;
+        }
+
+        private void RdioBtnFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            TxtBoxOtherGenders.Enabled = false;
+        }
+
+        private void RdioBtnDidntDisclose_CheckedChanged(object sender, EventArgs e)
+        {
+            TxtBoxOtherGenders.Enabled = false;
         }
     }
 }

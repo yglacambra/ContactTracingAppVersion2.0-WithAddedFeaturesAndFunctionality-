@@ -238,6 +238,7 @@
             this.RdioBtnMale.TabStop = true;
             this.RdioBtnMale.Text = "Male";
             this.RdioBtnMale.UseVisualStyleBackColor = true;
+            this.RdioBtnMale.CheckedChanged += new System.EventHandler(this.RdioBtnMale_CheckedChanged);
             // 
             // RdioBtnFemale
             // 
@@ -250,6 +251,7 @@
             this.RdioBtnFemale.TabStop = true;
             this.RdioBtnFemale.Text = "Female";
             this.RdioBtnFemale.UseVisualStyleBackColor = true;
+            this.RdioBtnFemale.CheckedChanged += new System.EventHandler(this.RdioBtnFemale_CheckedChanged);
             // 
             // RdioBttonOtherGenders
             // 
@@ -262,6 +264,7 @@
             this.RdioBttonOtherGenders.TabStop = true;
             this.RdioBttonOtherGenders.Text = "Others:";
             this.RdioBttonOtherGenders.UseVisualStyleBackColor = true;
+            this.RdioBttonOtherGenders.CheckedChanged += new System.EventHandler(this.RdioBttonOtherGenders_CheckedChanged);
             // 
             // TxtBoxOtherGenders
             // 
@@ -362,6 +365,7 @@
             this.RdioBtnDidntDisclose.TabStop = true;
             this.RdioBtnDidntDisclose.Text = "Prefer not to disclose";
             this.RdioBtnDidntDisclose.UseVisualStyleBackColor = true;
+            this.RdioBtnDidntDisclose.CheckedChanged += new System.EventHandler(this.RdioBtnDidntDisclose_CheckedChanged);
             // 
             // PnlQ1YesNo
             // 
@@ -564,6 +568,7 @@
             this.MaximizeBox = false;
             this.Name = "ContactTracingAppForm";
             this.Text = "YGL Mall Contact Tracing Form";
+            this.Load += new System.EventHandler(this.ContactTracingAppForm_Load);
             this.PnlGender.ResumeLayout(false);
             this.PnlGender.PerformLayout();
             this.PnlQ1YesNo.ResumeLayout(false);
