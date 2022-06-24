@@ -35,14 +35,6 @@
             this.TxtBoxHomeAddress = new System.Windows.Forms.TextBox();
             this.LblContactNum = new System.Windows.Forms.Label();
             this.TxtBoxContactNum = new System.Windows.Forms.TextBox();
-            this.LblTimeEntered = new System.Windows.Forms.Label();
-            this.LbllTEColon = new System.Windows.Forms.Label();
-            this.LblTimeDeparted = new System.Windows.Forms.Label();
-            this.LblTLColon = new System.Windows.Forms.Label();
-            this.LblDateVisited = new System.Windows.Forms.Label();
-            this.BtnMonthVisited = new System.Windows.Forms.Button();
-            this.LblForwardSlash2 = new System.Windows.Forms.Label();
-            this.TxtBoxYearVisited = new System.Windows.Forms.TextBox();
             this.LblGender = new System.Windows.Forms.Label();
             this.RdioBtnMale = new System.Windows.Forms.RadioButton();
             this.RdioBtnFemale = new System.Windows.Forms.RadioButton();
@@ -60,24 +52,39 @@
             this.PnlQ2YesNo = new System.Windows.Forms.Panel();
             this.RdioBtnQ2No = new System.Windows.Forms.RadioButton();
             this.RdioBtnQ2Yes = new System.Windows.Forms.RadioButton();
-            this.LblForwardSlash1 = new System.Windows.Forms.Label();
-            this.BtnDayVisited = new System.Windows.Forms.Button();
-            this.BtnHourEntered = new System.Windows.Forms.Button();
-            this.BtnHourDeparted = new System.Windows.Forms.Button();
-            this.BtnMinuteDeparted = new System.Windows.Forms.Button();
-            this.BtnMinuteEntered = new System.Windows.Forms.Button();
-            this.BtnTimeEnteredAMPM = new System.Windows.Forms.Button();
-            this.BtnTimeDepartedAMPM = new System.Windows.Forms.Button();
             this.LblMallName = new System.Windows.Forms.Label();
             this.PicBoxPalmTree = new System.Windows.Forms.PictureBox();
             this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
             this.ComboBtnSettings = new System.Windows.Forms.ToolStripSplitButton();
             this.BtnAccessTheDatabase = new System.Windows.Forms.ToolStripMenuItem();
+            this.LblQuestion3 = new System.Windows.Forms.Label();
+            this.PanelQ3VaccinationQuestion = new System.Windows.Forms.Panel();
+            this.RdioBtnQ3YesBooster = new System.Windows.Forms.RadioButton();
+            this.RdioBtnQ3No = new System.Windows.Forms.RadioButton();
+            this.RdioBtnQ3YesSecondDose = new System.Windows.Forms.RadioButton();
+            this.RdioBtnQ3YesFirstDose = new System.Windows.Forms.RadioButton();
+            this.BtnTimeDepartedAMPM = new System.Windows.Forms.Button();
+            this.BtnMinuteDeparted = new System.Windows.Forms.Button();
+            this.LblTLColon = new System.Windows.Forms.Label();
+            this.BtnHourDeparted = new System.Windows.Forms.Button();
+            this.LblTimeDeparted = new System.Windows.Forms.Label();
+            this.BtnTimeEnteredAMPM = new System.Windows.Forms.Button();
+            this.BtnMinuteEntered = new System.Windows.Forms.Button();
+            this.LbllTEColon = new System.Windows.Forms.Label();
+            this.BtnHourEntered = new System.Windows.Forms.Button();
+            this.LblTimeEntered = new System.Windows.Forms.Label();
+            this.LblForwardSlash2 = new System.Windows.Forms.Label();
+            this.TxtBoxYearVisited = new System.Windows.Forms.TextBox();
+            this.BtnDayVisited = new System.Windows.Forms.Button();
+            this.LblForwardSlash1 = new System.Windows.Forms.Label();
+            this.BtnMonthVisited = new System.Windows.Forms.Button();
+            this.LblDateVisited = new System.Windows.Forms.Label();
             this.PnlGender.SuspendLayout();
             this.PnlQ1YesNo.SuspendLayout();
             this.PnlQ2YesNo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxPalmTree)).BeginInit();
             this.MenuToolStrip.SuspendLayout();
+            this.PanelQ3VaccinationQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblName
@@ -138,88 +145,6 @@
             this.TxtBoxContactNum.TabIndex = 5;
             this.TxtBoxContactNum.TextChanged += new System.EventHandler(this.TxtBoxContactNum_TextChanged);
             this.TxtBoxContactNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxContactNum_KeyPress);
-            // 
-            // LblTimeEntered
-            // 
-            this.LblTimeEntered.AutoSize = true;
-            this.LblTimeEntered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTimeEntered.Location = new System.Drawing.Point(410, 164);
-            this.LblTimeEntered.Name = "LblTimeEntered";
-            this.LblTimeEntered.Size = new System.Drawing.Size(144, 23);
-            this.LblTimeEntered.TabIndex = 6;
-            this.LblTimeEntered.Text = "Time Entered:";
-            // 
-            // LbllTEColon
-            // 
-            this.LbllTEColon.AutoSize = true;
-            this.LbllTEColon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LbllTEColon.Location = new System.Drawing.Point(484, 194);
-            this.LbllTEColon.Name = "LbllTEColon";
-            this.LbllTEColon.Size = new System.Drawing.Size(15, 23);
-            this.LbllTEColon.TabIndex = 9;
-            this.LbllTEColon.Text = ":";
-            // 
-            // LblTimeDeparted
-            // 
-            this.LblTimeDeparted.AutoSize = true;
-            this.LblTimeDeparted.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTimeDeparted.Location = new System.Drawing.Point(410, 228);
-            this.LblTimeDeparted.Name = "LblTimeDeparted";
-            this.LblTimeDeparted.Size = new System.Drawing.Size(157, 23);
-            this.LblTimeDeparted.TabIndex = 12;
-            this.LblTimeDeparted.Text = "Time Departed:";
-            // 
-            // LblTLColon
-            // 
-            this.LblTLColon.AutoSize = true;
-            this.LblTLColon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTLColon.Location = new System.Drawing.Point(484, 258);
-            this.LblTLColon.Name = "LblTLColon";
-            this.LblTLColon.Size = new System.Drawing.Size(15, 23);
-            this.LblTLColon.TabIndex = 13;
-            this.LblTLColon.Text = ":";
-            // 
-            // LblDateVisited
-            // 
-            this.LblDateVisited.AutoSize = true;
-            this.LblDateVisited.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblDateVisited.Location = new System.Drawing.Point(410, 100);
-            this.LblDateVisited.Name = "LblDateVisited";
-            this.LblDateVisited.Size = new System.Drawing.Size(133, 23);
-            this.LblDateVisited.TabIndex = 16;
-            this.LblDateVisited.Text = "Date Visited:";
-            // 
-            // BtnMonthVisited
-            // 
-            this.BtnMonthVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMonthVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMonthVisited.Location = new System.Drawing.Point(429, 128);
-            this.BtnMonthVisited.Name = "BtnMonthVisited";
-            this.BtnMonthVisited.Size = new System.Drawing.Size(101, 29);
-            this.BtnMonthVisited.TabIndex = 17;
-            this.BtnMonthVisited.Text = "January";
-            this.BtnMonthVisited.UseVisualStyleBackColor = true;
-            this.BtnMonthVisited.Click += new System.EventHandler(this.BtnMonthVisited_Click);
-            // 
-            // LblForwardSlash2
-            // 
-            this.LblForwardSlash2.AutoSize = true;
-            this.LblForwardSlash2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblForwardSlash2.Location = new System.Drawing.Point(574, 131);
-            this.LblForwardSlash2.Name = "LblForwardSlash2";
-            this.LblForwardSlash2.Size = new System.Drawing.Size(18, 23);
-            this.LblForwardSlash2.TabIndex = 18;
-            this.LblForwardSlash2.Text = "/";
-            // 
-            // TxtBoxYearVisited
-            // 
-            this.TxtBoxYearVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxYearVisited.Location = new System.Drawing.Point(590, 130);
-            this.TxtBoxYearVisited.Name = "TxtBoxYearVisited";
-            this.TxtBoxYearVisited.Size = new System.Drawing.Size(59, 27);
-            this.TxtBoxYearVisited.TabIndex = 20;
-            this.TxtBoxYearVisited.TextChanged += new System.EventHandler(this.TxtBoxYearVisited_TextChanged);
-            this.TxtBoxYearVisited.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxYearVisited_KeyPress);
             // 
             // LblGender
             // 
@@ -337,7 +262,7 @@
             this.BtnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BtnSubmit.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.BtnSubmit.Location = new System.Drawing.Point(400, 504);
+            this.BtnSubmit.Location = new System.Drawing.Point(422, 616);
             this.BtnSubmit.Name = "BtnSubmit";
             this.BtnSubmit.Size = new System.Drawing.Size(113, 36);
             this.BtnSubmit.TabIndex = 37;
@@ -414,101 +339,6 @@
             this.RdioBtnQ2Yes.Text = "Yes";
             this.RdioBtnQ2Yes.UseVisualStyleBackColor = true;
             // 
-            // LblForwardSlash1
-            // 
-            this.LblForwardSlash1.AutoSize = true;
-            this.LblForwardSlash1.BackColor = System.Drawing.Color.Transparent;
-            this.LblForwardSlash1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblForwardSlash1.Location = new System.Drawing.Point(529, 131);
-            this.LblForwardSlash1.Name = "LblForwardSlash1";
-            this.LblForwardSlash1.Size = new System.Drawing.Size(18, 23);
-            this.LblForwardSlash1.TabIndex = 41;
-            this.LblForwardSlash1.Text = "/";
-            // 
-            // BtnDayVisited
-            // 
-            this.BtnDayVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnDayVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnDayVisited.Location = new System.Drawing.Point(542, 129);
-            this.BtnDayVisited.Name = "BtnDayVisited";
-            this.BtnDayVisited.Size = new System.Drawing.Size(35, 29);
-            this.BtnDayVisited.TabIndex = 47;
-            this.BtnDayVisited.Text = "0";
-            this.BtnDayVisited.UseVisualStyleBackColor = true;
-            this.BtnDayVisited.Click += new System.EventHandler(this.BtnDayVisited_Click);
-            // 
-            // BtnHourEntered
-            // 
-            this.BtnHourEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnHourEntered.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnHourEntered.Location = new System.Drawing.Point(443, 194);
-            this.BtnHourEntered.Name = "BtnHourEntered";
-            this.BtnHourEntered.Size = new System.Drawing.Size(35, 29);
-            this.BtnHourEntered.TabIndex = 48;
-            this.BtnHourEntered.Text = "01";
-            this.BtnHourEntered.UseVisualStyleBackColor = true;
-            this.BtnHourEntered.Click += new System.EventHandler(this.BtnHourEntered_Click);
-            // 
-            // BtnHourDeparted
-            // 
-            this.BtnHourDeparted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnHourDeparted.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnHourDeparted.Location = new System.Drawing.Point(443, 258);
-            this.BtnHourDeparted.Name = "BtnHourDeparted";
-            this.BtnHourDeparted.Size = new System.Drawing.Size(35, 29);
-            this.BtnHourDeparted.TabIndex = 49;
-            this.BtnHourDeparted.Text = "01";
-            this.BtnHourDeparted.UseVisualStyleBackColor = true;
-            this.BtnHourDeparted.Click += new System.EventHandler(this.BtnHourDeparted_Click);
-            // 
-            // BtnMinuteDeparted
-            // 
-            this.BtnMinuteDeparted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMinuteDeparted.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMinuteDeparted.Location = new System.Drawing.Point(505, 258);
-            this.BtnMinuteDeparted.Name = "BtnMinuteDeparted";
-            this.BtnMinuteDeparted.Size = new System.Drawing.Size(35, 29);
-            this.BtnMinuteDeparted.TabIndex = 50;
-            this.BtnMinuteDeparted.Text = "00";
-            this.BtnMinuteDeparted.UseVisualStyleBackColor = true;
-            this.BtnMinuteDeparted.Click += new System.EventHandler(this.BtnMinuteDeparted_Click);
-            // 
-            // BtnMinuteEntered
-            // 
-            this.BtnMinuteEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMinuteEntered.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMinuteEntered.Location = new System.Drawing.Point(505, 194);
-            this.BtnMinuteEntered.Name = "BtnMinuteEntered";
-            this.BtnMinuteEntered.Size = new System.Drawing.Size(35, 29);
-            this.BtnMinuteEntered.TabIndex = 51;
-            this.BtnMinuteEntered.Text = "00";
-            this.BtnMinuteEntered.UseVisualStyleBackColor = true;
-            this.BtnMinuteEntered.Click += new System.EventHandler(this.BtnMinuteEntered_Click);
-            // 
-            // BtnTimeEnteredAMPM
-            // 
-            this.BtnTimeEnteredAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnTimeEnteredAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnTimeEnteredAMPM.Location = new System.Drawing.Point(546, 194);
-            this.BtnTimeEnteredAMPM.Name = "BtnTimeEnteredAMPM";
-            this.BtnTimeEnteredAMPM.Size = new System.Drawing.Size(46, 29);
-            this.BtnTimeEnteredAMPM.TabIndex = 52;
-            this.BtnTimeEnteredAMPM.Text = "AM";
-            this.BtnTimeEnteredAMPM.UseVisualStyleBackColor = true;
-            this.BtnTimeEnteredAMPM.Click += new System.EventHandler(this.BtnTimeEnteredAMPM_Click);
-            // 
-            // BtnTimeDepartedAMPM
-            // 
-            this.BtnTimeDepartedAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnTimeDepartedAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(546, 258);
-            this.BtnTimeDepartedAMPM.Name = "BtnTimeDepartedAMPM";
-            this.BtnTimeDepartedAMPM.Size = new System.Drawing.Size(46, 29);
-            this.BtnTimeDepartedAMPM.TabIndex = 54;
-            this.BtnTimeDepartedAMPM.Text = "AM";
-            this.BtnTimeDepartedAMPM.UseVisualStyleBackColor = true;
-            this.BtnTimeDepartedAMPM.Click += new System.EventHandler(this.BtnTimeDepartedAMPM_Click);
-            // 
             // LblMallName
             // 
             this.LblMallName.AutoSize = true;
@@ -559,12 +389,262 @@
             this.BtnAccessTheDatabase.Text = "Access the Database Containing the Informattion Submitted";
             this.BtnAccessTheDatabase.Click += new System.EventHandler(this.BtnAccessTheDatabase_Click);
             // 
+            // LblQuestion3
+            // 
+            this.LblQuestion3.AutoSize = true;
+            this.LblQuestion3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblQuestion3.Location = new System.Drawing.Point(351, 507);
+            this.LblQuestion3.Name = "LblQuestion3";
+            this.LblQuestion3.Size = new System.Drawing.Size(148, 19);
+            this.LblQuestion3.TabIndex = 58;
+            this.LblQuestion3.Text = "Are you vaccinated?";
+            this.LblQuestion3.Click += new System.EventHandler(this.LblQuestion3_Click);
+            // 
+            // PanelQ3VaccinationQuestion
+            // 
+            this.PanelQ3VaccinationQuestion.BackColor = System.Drawing.Color.LightSalmon;
+            this.PanelQ3VaccinationQuestion.Controls.Add(this.RdioBtnQ3YesBooster);
+            this.PanelQ3VaccinationQuestion.Controls.Add(this.RdioBtnQ3No);
+            this.PanelQ3VaccinationQuestion.Controls.Add(this.RdioBtnQ3YesSecondDose);
+            this.PanelQ3VaccinationQuestion.Controls.Add(this.RdioBtnQ3YesFirstDose);
+            this.PanelQ3VaccinationQuestion.Location = new System.Drawing.Point(353, 529);
+            this.PanelQ3VaccinationQuestion.Name = "PanelQ3VaccinationQuestion";
+            this.PanelQ3VaccinationQuestion.Size = new System.Drawing.Size(275, 71);
+            this.PanelQ3VaccinationQuestion.TabIndex = 41;
+            // 
+            // RdioBtnQ3YesBooster
+            // 
+            this.RdioBtnQ3YesBooster.AutoSize = true;
+            this.RdioBtnQ3YesBooster.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnQ3YesBooster.Location = new System.Drawing.Point(160, 5);
+            this.RdioBtnQ3YesBooster.Name = "RdioBtnQ3YesBooster";
+            this.RdioBtnQ3YesBooster.Size = new System.Drawing.Size(107, 23);
+            this.RdioBtnQ3YesBooster.TabIndex = 40;
+            this.RdioBtnQ3YesBooster.TabStop = true;
+            this.RdioBtnQ3YesBooster.Text = "Yes, Booster";
+            this.RdioBtnQ3YesBooster.UseVisualStyleBackColor = true;
+            // 
+            // RdioBtnQ3No
+            // 
+            this.RdioBtnQ3No.AutoSize = true;
+            this.RdioBtnQ3No.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnQ3No.Location = new System.Drawing.Point(160, 34);
+            this.RdioBtnQ3No.Name = "RdioBtnQ3No";
+            this.RdioBtnQ3No.Size = new System.Drawing.Size(45, 23);
+            this.RdioBtnQ3No.TabIndex = 39;
+            this.RdioBtnQ3No.TabStop = true;
+            this.RdioBtnQ3No.Text = "No";
+            this.RdioBtnQ3No.UseVisualStyleBackColor = true;
+            // 
+            // RdioBtnQ3YesSecondDose
+            // 
+            this.RdioBtnQ3YesSecondDose.AutoSize = true;
+            this.RdioBtnQ3YesSecondDose.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnQ3YesSecondDose.Location = new System.Drawing.Point(8, 34);
+            this.RdioBtnQ3YesSecondDose.Name = "RdioBtnQ3YesSecondDose";
+            this.RdioBtnQ3YesSecondDose.Size = new System.Drawing.Size(140, 23);
+            this.RdioBtnQ3YesSecondDose.TabIndex = 38;
+            this.RdioBtnQ3YesSecondDose.TabStop = true;
+            this.RdioBtnQ3YesSecondDose.Text = "Yes, Second Dose";
+            this.RdioBtnQ3YesSecondDose.UseVisualStyleBackColor = true;
+            // 
+            // RdioBtnQ3YesFirstDose
+            // 
+            this.RdioBtnQ3YesFirstDose.AutoSize = true;
+            this.RdioBtnQ3YesFirstDose.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RdioBtnQ3YesFirstDose.Location = new System.Drawing.Point(8, 5);
+            this.RdioBtnQ3YesFirstDose.Name = "RdioBtnQ3YesFirstDose";
+            this.RdioBtnQ3YesFirstDose.Size = new System.Drawing.Size(122, 23);
+            this.RdioBtnQ3YesFirstDose.TabIndex = 37;
+            this.RdioBtnQ3YesFirstDose.TabStop = true;
+            this.RdioBtnQ3YesFirstDose.Text = "Yes, First Dose";
+            this.RdioBtnQ3YesFirstDose.UseVisualStyleBackColor = true;
+            // 
+            // BtnTimeDepartedAMPM
+            // 
+            this.BtnTimeDepartedAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnTimeDepartedAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(546, 258);
+            this.BtnTimeDepartedAMPM.Name = "BtnTimeDepartedAMPM";
+            this.BtnTimeDepartedAMPM.Size = new System.Drawing.Size(46, 29);
+            this.BtnTimeDepartedAMPM.TabIndex = 54;
+            this.BtnTimeDepartedAMPM.Text = "AM";
+            this.BtnTimeDepartedAMPM.UseVisualStyleBackColor = true;
+            this.BtnTimeDepartedAMPM.Click += new System.EventHandler(this.BtnTimeDepartedAMPM_Click);
+            // 
+            // BtnMinuteDeparted
+            // 
+            this.BtnMinuteDeparted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnMinuteDeparted.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnMinuteDeparted.Location = new System.Drawing.Point(505, 258);
+            this.BtnMinuteDeparted.Name = "BtnMinuteDeparted";
+            this.BtnMinuteDeparted.Size = new System.Drawing.Size(35, 29);
+            this.BtnMinuteDeparted.TabIndex = 50;
+            this.BtnMinuteDeparted.Text = "00";
+            this.BtnMinuteDeparted.UseVisualStyleBackColor = true;
+            this.BtnMinuteDeparted.Click += new System.EventHandler(this.BtnMinuteDeparted_Click);
+            // 
+            // LblTLColon
+            // 
+            this.LblTLColon.AutoSize = true;
+            this.LblTLColon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTLColon.Location = new System.Drawing.Point(484, 258);
+            this.LblTLColon.Name = "LblTLColon";
+            this.LblTLColon.Size = new System.Drawing.Size(15, 23);
+            this.LblTLColon.TabIndex = 13;
+            this.LblTLColon.Text = ":";
+            // 
+            // BtnHourDeparted
+            // 
+            this.BtnHourDeparted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnHourDeparted.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnHourDeparted.Location = new System.Drawing.Point(443, 258);
+            this.BtnHourDeparted.Name = "BtnHourDeparted";
+            this.BtnHourDeparted.Size = new System.Drawing.Size(35, 29);
+            this.BtnHourDeparted.TabIndex = 49;
+            this.BtnHourDeparted.Text = "01";
+            this.BtnHourDeparted.UseVisualStyleBackColor = true;
+            this.BtnHourDeparted.Click += new System.EventHandler(this.BtnHourDeparted_Click);
+            // 
+            // LblTimeDeparted
+            // 
+            this.LblTimeDeparted.AutoSize = true;
+            this.LblTimeDeparted.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTimeDeparted.Location = new System.Drawing.Point(410, 228);
+            this.LblTimeDeparted.Name = "LblTimeDeparted";
+            this.LblTimeDeparted.Size = new System.Drawing.Size(157, 23);
+            this.LblTimeDeparted.TabIndex = 12;
+            this.LblTimeDeparted.Text = "Time Departed:";
+            // 
+            // BtnTimeEnteredAMPM
+            // 
+            this.BtnTimeEnteredAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnTimeEnteredAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnTimeEnteredAMPM.Location = new System.Drawing.Point(546, 194);
+            this.BtnTimeEnteredAMPM.Name = "BtnTimeEnteredAMPM";
+            this.BtnTimeEnteredAMPM.Size = new System.Drawing.Size(46, 29);
+            this.BtnTimeEnteredAMPM.TabIndex = 52;
+            this.BtnTimeEnteredAMPM.Text = "AM";
+            this.BtnTimeEnteredAMPM.UseVisualStyleBackColor = true;
+            this.BtnTimeEnteredAMPM.Click += new System.EventHandler(this.BtnTimeEnteredAMPM_Click);
+            // 
+            // BtnMinuteEntered
+            // 
+            this.BtnMinuteEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnMinuteEntered.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnMinuteEntered.Location = new System.Drawing.Point(505, 194);
+            this.BtnMinuteEntered.Name = "BtnMinuteEntered";
+            this.BtnMinuteEntered.Size = new System.Drawing.Size(35, 29);
+            this.BtnMinuteEntered.TabIndex = 51;
+            this.BtnMinuteEntered.Text = "00";
+            this.BtnMinuteEntered.UseVisualStyleBackColor = true;
+            this.BtnMinuteEntered.Click += new System.EventHandler(this.BtnMinuteEntered_Click);
+            // 
+            // LbllTEColon
+            // 
+            this.LbllTEColon.AutoSize = true;
+            this.LbllTEColon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LbllTEColon.Location = new System.Drawing.Point(484, 194);
+            this.LbllTEColon.Name = "LbllTEColon";
+            this.LbllTEColon.Size = new System.Drawing.Size(15, 23);
+            this.LbllTEColon.TabIndex = 9;
+            this.LbllTEColon.Text = ":";
+            // 
+            // BtnHourEntered
+            // 
+            this.BtnHourEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnHourEntered.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnHourEntered.Location = new System.Drawing.Point(443, 194);
+            this.BtnHourEntered.Name = "BtnHourEntered";
+            this.BtnHourEntered.Size = new System.Drawing.Size(35, 29);
+            this.BtnHourEntered.TabIndex = 48;
+            this.BtnHourEntered.Text = "01";
+            this.BtnHourEntered.UseVisualStyleBackColor = true;
+            this.BtnHourEntered.Click += new System.EventHandler(this.BtnHourEntered_Click);
+            // 
+            // LblTimeEntered
+            // 
+            this.LblTimeEntered.AutoSize = true;
+            this.LblTimeEntered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTimeEntered.Location = new System.Drawing.Point(410, 164);
+            this.LblTimeEntered.Name = "LblTimeEntered";
+            this.LblTimeEntered.Size = new System.Drawing.Size(144, 23);
+            this.LblTimeEntered.TabIndex = 6;
+            this.LblTimeEntered.Text = "Time Entered:";
+            // 
+            // LblForwardSlash2
+            // 
+            this.LblForwardSlash2.AutoSize = true;
+            this.LblForwardSlash2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblForwardSlash2.Location = new System.Drawing.Point(574, 131);
+            this.LblForwardSlash2.Name = "LblForwardSlash2";
+            this.LblForwardSlash2.Size = new System.Drawing.Size(18, 23);
+            this.LblForwardSlash2.TabIndex = 18;
+            this.LblForwardSlash2.Text = "/";
+            // 
+            // TxtBoxYearVisited
+            // 
+            this.TxtBoxYearVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxYearVisited.Location = new System.Drawing.Point(590, 130);
+            this.TxtBoxYearVisited.Name = "TxtBoxYearVisited";
+            this.TxtBoxYearVisited.Size = new System.Drawing.Size(59, 27);
+            this.TxtBoxYearVisited.TabIndex = 20;
+            this.TxtBoxYearVisited.TextChanged += new System.EventHandler(this.TxtBoxYearVisited_TextChanged);
+            this.TxtBoxYearVisited.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxYearVisited_KeyPress);
+            // 
+            // BtnDayVisited
+            // 
+            this.BtnDayVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnDayVisited.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnDayVisited.Location = new System.Drawing.Point(542, 129);
+            this.BtnDayVisited.Name = "BtnDayVisited";
+            this.BtnDayVisited.Size = new System.Drawing.Size(35, 29);
+            this.BtnDayVisited.TabIndex = 47;
+            this.BtnDayVisited.Text = "0";
+            this.BtnDayVisited.UseVisualStyleBackColor = true;
+            this.BtnDayVisited.Click += new System.EventHandler(this.BtnDayVisited_Click);
+            // 
+            // LblForwardSlash1
+            // 
+            this.LblForwardSlash1.AutoSize = true;
+            this.LblForwardSlash1.BackColor = System.Drawing.Color.Transparent;
+            this.LblForwardSlash1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblForwardSlash1.Location = new System.Drawing.Point(529, 131);
+            this.LblForwardSlash1.Name = "LblForwardSlash1";
+            this.LblForwardSlash1.Size = new System.Drawing.Size(18, 23);
+            this.LblForwardSlash1.TabIndex = 41;
+            this.LblForwardSlash1.Text = "/";
+            // 
+            // BtnMonthVisited
+            // 
+            this.BtnMonthVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnMonthVisited.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnMonthVisited.Location = new System.Drawing.Point(429, 128);
+            this.BtnMonthVisited.Name = "BtnMonthVisited";
+            this.BtnMonthVisited.Size = new System.Drawing.Size(101, 29);
+            this.BtnMonthVisited.TabIndex = 17;
+            this.BtnMonthVisited.Text = "January";
+            this.BtnMonthVisited.UseVisualStyleBackColor = true;
+            this.BtnMonthVisited.Click += new System.EventHandler(this.BtnMonthVisited_Click);
+            // 
+            // LblDateVisited
+            // 
+            this.LblDateVisited.AutoSize = true;
+            this.LblDateVisited.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblDateVisited.Location = new System.Drawing.Point(410, 100);
+            this.LblDateVisited.Name = "LblDateVisited";
+            this.LblDateVisited.Size = new System.Drawing.Size(133, 23);
+            this.LblDateVisited.TabIndex = 16;
+            this.LblDateVisited.Text = "Date Visited:";
+            // 
             // ContactTracingAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(918, 552);
+            this.ClientSize = new System.Drawing.Size(918, 665);
+            this.Controls.Add(this.PanelQ3VaccinationQuestion);
+            this.Controls.Add(this.LblQuestion3);
             this.Controls.Add(this.MenuToolStrip);
             this.Controls.Add(this.PicBoxPalmTree);
             this.Controls.Add(this.LblMallName);
@@ -612,6 +692,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxPalmTree)).EndInit();
             this.MenuToolStrip.ResumeLayout(false);
             this.MenuToolStrip.PerformLayout();
+            this.PanelQ3VaccinationQuestion.ResumeLayout(false);
+            this.PanelQ3VaccinationQuestion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,14 +707,6 @@
         private TextBox TxtBoxHomeAddress;
         private Label LblContactNum;
         private TextBox TxtBoxContactNum;
-        private Label LblTimeEntered;
-        private Label LbllTEColon;
-        private Label LblTimeDeparted;
-        private Label LblTLColon;
-        private Label LblDateVisited;
-        private Button BtnMonthVisited;
-        private Label LblForwardSlash2;
-        private TextBox TxtBoxYearVisited;
         private Label LblGender;
         private RadioButton RdioBtnMale;
         private RadioButton RdioBtnFemale;
@@ -649,19 +723,33 @@
         private Panel PnlQ2YesNo;
         private RadioButton RdioBtnQ2No;
         private RadioButton RdioBtnQ2Yes;
-        private Label LblForwardSlash1;
-        private Button BtnDayVisited;
-        private Button BtnHourEntered;
-        private Button BtnHourDeparted;
-        private Button BtnMinuteDeparted;
-        private Button BtnMinuteEntered;
-        private Button BtnTimeEnteredAMPM;
-        private Button BtnTimeDepartedAMPM;
         private Label LblMallName;
         private PictureBox PicBoxPalmTree;
         private RadioButton RdioBtnDidntDisclose;
         private ToolStrip MenuToolStrip;
         private ToolStripSplitButton ComboBtnSettings;
         private ToolStripMenuItem BtnAccessTheDatabase;
+        private Label LblQuestion3;
+        private Panel PanelQ3VaccinationQuestion;
+        private RadioButton RdioBtnQ3YesSecondDose;
+        private RadioButton RdioBtnQ3YesFirstDose;
+        private Button BtnTimeDepartedAMPM;
+        private Button BtnMinuteDeparted;
+        private Label LblTLColon;
+        private Button BtnHourDeparted;
+        private Label LblTimeDeparted;
+        private Button BtnTimeEnteredAMPM;
+        private Button BtnMinuteEntered;
+        private Label LbllTEColon;
+        private Button BtnHourEntered;
+        private Label LblTimeEntered;
+        private Label LblForwardSlash2;
+        private TextBox TxtBoxYearVisited;
+        private Button BtnDayVisited;
+        private Label LblForwardSlash1;
+        private Button BtnMonthVisited;
+        private Label LblDateVisited;
+        private RadioButton RdioBtnQ3YesBooster;
+        private RadioButton RdioBtnQ3No;
     }
 }

@@ -335,6 +335,7 @@ namespace ContactTracingApp
             bool GenderRadioButtonsChecked = false;
             bool Q1RadioButtonsChecked = false;
             bool Q2RadioButtonsChecked = false;
+            bool Q3RadioButtonsChecked = false;
             if (RdioBtnMale.Checked == true || RdioBtnFemale.Checked == true || (RdioBtnOtherGenders.Checked == true &&
                 TxtBoxOtherGenders.Text != "") || RdioBtnDidntDisclose.Checked == true)
             {
@@ -348,9 +349,14 @@ namespace ContactTracingApp
             {
                 Q2RadioButtonsChecked = true;
             }
+            if (RdioBtnQ3YesFirstDose.Checked == true || RdioBtnQ3YesSecondDose.Checked == true
+                || RdioBtnQ3YesBooster.Checked == true || RdioBtnQ3No.Checked == true)
+            {
+                Q3RadioButtonsChecked = true;
+            }
             if (TxtBoxName.Text == "" || TxtBoxHomeAddress.Text == "" || TxtBoxContactNum.Text == ""
                 || TxtBoxYearVisited.Text == "" || GenderRadioButtonsChecked == false || Q1RadioButtonsChecked == false
-                || Q2RadioButtonsChecked == false)
+                || Q2RadioButtonsChecked == false || Q3RadioButtonsChecked == false)
             {
                 EverythingHasBeenFilledUp = false;
                 string NotEverythingIsFilledUpMsg = "You haven't answered everything on the form. Please kindly answer them.";
@@ -447,6 +453,23 @@ namespace ContactTracingApp
                 ContactTracingFormInfoFileWriter.WriteLine("Had contact with a COVID positive person: No");
             }
             ContactTracingFormInfoFileWriter.Close();
+            // to determine what the user answered in question 3
+            if (RdioBtnQ3YesFirstDose.Checked == true)
+            {
+                ContactTracingFormInfoFileWriter.WriteLine("Is Vaccinated: Yes, First Dose");
+            }
+            else if (RdioBtnQ3YesSecondDose.Checked == true)
+            {
+                ContactTracingFormInfoFileWriter.WriteLine("Is Vaccinated: Yes, Second Dose");
+            }
+            else if (RdioBtnQ3YesBooster.Checked == true)
+            {
+                ContactTracingFormInfoFileWriter.WriteLine("Is Vaccinated: Yes, Booster");
+            }
+            else if (RdioBtnQ3No.Checked == true)
+            {
+                ContactTracingFormInfoFileWriter.WriteLine("Is Vaccinated: No");
+            }
         }
 
         private void BtnAccessTheDatabase_Click(object sender, EventArgs e)
@@ -459,6 +482,11 @@ namespace ContactTracingApp
                 Form2.Show();
                 this.Visible = false;  
             }
+        }
+
+        private void LblQuestion3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
