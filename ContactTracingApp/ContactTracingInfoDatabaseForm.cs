@@ -27,7 +27,7 @@ namespace ContactTracingApp
             {
                 string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                 LineCount++;
-                if (LineCount == 1 || ((LineCount - 1) % 9 == 0))
+                if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
                 {
                     ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
                 }
@@ -47,13 +47,30 @@ namespace ContactTracingApp
                 {
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if (!(LineCount == 1 || ((LineCount - 1) % 9 == 0)) && LineCount < 9)
+                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount < 11)
                     {
                         ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
                     }
                 }
                 ContactTracingInfoFileReader.Close();
             }
+            else if (IndexNumber == 1)
+            {
+                ChangeBtnTextToBack();
+                int LineCount = 0;
+                StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
+                while (!ContactTracingInfoFileReader.EndOfStream)
+                {
+                    string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
+                    LineCount++;
+                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount > 11 && LineCount < 21 )
+                    {
+                        ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
+                    }
+                }
+                ContactTracingInfoFileReader.Close();
+            }
+
             else if (BtnCheckRecord.Text == "Back")
             {
                 if (ListBoxCustomerInformation.Items.Count > 0)
@@ -68,7 +85,7 @@ namespace ContactTracingApp
                         {
                             string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                             LineCount++;
-                            if (LineCount == 1 || ((LineCount - 1) % 9 == 0))
+                            if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
                             {
                                 ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
                             }
@@ -86,7 +103,7 @@ namespace ContactTracingApp
                 {
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if (!(LineCount == 1 || ((LineCount - 1) % 9 == 0)) && (LineCount < (IndexNumber + 1) * 9) && (LineCount > IndexNumber * 9))
+                    if ((!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((IndexNumber + 1) * 10)) && (LineCount > ((IndexNumber * 11) - (IndexNumber - 1))) && !(IndexNumber == 1))
                     {
                         ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
                     }

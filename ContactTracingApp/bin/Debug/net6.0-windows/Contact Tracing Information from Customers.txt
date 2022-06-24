@@ -7,6 +7,7 @@ Time Departed: 06:24
 Gender: Male
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
+Is Vaccinated: Yes, Second Dose
 Yuan Gabriel S. Lacambra
 Address: #9 Capricorn St., Sierra Vista, Brgy.Cupang, Antipolo City, Rizal
 Contact Number: 09878856435
@@ -16,6 +17,7 @@ Time Departed: 09:15
 Gender: Male
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: No
+Is Vaccinated: Yes, Booster
 Andres Delos Reyes
 Address: #3 Oriole St., Francisville Subd., Brgy. Mambugan, Antipolo City, Rizal 
 Contact Number: 09456732289
@@ -25,6 +27,7 @@ Time Departed: 05:47
 Gender: Didn't Disclose
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
+Is Vaccinated: No
 Charito Lacambra
 Address: #9 Capricorn St., Sierra Vista Subd., Brgy.Cupang, Antipolo City, Rizal
 Contact Number: 09678854674
@@ -34,6 +37,7 @@ Time Departed: 05:10
 Gender: Female
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: No
+Is Vaccinated: Yes, Booster
 Estrella Natividad
 Address: #13 Magnolia St., Kingsville Subd., Brgy.Mayamot, Antipolo City, Rizal
 Contact Number: 09954893243
@@ -43,6 +47,7 @@ Time Departed: 09:14
 Gender: Female
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
+Is Vaccinated: Yes, Second Dose
 Vanya Dela Cruz
 Address: #23 Brioche St., Filinvest Subd., Brgy. Cainta, Antipolo City, Rizal
 Contact Number: 09877634485
@@ -52,6 +57,7 @@ Time Departed: 03:26
 Gender: Transgender Woman
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
+Is Vaccinated: Yes, Second Dose
 Oliver Dela Peña
 Address: #45 Cabolog St., Greenheights Newtown One, Brgy. Katipunan, Quezon City, Metro Manila
 Contact Number: 09955468879
@@ -61,6 +67,7 @@ Time Departed: 01:43
 Gender: Male
 Has COVID symptoms: No
 Had contact with a COVID positive person: Yes
+Is Vaccinated: No
 Artuto Barreto
 Address: #7 Adjucation St., Breezy Hills Subd., Brgy. Del Monte, Quezon City, Metro Manila
 Contact Number: 09345890134
@@ -70,6 +77,7 @@ Time Departed: 10:26
 Gender: Transgender Man
 Has COVID symptoms: No
 Had contact with a COVID positive person: Yes
+Is Vaccinated: Yes, First Dose
 Tricia Madrigal
 Address: #23 Exeter St., Rancho Estate Subd., Brgy. Concepcion Dos, Marikina City, Metro Manila
 Contact Number: 09543467884
@@ -79,6 +87,7 @@ Time Departed: 05:35
 Gender: Female
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
+Is Vaccinated: Yes, Second Dose
 Bea Ortiz
 Address: #15 Ascencion St., Brgy. Tumana, Marikina City, Metro Manila
 Contact Number: 09945672167
@@ -88,3 +97,4 @@ Time Departed: 09:15
 Gender: Non-Binary
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
+Is Vaccinated: Yes, Booster
