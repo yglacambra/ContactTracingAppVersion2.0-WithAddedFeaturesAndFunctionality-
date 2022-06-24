@@ -21,6 +21,10 @@ namespace ContactTracingApp
         }
         private void ContactTracingInfoDatabaseForm_Load(object sender, EventArgs e)
         {
+            DTPFromDate.CustomFormat = "MMMM-dd-yyyy";
+            DTPFromDate.Format = DateTimePickerFormat.Custom;
+            DTPToDate.CustomFormat = "MMMM-dd-yyyy";
+            DTPToDate.Format = DateTimePickerFormat.Custom;
             int LineCount = 0;
             StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
             while (!ContactTracingInfoFileReader.EndOfStream)
@@ -37,8 +41,13 @@ namespace ContactTracingApp
 
         private void BtnCheckRecord_Click(object sender, EventArgs e)
         {
-            int IndexNumber = ListBoxCustomerInformation.SelectedIndex;
-            if (IndexNumber == 0)
+            int ListBoxItemIndexNumber = ListBoxCustomerInformation.SelectedIndex;
+            if (ListBoxCustomerInformation.SelectedIndex == -1 && BtnCheckRecordOrBack.Text == "Check Record")
+            {
+                string NoneSelectedMsg = "You have not selected anything from the textbox. Please select an item.";
+                MessageBox.Show(NoneSelectedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            if (ListBoxItemIndexNumber == 0 && BtnCheckRecordOrBack.Text == "Check Record")
             {
                 ChangeBtnTextToBack();
                 int LineCount = 0;
@@ -54,7 +63,7 @@ namespace ContactTracingApp
                 }
                 ContactTracingInfoFileReader.Close();
             }
-            else if (IndexNumber == 1)
+            else if (ListBoxItemIndexNumber == 1 && BtnCheckRecordOrBack.Text == "Check Record")
             {
                 ChangeBtnTextToBack();
                 int LineCount = 0;
@@ -71,13 +80,13 @@ namespace ContactTracingApp
                 ContactTracingInfoFileReader.Close();
             }
 
-            else if (BtnCheckRecord.Text == "Back")
+            else if (BtnCheckRecordOrBack.Text == "Back")
             {
                 if (ListBoxCustomerInformation.Items.Count > 0)
                 {
                     ListBoxCustomerInformation.Items.Clear();
-                    BtnCheckRecord.Text = "Check Record";
-                    if (ListBoxCustomerInformation.Items.Count == 0)
+                    BtnCheckRecordOrBack.Text = "Check Record";
+                    if (ListBoxCustomerInformation.Items.Count == 0 )
                     {
                         int LineCount = 0;
                         StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
@@ -94,7 +103,7 @@ namespace ContactTracingApp
                     }
                 }
             }
-            else
+            else if (ListBoxItemIndexNumber > 1)
             {
                 ChangeBtnTextToBack();
                 int LineCount = 0;
@@ -103,7 +112,7 @@ namespace ContactTracingApp
                 {
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if ((!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((IndexNumber + 1) * 10)) && (LineCount > ((IndexNumber * 11) - (IndexNumber - 1))) && !(IndexNumber == 1))
+                    if ((!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((ListBoxItemIndexNumber + 1) * 10)) && (LineCount > ((ListBoxItemIndexNumber * 11) - (ListBoxItemIndexNumber - 1))) && !(ListBoxItemIndexNumber == 1))
                     {
                         ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
                     }
@@ -113,14 +122,14 @@ namespace ContactTracingApp
         }
         private void ChangeBtnTextToBack()
         {
-            if (BtnCheckRecord.Text == "Check Record")
+            if (BtnCheckRecordOrBack.Text == "Check Record")
             {
-                BtnCheckRecord.Text = "Back";
+                BtnCheckRecordOrBack.Text = "Back";
                 if (ListBoxCustomerInformation.Items.Count > 0)
                 {
                     ListBoxCustomerInformation.Items.Clear();
                 }
-           }
+            }
         }
     }
 }
