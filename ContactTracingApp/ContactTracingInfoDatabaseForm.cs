@@ -38,6 +38,10 @@ namespace ContactTracingApp
         private void BtnCheckRecord_Click(object sender, EventArgs e)
         {
             int IndexNumber = ListBoxCustomerNames.SelectedIndex;
+            if (ListBoxCustomerNames.Items.Count > 8)
+            {
+                ListBoxCustomerNames.Items.Clear();
+            }
             if (IndexNumber == 0)
             {
                 int LineCount = 0;
@@ -48,7 +52,8 @@ namespace ContactTracingApp
                     LineCount++;
                     if (!(LineCount == 1 || ((LineCount - 1) % 9 == 0)) && LineCount < 9)
                     {
-                        MessageBox.Show(LineOnTheTextFile, "Customer Information");
+                        ListBoxCustomerNames.Items.Clear();
+                        ListBoxCustomerNames.Items.Add(LineOnTheTextFile);
                     }
                 }
             }
@@ -62,7 +67,7 @@ namespace ContactTracingApp
                     LineCount++;
                     if (!(LineCount == 1 || ((LineCount - 1) % 9 == 0)) && (LineCount < (IndexNumber + 1) * 9) && (LineCount > IndexNumber  * 9))
                     {
-                        MessageBox.Show(LineOnTheTextFile, "Customer Information");
+                        ListBoxCustomerNames.Items.Add(LineOnTheTextFile);
                     }
                 }
             }

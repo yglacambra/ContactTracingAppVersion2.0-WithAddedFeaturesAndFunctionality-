@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 375);
+            this.ClientSize = new System.Drawing.Size(362, 375);
             this.Controls.Add(this.BtnCheckRecord);
             this.Controls.Add(this.ListBoxCustomerNames);
             this.Controls.Add(this.LblCustomerNames);
