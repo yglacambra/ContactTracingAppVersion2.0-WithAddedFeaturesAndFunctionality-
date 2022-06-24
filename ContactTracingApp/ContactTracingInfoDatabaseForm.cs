@@ -38,12 +38,9 @@ namespace ContactTracingApp
         private void BtnCheckRecord_Click(object sender, EventArgs e)
         {
             int IndexNumber = ListBoxCustomerNames.SelectedIndex;
-            if (ListBoxCustomerNames.Items.Count > 8)
-            {
-                ListBoxCustomerNames.Items.Clear();
-            }
             if (IndexNumber == 0)
             {
+                ChangeBtnTextToBack();
                 int LineCount = 0;
                 StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
                 while (!ContactTracingInfoFileReader.EndOfStream)
@@ -52,25 +49,61 @@ namespace ContactTracingApp
                     LineCount++;
                     if (!(LineCount == 1 || ((LineCount - 1) % 9 == 0)) && LineCount < 9)
                     {
-                        ListBoxCustomerNames.Items.Clear();
                         ListBoxCustomerNames.Items.Add(LineOnTheTextFile);
+                    }
+                }
+                ContactTracingInfoFileReader.Close();
+            }
+            else if (BtnCheckRecord.Text == "Back")
+            {
+                if (ListBoxCustomerNames.Items.Count > 0)
+                {
+                    ListBoxCustomerNames.Items.Clear();
+                    BtnCheckRecord.Text = "Check Record";
+                    if (ListBoxCustomerNames.Items.Count == 0)
+                    {
+                        int LineCount = 0;
+                        StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
+                        while (!ContactTracingInfoFileReader.EndOfStream)
+                        {
+                            string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
+                            LineCount++;
+                            if (LineCount == 1 || ((LineCount - 1) % 9 == 0))
+                            {
+                                ListBoxCustomerNames.Items.Add(LineOnTheTextFile);
+                            }
+                        }
+                        ContactTracingInfoFileReader.Close();
                     }
                 }
             }
             else
             {
+                ChangeBtnTextToBack();
                 int LineCount = 0;
                 StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
                 while (!ContactTracingInfoFileReader.EndOfStream)
                 {
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if (!(LineCount == 1 || ((LineCount - 1) % 9 == 0)) && (LineCount < (IndexNumber + 1) * 9) && (LineCount > IndexNumber  * 9))
+                    if (!(LineCount == 1 || ((LineCount - 1) % 9 == 0)) && (LineCount < (IndexNumber + 1) * 9) && (LineCount > IndexNumber * 9))
                     {
                         ListBoxCustomerNames.Items.Add(LineOnTheTextFile);
                     }
                 }
+                ContactTracingInfoFileReader.Close();
             }
+        }
+        private void ChangeBtnTextToBack()
+        {
+            if (BtnCheckRecord.Text == "Check Record")
+            {
+                BtnCheckRecord.Text = "Back";
+                if (ListBoxCustomerNames.Items.Count > 0)
+                {
+                    ListBoxCustomerNames.Items.Clear();
+                }
+           }
         }
     }
 }

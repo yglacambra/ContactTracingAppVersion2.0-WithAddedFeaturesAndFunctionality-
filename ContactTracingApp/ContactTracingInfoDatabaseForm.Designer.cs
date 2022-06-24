@@ -46,6 +46,7 @@
             // ListBoxCustomerNames
             // 
             this.ListBoxCustomerNames.FormattingEnabled = true;
+            this.ListBoxCustomerNames.HorizontalScrollbar = true;
             this.ListBoxCustomerNames.ItemHeight = 15;
             this.ListBoxCustomerNames.Location = new System.Drawing.Point(22, 98);
             this.ListBoxCustomerNames.Name = "ListBoxCustomerNames";
@@ -84,7 +85,6 @@
 
         private Label LblCustomerNames;
         private ListBox ListBoxCustomerNames;
-        private ComboBox comboBox1;
         private Button BtnCheckRecord;
     }
 }
