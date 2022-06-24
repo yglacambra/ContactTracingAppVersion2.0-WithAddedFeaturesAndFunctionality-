@@ -457,7 +457,7 @@ namespace ContactTracingApp
             {
                 PasswordForm Form2 = new();
                 Form2.Show();
-                this.Close();
+                this.Visible = false;  
             }
         }
     }

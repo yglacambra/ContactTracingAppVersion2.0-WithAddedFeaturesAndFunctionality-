@@ -21,12 +21,14 @@ namespace ContactTracingApp
         {
             TxtBoxPassword.PasswordChar = '*';
         }
+        private bool CorrectPasswordInputted = false;
         private void TxtBoxPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 if (TxtBoxPassword.Text == "BSCOE1-4OOP")
                 {
+                    CorrectPasswordInputted = true;
                     ContactTracingInfoDatabaseForm Form3 = new();
                     Form3.Show();
                     this.Close();
@@ -37,6 +39,19 @@ namespace ContactTracingApp
                     MessageBox.Show(WrongPasswordMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TxtBoxPassword.Text = "";
                 }
+            }
+        }
+
+        private void PasswordForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ContactTracingAppForm Form1 = new();
+            if (CorrectPasswordInputted == true)
+            {
+                Form1.Visible = false;
+            }
+            else
+            {
+                Form1.Visible = true;
             }
         }
     }
