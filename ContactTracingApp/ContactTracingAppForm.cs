@@ -311,7 +311,7 @@ namespace ContactTracingApp
                 MessageBox.Show(TooManyCharactersMsg, TooManyCharactersMsgBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //restricts the input on the address textbox
-            if (TxtBoxHomeAddress.TextLength >= 70)
+            if (TxtBoxHomeAddress.TextLength >= 105)
             {
                 string TooManyCharactersMsg = "You inputted too many characters on the address textbox.";
                 string TooManyCharactersMsgBoxTitle = "Check The Form";
@@ -368,7 +368,6 @@ namespace ContactTracingApp
                 DialogResult ConfirmationMsgResult = MessageBox.Show (ConfirmationMsg,ConfirmationMsgTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (ConfirmationMsgResult == DialogResult.Yes)
                 {
-                    bool NoCorrections = false;
                     ContactTracingAppForm ResettedForm = new ContactTracingAppForm();
                     ResettedForm.Show();
                     this.Dispose(false);
@@ -404,7 +403,8 @@ namespace ContactTracingApp
         }
         private void WriteTheInfoCollectedOnTheTextFile()
         {
-            StreamWriter ContactTracingFormInfoFile = new StreamWriter(@"C:\Users\Public\Documents\Contact Tracing Info.txt", true);
+            StreamWriter ContactTracingFormInfoFile;
+            ContactTracingFormInfoFile = File.AppendText("Contact Tracing Information from Customers.txt");
             ContactTracingFormInfoFile.WriteLine("Name: " + TxtBoxName.Text);
             ContactTracingFormInfoFile.WriteLine("Address: " + TxtBoxHomeAddress.Text); 
             ContactTracingFormInfoFile.WriteLine("Contact Number: " + TxtBoxContactNum.Text);

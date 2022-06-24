@@ -1,0 +1,9 @@
+Name: Lawrence Olivier
+Address: #3 Marqueses St. Golden Apple Subdivision, Brgy. Pio Del Pilar, Makati City
+Contact Number: 09775496982
+Date Visited: June 5,2022
+Time Entered: 03:08
+Time Departed: 06:24
+Gender: Male
+Has COVID symptoms: Yes
+Had contact with a COVID positive person: Yes

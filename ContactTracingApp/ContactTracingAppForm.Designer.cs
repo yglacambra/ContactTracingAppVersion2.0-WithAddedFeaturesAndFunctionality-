@@ -70,10 +70,13 @@
             this.BtnTimeDepartedAMPM = new System.Windows.Forms.Button();
             this.LblMallName = new System.Windows.Forms.Label();
             this.PicBoxPalmTree = new System.Windows.Forms.PictureBox();
+            this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
+            this.SettingsToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.PnlGender.SuspendLayout();
             this.PnlQ1YesNo.SuspendLayout();
             this.PnlQ2YesNo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxPalmTree)).BeginInit();
+            this.MenuToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblName
@@ -510,7 +513,7 @@
             this.LblMallName.AutoSize = true;
             this.LblMallName.Font = new System.Drawing.Font("Sylfaen", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.LblMallName.ForeColor = System.Drawing.Color.IndianRed;
-            this.LblMallName.Location = new System.Drawing.Point(1, 18);
+            this.LblMallName.Location = new System.Drawing.Point(0, 38);
             this.LblMallName.Name = "LblMallName";
             this.LblMallName.Size = new System.Drawing.Size(231, 62);
             this.LblMallName.TabIndex = 55;
@@ -520,12 +523,30 @@
             // 
             this.PicBoxPalmTree.Enabled = false;
             this.PicBoxPalmTree.Image = global::ContactTracingApp.Properties.Resources.fd6323c1bde78172ef5f9c3b509e0b2f;
-            this.PicBoxPalmTree.Location = new System.Drawing.Point(238, 12);
+            this.PicBoxPalmTree.Location = new System.Drawing.Point(237, 29);
             this.PicBoxPalmTree.Name = "PicBoxPalmTree";
             this.PicBoxPalmTree.Size = new System.Drawing.Size(84, 71);
             this.PicBoxPalmTree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBoxPalmTree.TabIndex = 56;
             this.PicBoxPalmTree.TabStop = false;
+            // 
+            // MenuToolStrip
+            // 
+            this.MenuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SettingsToolStripButton});
+            this.MenuToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.MenuToolStrip.Name = "MenuToolStrip";
+            this.MenuToolStrip.Size = new System.Drawing.Size(918, 25);
+            this.MenuToolStrip.TabIndex = 57;
+            // 
+            // SettingsToolStripButton
+            // 
+            this.SettingsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SettingsToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("SettingsToolStripButton.Image")));
+            this.SettingsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SettingsToolStripButton.Name = "SettingsToolStripButton";
+            this.SettingsToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.SettingsToolStripButton.Text = "Settings";
             // 
             // ContactTracingAppForm
             // 
@@ -533,6 +554,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(918, 552);
+            this.Controls.Add(this.MenuToolStrip);
             this.Controls.Add(this.PicBoxPalmTree);
             this.Controls.Add(this.LblMallName);
             this.Controls.Add(this.BtnTimeDepartedAMPM);
@@ -576,6 +598,8 @@
             this.PnlQ2YesNo.ResumeLayout(false);
             this.PnlQ2YesNo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxPalmTree)).EndInit();
+            this.MenuToolStrip.ResumeLayout(false);
+            this.MenuToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -624,5 +648,7 @@
         private Label LblMallName;
         private PictureBox PicBoxPalmTree;
         private RadioButton RdioBtnDidntDisclose;
+        private ToolStrip MenuToolStrip;
+        private ToolStripButton SettingsToolStripButton;
     }
 }
