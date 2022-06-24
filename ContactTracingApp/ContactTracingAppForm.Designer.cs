@@ -597,6 +597,7 @@
             this.Controls.Add(this.LblHomeAddress);
             this.Controls.Add(this.TxtBoxName);
             this.Controls.Add(this.LblName);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ContactTracingAppForm";

@@ -1,9 +1,90 @@
 Name: Lawrence Olivier
-Address: #3 Marqueses St. Golden Apple Subdivision, Brgy. Pio Del Pilar, Makati City
+Address: #3 Marqueses St., Golden Apple Subdivision, Brgy. Pio Del Pilar, Makati City
 Contact Number: 09775496982
 Date Visited: June 5,2022
 Time Entered: 03:08
 Time Departed: 06:24
 Gender: Male
+Has COVID symptoms: Yes
+Had contact with a COVID positive person: Yes
+Name: Yuan Gabriel S. Lacambra
+Address: #9 Capricorn St., Sierra Vista, Brgy.Cupang, Antipolo City, Rizal
+Contact Number: 09878856435
+Date Visited: April 13,2022
+Time Entered: 04:05
+Time Departed: 09:15
+Gender: Male
+Has COVID symptoms: Yes
+Had contact with a COVID positive person: No
+Name: Andres Delos Reyes
+Address: #3 Oriole St., Francisville Subd., Brgy. Mambugan, Antipolo City, Rizal 
+Contact Number: 09456732289
+Date Visited: February 11,2022
+Time Entered: 09:04
+Time Departed: 05:47
+Gender: Didn't Disclose
+Has COVID symptoms: No
+Had contact with a COVID positive person: No
+Name: Charito Lacambra
+Address: #9 Capricorn St., Sierra Vista Subd., Brgy.Cupang, Antipolo City, Rizal
+Contact Number: 09678854674
+Date Visited: March 21,2022
+Time Entered: 01:42
+Time Departed: 05:10
+Gender: Female
+Has COVID symptoms: Yes
+Had contact with a COVID positive person: No
+Name: Estrella Natividad
+Address: #13 Magnolia St., Kingsville Subd., Brgy.Mayamot, Antipolo City, Rizal
+Contact Number: 09954893243
+Date Visited: August 11,2021
+Time Entered: 05:05
+Time Departed: 09:14
+Gender: Female
+Has COVID symptoms: No
+Had contact with a COVID positive person: No
+Name: Vanya Dela Cruz
+Address: #23 Brioche St., Filinvest Subd., Brgy. Cainta, Antipolo City, Rizal
+Contact Number: 09877634485
+Date Visited: January 12,2021
+Time Entered: 02:14
+Time Departed: 03:26
+Gender: Transgender Woman
+Has COVID symptoms: Yes
+Had contact with a COVID positive person: Yes
+Name: Oliver Dela Peña
+Address: #45 Cabolog St., Greenheights Newtown One, Brgy. Katipunan, Quezon City, Metro Manila
+Contact Number: 09955468879
+Date Visited: May 8,2020
+Time Entered: 09:11
+Time Departed: 01:43
+Gender: Male
+Has COVID symptoms: No
+Had contact with a COVID positive person: Yes
+Name: Artuto Barreto
+Address: #7 Adjucation St., Breezy Hills Subd., Brgy. Del Monte, Quezon City, Metro Manila
+Contact Number: 09345890134
+Date Visited: June 30,2020
+Time Entered: 08:02
+Time Departed: 10:26
+Gender: Transgender Man
+Has COVID symptoms: No
+Had contact with a COVID positive person: Yes
+Name: Tricia Madrigal
+Address: #23 Exeter St., Rancho Estate Subd., Brgy. Concepcion Dos, Marikina City, Metro Manila
+Contact Number: 09543467884
+Date Visited: November 16,2022
+Time Entered: 12:06
+Time Departed: 05:35
+Gender: Female
+Has COVID symptoms: No
+Had contact with a COVID positive person: No
+Name: Bea Ortiz
+Address: #15 Ascencion St., Brgy. Tumana, Marikina City, Metro Manila
+Contact Number: 09945672167
+Date Visited: December 12,2021
+Time Entered: 06:10
+Time Departed: 09:15
+Gender: Non-Binary
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes

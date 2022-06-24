@@ -403,50 +403,50 @@ namespace ContactTracingApp
         }
         private void WriteTheInfoCollectedOnTheTextFile()
         {
-            StreamWriter ContactTracingFormInfoFile;
-            ContactTracingFormInfoFile = File.AppendText("Contact Tracing Information from Customers.txt");
-            ContactTracingFormInfoFile.WriteLine("Name: " + TxtBoxName.Text);
-            ContactTracingFormInfoFile.WriteLine("Address: " + TxtBoxHomeAddress.Text);
-            ContactTracingFormInfoFile.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
-            ContactTracingFormInfoFile.WriteLine("Date Visited: " + BtnMonthVisited.Text + " " + BtnDayVisited.Text + "," + TxtBoxYearVisited.Text);
-            ContactTracingFormInfoFile.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text);
-            ContactTracingFormInfoFile.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text);
+            StreamWriter ContactTracingFormInfoFileWriter;
+            ContactTracingFormInfoFileWriter = File.AppendText("Contact Tracing Information from Customers.txt");
+            ContactTracingFormInfoFileWriter.WriteLine("Name: " + TxtBoxName.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Address: " + TxtBoxHomeAddress.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Date Visited: " + BtnMonthVisited.Text + " " + BtnDayVisited.Text + "," + TxtBoxYearVisited.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text);
             // to determine what gender is to be inputted on the text file
             if (RdioBtnMale.Checked == true)
             {
-                ContactTracingFormInfoFile.WriteLine("Gender: " + RdioBtnMale.Text);
+                ContactTracingFormInfoFileWriter.WriteLine("Gender: " + RdioBtnMale.Text);
             }
             else if (RdioBtnFemale.Checked == true)
             {
-                ContactTracingFormInfoFile.WriteLine("Gender: " + RdioBtnFemale.Text);
+                ContactTracingFormInfoFileWriter.WriteLine("Gender: " + RdioBtnFemale.Text);
             }
             else if (RdioBtnOtherGenders.Checked == true)
             {
-                ContactTracingFormInfoFile.WriteLine("Gender: " + TxtBoxOtherGenders.Text);
+                ContactTracingFormInfoFileWriter.WriteLine("Gender: " + TxtBoxOtherGenders.Text);
             }
             else if (RdioBtnDidntDisclose.Checked == true)
             {
-                ContactTracingFormInfoFile.WriteLine("Gender: Didn't Disclose");
+                ContactTracingFormInfoFileWriter.WriteLine("Gender: Didn't Disclose");
             }
             // to determine what the user answered in question 1
             if (RdioBtnQ1Yes.Checked == true)
             {
-                ContactTracingFormInfoFile.WriteLine("Has COVID symptoms: Yes");
+                ContactTracingFormInfoFileWriter.WriteLine("Has COVID symptoms: Yes");
             }
             else if (RdioBtnQ1No.Checked == true)
             {
-                ContactTracingFormInfoFile.WriteLine("Has COVID symptoms: No");
+                ContactTracingFormInfoFileWriter.WriteLine("Has COVID symptoms: No");
             }
             // to determine what the user answered in question 2
             if (RdioBtnQ2Yes.Checked == true)
             {
-                ContactTracingFormInfoFile.WriteLine("Had contact with a COVID positive person: Yes");
+                ContactTracingFormInfoFileWriter.WriteLine("Had contact with a COVID positive person: Yes");
             }
             else if (RdioBtnQ2No.Checked == true)
             {
-                ContactTracingFormInfoFile.WriteLine("Had contact with a COVID positive person: No");
+                ContactTracingFormInfoFileWriter.WriteLine("Had contact with a COVID positive person: No");
             }
-            ContactTracingFormInfoFile.Close();
+            ContactTracingFormInfoFileWriter.Close();
         }
 
         private void BtnAccessTheDatabase_Click(object sender, EventArgs e)
