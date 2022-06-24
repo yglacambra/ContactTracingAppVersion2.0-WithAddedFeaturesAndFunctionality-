@@ -405,7 +405,7 @@ namespace ContactTracingApp
         {
             StreamWriter ContactTracingFormInfoFileWriter;
             ContactTracingFormInfoFileWriter = File.AppendText("Contact Tracing Information from Customers.txt");
-            ContactTracingFormInfoFileWriter.WriteLine("Name: " + TxtBoxName.Text);
+            ContactTracingFormInfoFileWriter.WriteLine(TxtBoxName.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Address: " + TxtBoxHomeAddress.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Date Visited: " + BtnMonthVisited.Text + " " + BtnDayVisited.Text + "," + TxtBoxYearVisited.Text);

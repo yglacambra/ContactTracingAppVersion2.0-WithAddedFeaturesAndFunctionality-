@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 341);
+            this.ClientSize = new System.Drawing.Size(372, 357);
             this.Controls.Add(this.ListBoxCustomerNames);
             this.Controls.Add(this.LblCustomerNames);
             this.Name = "ContactTracingInfoDatabaseForm";

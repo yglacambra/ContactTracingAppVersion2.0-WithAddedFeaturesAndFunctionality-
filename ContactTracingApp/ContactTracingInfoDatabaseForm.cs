@@ -23,19 +23,18 @@ namespace ContactTracingApp
         private void ContactTracingInfoDatabaseForm_Load(object sender, EventArgs e)
         {
             int LineCount = 0;
-            string LineOnTheTextFile;
             StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
-                while (!ContactTracingInfoFileReader.EndOfStream)
+            List<string> NameList = new List<string>();
+            while (!ContactTracingInfoFileReader.EndOfStream)
+            {
+                string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
+                LineCount++;
+                if (LineCount == 1 || ((LineCount - 1) % 9 == 0))
                 {
-                    LineCount++;
-                    LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
-                List<string> NameList = new List<string>();
-                if (LineCount == 1 && LineCount % 10 == 1)
-                {
-                    NameList.Add(LineOnTheTextFile);
-                    ListBoxCustomerNames.DataSource = NameList;
+                    ListBoxCustomerNames.Items.Add(LineOnTheTextFile);
                 }
-                }
+            }
         }
-    }
+    }         
 }
+
