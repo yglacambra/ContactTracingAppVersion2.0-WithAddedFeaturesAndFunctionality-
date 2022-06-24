@@ -63,6 +63,36 @@ namespace ContactTracingApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _285_2859045_filter_filters_filters_icon_png_transparent_png {
+            get {
+                object obj = ResourceManager.GetObject("285-2859045_filter-filters-filters-icon-png-transparent-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _790818ba992ec7bba4ef7dc317245cc4 {
+            get {
+                object obj = ResourceManager.GetObject("790818ba992ec7bba4ef7dc317245cc4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _790818ba992ec7bba4ef7dc317245cc41 {
+            get {
+                object obj = ResourceManager.GetObject("790818ba992ec7bba4ef7dc317245cc41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _81_816989_cartoon_coconut_tree_png_sun_and_palm_tree_png {
             get {
                 object obj = ResourceManager.GetObject("81-816989_cartoon-coconut-tree-png-sun-and-palm-tree-png", resourceCulture);
