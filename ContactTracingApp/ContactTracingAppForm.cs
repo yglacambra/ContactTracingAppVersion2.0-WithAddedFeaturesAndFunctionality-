@@ -414,7 +414,7 @@ namespace ContactTracingApp
             ContactTracingFormInfoFileWriter.WriteLine(TxtBoxName.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Address: " + TxtBoxHomeAddress.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
-            ContactTracingFormInfoFileWriter.WriteLine("Date Visited: " + BtnMonthVisited.Text + " " + BtnDayVisited.Text + "," + TxtBoxYearVisited.Text);
+            ContactTracingFormInfoFileWriter.WriteLine(BtnMonthVisited.Text + " " + BtnDayVisited.Text + "," + TxtBoxYearVisited.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text);
             // to determine what gender is to be inputted on the text file

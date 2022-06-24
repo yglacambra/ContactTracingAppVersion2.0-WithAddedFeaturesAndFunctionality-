@@ -15,17 +15,15 @@ namespace ContactTracingApp
 {
     public partial class ContactTracingInfoDatabaseForm : Form
     {
+        string ListBoxColumnDetails = "{0, -50}{1, -30}";
         public ContactTracingInfoDatabaseForm()
         {
             InitializeComponent();
         }
         private void ContactTracingInfoDatabaseForm_Load(object sender, EventArgs e)
         {
-            DTPFromDate.CustomFormat = "MMMM-dd-yyyy";
-            DTPFromDate.Format = DateTimePickerFormat.Custom;
-            DTPToDate.CustomFormat = "MMMM-dd-yyyy";
-            DTPToDate.Format = DateTimePickerFormat.Custom;
             int LineCount = 0;
+            ListBoxCustomerInfo.Items.Add(string.Format(ListBoxColumnDetails, "Name", "Date"));
             StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
             while (!ContactTracingInfoFileReader.EndOfStream)
             {
@@ -33,16 +31,21 @@ namespace ContactTracingApp
                 LineCount++;
                 if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
                 {
-                    ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
+                    ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
+                }
+                if (LineCount == 4 || ((LineCount - 4) % 10 == 0))
+                {
+                    List<string> DateList = new List<string>();
+                    DateList.Add (LineOnTheTextFile);
                 }
             }
             ContactTracingInfoFileReader.Close();
         }
-
-        private void BtnCheckRecord_Click(object sender, EventArgs e)
+        private void BtnCheckRecordOrBack_Click(object sender, EventArgs e)
         {
-            int ListBoxItemIndexNumber = ListBoxCustomerInformation.SelectedIndex;
-            if (ListBoxCustomerInformation.SelectedIndex == -1 && BtnCheckRecordOrBack.Text == "Check Record")
+            ListBoxCustomerInfo.Items.Add(string.Format(ListBoxColumnDetails, "Name", "Date"));
+            int ListBoxItemIndexNumber = ListBoxCustomerInfo.SelectedIndex;
+            if (ListBoxCustomerInfo.SelectedIndex == -1 && BtnCheckRecordOrBack.Text == "Check Record")
             {
                 string NoneSelectedMsg = "You have not selected anything from the textbox. Please select an item.";
                 MessageBox.Show(NoneSelectedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -58,7 +61,11 @@ namespace ContactTracingApp
                     LineCount++;
                     if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount < 11)
                     {
-                        ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
+                        ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
+                        if (LineCount == 4)
+                        {
+                            ListBoxCustomerInfo.Items.Add("Date Visited: " + LineOnTheTextFile);
+                        }
                     }
                 }
                 ContactTracingInfoFileReader.Close();
@@ -72,9 +79,13 @@ namespace ContactTracingApp
                 {
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount > 11 && LineCount < 21 )
+                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount > 11 && LineCount < 21)
                     {
-                        ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
+                        ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
+                        if (((LineCount - 4) % 10 == 0))
+                        {
+                            ListBoxCustomerInfo.Items.Add("Date Visited: " + LineOnTheTextFile);
+                        }
                     }
                 }
                 ContactTracingInfoFileReader.Close();
@@ -82,11 +93,11 @@ namespace ContactTracingApp
 
             else if (BtnCheckRecordOrBack.Text == "Back")
             {
-                if (ListBoxCustomerInformation.Items.Count > 0)
+                if (ListBoxCustomerInfo.Items.Count > 0)
                 {
-                    ListBoxCustomerInformation.Items.Clear();
+                    ListBoxCustomerInfo.Items.Clear();
                     BtnCheckRecordOrBack.Text = "Check Record";
-                    if (ListBoxCustomerInformation.Items.Count == 0 )
+                    if (ListBoxCustomerInfo.Items.Count == 0)
                     {
                         int LineCount = 0;
                         StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
@@ -96,7 +107,7 @@ namespace ContactTracingApp
                             LineCount++;
                             if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
                             {
-                                ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
+                                ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
                             }
                         }
                         ContactTracingInfoFileReader.Close();
@@ -114,7 +125,11 @@ namespace ContactTracingApp
                     LineCount++;
                     if ((!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((ListBoxItemIndexNumber + 1) * 10)) && (LineCount > ((ListBoxItemIndexNumber * 11) - (ListBoxItemIndexNumber - 1))) && !(ListBoxItemIndexNumber == 1))
                     {
-                        ListBoxCustomerInformation.Items.Add(LineOnTheTextFile);
+                        ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
+                        if (((LineCount - 4) % 10 == 0))
+                        {
+                            ListBoxCustomerInfo.Items.Add("Date Visited: " + LineOnTheTextFile);
+                        }
                     }
                 }
                 ContactTracingInfoFileReader.Close();
@@ -122,16 +137,18 @@ namespace ContactTracingApp
         }
         private void ChangeBtnTextToBack()
         {
+            ListBoxCustomerInfo.Items.Add(string.Format(ListBoxColumnDetails, "Name", "Date"));
             if (BtnCheckRecordOrBack.Text == "Check Record")
             {
                 BtnCheckRecordOrBack.Text = "Back";
-                if (ListBoxCustomerInformation.Items.Count > 0)
+                if (ListBoxCustomerInfo.Items.Count > 0)
                 {
-                    ListBoxCustomerInformation.Items.Clear();
+                    ListBoxCustomerInfo.Items.Clear();
                 }
             }
         }
-    }
+    }        
 }
+
 
 
