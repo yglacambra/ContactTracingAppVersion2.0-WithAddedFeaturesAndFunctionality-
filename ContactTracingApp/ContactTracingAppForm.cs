@@ -74,11 +74,11 @@ namespace ContactTracingApp
 
         private void CheckIfMonthOnlyHas30Days()
         {
-            if (BtnDayVisited.Text == "31" && (BtnMonthVisited.Text == "April" || BtnMonthVisited.Text == "June" 
+            if (BtnDayVisited.Text == "31" && (BtnMonthVisited.Text == "April" || BtnMonthVisited.Text == "June"
                 || BtnMonthVisited.Text == "September" || BtnMonthVisited.Text == "November"))
             {
                 string DateWrongMsg = "The date you inputted is invalid. Please change it.";
-                MessageBox.Show (DateWrongMsg,"Check the Form",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(DateWrongMsg, "Check the Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 BtnDayVisited.Text = "30";
                 Day = 30;
             }
@@ -105,7 +105,7 @@ namespace ContactTracingApp
                 BtnDayVisited.Text = "29";
                 Day = 29;
             }
-           
+
         }
 
         private void CheckIfTheYearIsInThe21stCentury()
@@ -284,7 +284,7 @@ namespace ContactTracingApp
         //restricts input on the name textbox
         private void TxtBoxName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) 
+            if (e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                 && e.KeyChar != '.' && e.KeyChar != ' ')
             {
                 string InvalidCharactersInputtedMsg = "You inputted characters that are not letters or dots.";
@@ -294,7 +294,7 @@ namespace ContactTracingApp
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
             // message box that will appear when press is submitted and everything has been filled up
-           
+
             //to ensure that no date gets submitted that has a day that is 0
             if (BtnDayVisited.Text == "0")
             {
@@ -331,12 +331,12 @@ namespace ContactTracingApp
         }
         private void CheckIfEverythingHasBeenFilledUp()
         {
-            bool EverythingHasBeenFilledUp = false;
+            bool EverythingHasBeenFilledUp;
             bool GenderRadioButtonsChecked = false;
             bool Q1RadioButtonsChecked = false;
             bool Q2RadioButtonsChecked = false;
             if (RdioBtnMale.Checked == true || RdioBtnFemale.Checked == true || (RdioBtnOtherGenders.Checked == true &&
-                TxtBoxOtherGenders.Text != "")|| RdioBtnDidntDisclose.Checked == true)
+                TxtBoxOtherGenders.Text != "") || RdioBtnDidntDisclose.Checked == true)
             {
                 GenderRadioButtonsChecked = true;
             }
@@ -354,28 +354,28 @@ namespace ContactTracingApp
             {
                 EverythingHasBeenFilledUp = false;
                 string NotEverythingIsFilledUpMsg = "You haven't answered everything on the form. Please kindly answer them.";
-                MessageBox.Show (NotEverythingIsFilledUpMsg, "Check the Form",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(NotEverythingIsFilledUpMsg, "Check the Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 EverythingHasBeenFilledUp = true;
             }
             // to reset the form after a submission has been done
-            if(EverythingHasBeenFilledUp == true)
-            { 
+            if (EverythingHasBeenFilledUp == true)
+            {
                 string ConfirmationMsg = "Are you sure that everything you inputted in the form is correct?";
                 string ConfirmationMsgTitle = "Confirmation Message";
-                DialogResult ConfirmationMsgResult = MessageBox.Show (ConfirmationMsg,ConfirmationMsgTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult ConfirmationMsgResult = MessageBox.Show(ConfirmationMsg, ConfirmationMsgTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (ConfirmationMsgResult == DialogResult.Yes)
                 {
-                    ContactTracingAppForm ResettedForm = new ContactTracingAppForm();
+                    ContactTracingAppForm ResettedForm = new();
                     ResettedForm.Show();
                     this.Dispose(false);
                     WriteTheInfoCollectedOnTheTextFile();
                 }
             }
         }
-        
+
         //locks out the other gender buttons textbox if the other genders radio button is not checked
         private void ContactTracingAppForm_Load(object sender, EventArgs e)
         {
@@ -406,7 +406,7 @@ namespace ContactTracingApp
             StreamWriter ContactTracingFormInfoFile;
             ContactTracingFormInfoFile = File.AppendText("Contact Tracing Information from Customers.txt");
             ContactTracingFormInfoFile.WriteLine("Name: " + TxtBoxName.Text);
-            ContactTracingFormInfoFile.WriteLine("Address: " + TxtBoxHomeAddress.Text); 
+            ContactTracingFormInfoFile.WriteLine("Address: " + TxtBoxHomeAddress.Text);
             ContactTracingFormInfoFile.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
             ContactTracingFormInfoFile.WriteLine("Date Visited: " + BtnMonthVisited.Text + " " + BtnDayVisited.Text + "," + TxtBoxYearVisited.Text);
             ContactTracingFormInfoFile.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text);
@@ -448,7 +448,18 @@ namespace ContactTracingApp
             }
             ContactTracingFormInfoFile.Close();
         }
-      
+
+        private void BtnAccessTheDatabase_Click(object sender, EventArgs e)
+        {
+            string AuthorizationQuestionMsg = "Do you have the appropriate authorization to access this?";
+            DialogResult AuthroizationQuestionMsgResult = MessageBox.Show(AuthorizationQuestionMsg, "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (AuthroizationQuestionMsgResult == DialogResult.Yes)
+            {
+                PasswordForm Form2 = new();
+                Form2.Show();
+                this.Close();
+            }
+        }
     }
 }
 

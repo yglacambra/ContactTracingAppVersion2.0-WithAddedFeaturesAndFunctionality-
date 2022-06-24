@@ -71,7 +71,8 @@
             this.LblMallName = new System.Windows.Forms.Label();
             this.PicBoxPalmTree = new System.Windows.Forms.PictureBox();
             this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
-            this.SettingsToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ComboBtnSettings = new System.Windows.Forms.ToolStripSplitButton();
+            this.BtnAccessTheDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.PnlGender.SuspendLayout();
             this.PnlQ1YesNo.SuspendLayout();
             this.PnlQ2YesNo.SuspendLayout();
@@ -533,20 +534,30 @@
             // MenuToolStrip
             // 
             this.MenuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SettingsToolStripButton});
+            this.ComboBtnSettings});
             this.MenuToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuToolStrip.Name = "MenuToolStrip";
             this.MenuToolStrip.Size = new System.Drawing.Size(918, 25);
             this.MenuToolStrip.TabIndex = 57;
             // 
-            // SettingsToolStripButton
+            // ComboBtnSettings
             // 
-            this.SettingsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SettingsToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("SettingsToolStripButton.Image")));
-            this.SettingsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SettingsToolStripButton.Name = "SettingsToolStripButton";
-            this.SettingsToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.SettingsToolStripButton.Text = "Settings";
+            this.ComboBtnSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ComboBtnSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnAccessTheDatabase});
+            this.ComboBtnSettings.Image = ((System.Drawing.Image)(resources.GetObject("ComboBtnSettings.Image")));
+            this.ComboBtnSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ComboBtnSettings.Name = "ComboBtnSettings";
+            this.ComboBtnSettings.Size = new System.Drawing.Size(32, 22);
+            this.ComboBtnSettings.Text = "toolStripSplitButton1";
+            this.ComboBtnSettings.ToolTipText = "Settings";
+            // 
+            // BtnAccessTheDatabase
+            // 
+            this.BtnAccessTheDatabase.Name = "BtnAccessTheDatabase";
+            this.BtnAccessTheDatabase.Size = new System.Drawing.Size(391, 22);
+            this.BtnAccessTheDatabase.Text = "Access the Database Containing the Informattion Submitted";
+            this.BtnAccessTheDatabase.Click += new System.EventHandler(this.BtnAccessTheDatabase_Click);
             // 
             // ContactTracingAppForm
             // 
@@ -649,6 +660,7 @@
         private PictureBox PicBoxPalmTree;
         private RadioButton RdioBtnDidntDisclose;
         private ToolStrip MenuToolStrip;
-        private ToolStripButton SettingsToolStripButton;
+        private ToolStripSplitButton ComboBtnSettings;
+        private ToolStripMenuItem BtnAccessTheDatabase;
     }
 }
