@@ -30,6 +30,7 @@
         {
             this.LblCustomerNames = new System.Windows.Forms.Label();
             this.ListBoxCustomerNames = new System.Windows.Forms.ListBox();
+            this.BtnCheckRecord = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblCustomerNames
@@ -51,11 +52,23 @@
             this.ListBoxCustomerNames.Size = new System.Drawing.Size(299, 214);
             this.ListBoxCustomerNames.TabIndex = 1;
             // 
+            // BtnCheckRecord
+            // 
+            this.BtnCheckRecord.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnCheckRecord.Location = new System.Drawing.Point(22, 331);
+            this.BtnCheckRecord.Name = "BtnCheckRecord";
+            this.BtnCheckRecord.Size = new System.Drawing.Size(109, 32);
+            this.BtnCheckRecord.TabIndex = 2;
+            this.BtnCheckRecord.Text = "Check Record";
+            this.BtnCheckRecord.UseVisualStyleBackColor = true;
+            this.BtnCheckRecord.Click += new System.EventHandler(this.BtnCheckRecord_Click);
+            // 
             // ContactTracingInfoDatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 357);
+            this.ClientSize = new System.Drawing.Size(372, 375);
+            this.Controls.Add(this.BtnCheckRecord);
             this.Controls.Add(this.ListBoxCustomerNames);
             this.Controls.Add(this.LblCustomerNames);
             this.Name = "ContactTracingInfoDatabaseForm";
@@ -72,5 +85,6 @@
         private Label LblCustomerNames;
         private ListBox ListBoxCustomerNames;
         private ComboBox comboBox1;
+        private Button BtnCheckRecord;
     }
 }
