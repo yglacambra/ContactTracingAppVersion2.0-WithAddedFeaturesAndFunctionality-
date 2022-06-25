@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactTracingInfoDatabaseForm));
             this.LblCustomerNames = new System.Windows.Forms.Label();
-            this.BtnFilterByDate = new System.Windows.Forms.Button();
             this.BtnCheckRecordOrBack = new System.Windows.Forms.Button();
             this.TxtBoxSearchOrFilterDate = new System.Windows.Forms.TextBox();
             this.ListBoxCustomerInfo = new System.Windows.Forms.ListBox();
+            this.BtnFilter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblCustomerNames
@@ -45,17 +45,6 @@
             this.LblCustomerNames.Size = new System.Drawing.Size(454, 25);
             this.LblCustomerNames.TabIndex = 0;
             this.LblCustomerNames.Text = "Customer Information for Contact Tracing";
-            // 
-            // BtnFilterByDate
-            // 
-            this.BtnFilterByDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnFilterByDate.Location = new System.Drawing.Point(42, 91);
-            this.BtnFilterByDate.Name = "BtnFilterByDate";
-            this.BtnFilterByDate.Size = new System.Drawing.Size(137, 34);
-            this.BtnFilterByDate.TabIndex = 4;
-            this.BtnFilterByDate.Text = "Filter By Date";
-            this.BtnFilterByDate.UseVisualStyleBackColor = true;
-            this.BtnFilterByDate.Click += new System.EventHandler(this.BtnFilterByDate_Click);
             // 
             // BtnCheckRecordOrBack
             // 
@@ -71,7 +60,7 @@
             // TxtBoxSearchOrFilterDate
             // 
             this.TxtBoxSearchOrFilterDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxSearchOrFilterDate.Location = new System.Drawing.Point(185, 94);
+            this.TxtBoxSearchOrFilterDate.Location = new System.Drawing.Point(123, 105);
             this.TxtBoxSearchOrFilterDate.Name = "TxtBoxSearchOrFilterDate";
             this.TxtBoxSearchOrFilterDate.Size = new System.Drawing.Size(179, 31);
             this.TxtBoxSearchOrFilterDate.TabIndex = 59;
@@ -86,16 +75,27 @@
             this.ListBoxCustomerInfo.Size = new System.Drawing.Size(390, 154);
             this.ListBoxCustomerInfo.TabIndex = 57;
             // 
+            // BtnFilter
+            // 
+            this.BtnFilter.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnFilter.Location = new System.Drawing.Point(42, 108);
+            this.BtnFilter.Name = "BtnFilter";
+            this.BtnFilter.Size = new System.Drawing.Size(75, 26);
+            this.BtnFilter.TabIndex = 60;
+            this.BtnFilter.Text = "Filter:";
+            this.BtnFilter.UseVisualStyleBackColor = true;
+            this.BtnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
+            // 
             // ContactTracingInfoDatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(496, 349);
+            this.Controls.Add(this.BtnFilter);
             this.Controls.Add(this.TxtBoxSearchOrFilterDate);
             this.Controls.Add(this.BtnCheckRecordOrBack);
             this.Controls.Add(this.ListBoxCustomerInfo);
-            this.Controls.Add(this.BtnFilterByDate);
             this.Controls.Add(this.LblCustomerNames);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ContactTracingInfoDatabaseForm";
@@ -109,7 +109,6 @@
         #endregion
 
         private Label LblCustomerNames;
-        private Button BtnFilterByDate;
         private PictureBox PicBoxFilterIcon;
         private Button BtnDayVisited;
         private Label LblForwardSlash1;
@@ -119,5 +118,6 @@
         private Button BtnCheckRecordOrBack;
         private TextBox TxtBoxSearchOrFilterDate;
         private ListBox ListBoxCustomerInfo;
+        private Button BtnFilter;
     }
 }

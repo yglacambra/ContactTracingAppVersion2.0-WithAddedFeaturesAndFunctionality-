@@ -371,10 +371,10 @@ namespace ContactTracingApp
         {
             StreamWriter ContactTracingFormInfoFileWriter;
             ContactTracingFormInfoFileWriter = File.AppendText("Contact Tracing Information from Customers.txt");
-            ContactTracingFormInfoFileWriter.WriteLine(TxtBoxName.Text);
+            ContactTracingFormInfoFileWriter.WriteLine(TxtBoxName.Text +" - " + BtnDayVisited.Text + "/" + BtnMonthVisited.Text + "/" + TxtBoxYearVisited.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Address: " + TxtBoxHomeAddress.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
-            ContactTracingFormInfoFileWriter.WriteLine(BtnMonthVisited.Text + " " + BtnDayVisited.Text + "," + TxtBoxYearVisited.Text);
+            ContactTracingFormInfoFileWriter.WriteLine(BtnDayVisited.Text + "/" + BtnMonthVisited.Text +"/" + TxtBoxYearVisited.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text);
             // to determine what gender is to be inputted on the text file
@@ -412,7 +412,6 @@ namespace ContactTracingApp
             {
                 ContactTracingFormInfoFileWriter.WriteLine("Had contact with a COVID positive person: No");
             }
-            ContactTracingFormInfoFileWriter.Close();
             // to determine what the user answered in question 3
             if (RdioBtnQ3YesFirstDose.Checked == true)
             {
@@ -430,6 +429,7 @@ namespace ContactTracingApp
             {
                 ContactTracingFormInfoFileWriter.WriteLine("Is Vaccinated: No");
             }
+            ContactTracingFormInfoFileWriter.Close();
         }
 
         private void BtnAccessTheDatabase_Click(object sender, EventArgs e)

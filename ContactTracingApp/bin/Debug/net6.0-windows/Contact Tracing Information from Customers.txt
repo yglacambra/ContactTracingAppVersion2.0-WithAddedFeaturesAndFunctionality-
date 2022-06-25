@@ -1,4 +1,4 @@
-Lawrence Olivier
+Lawrence Olivier - 05/06/2022
 Address: #3 Marqueses St., Golden Apple Subdivision, Brgy. Pio Del Pilar, Makati City
 Contact Number: 09775496982
 05/06/2022
@@ -8,7 +8,7 @@ Gender: Male
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
 Is Vaccinated: Yes, Second Dose
-Yuan Gabriel S. Lacambra
+Yuan Gabriel S. Lacambra - 13/04/2022
 Address: #9 Capricorn St., Sierra Vista, Brgy.Cupang, Antipolo City, Rizal
 Contact Number: 09878856435
 13/04/2022
@@ -18,7 +18,7 @@ Gender: Male
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: No
 Is Vaccinated: Yes, Booster
-Andres Delos Reyes
+Andres Delos Reyes - 11/02/2022
 Address: #3 Oriole St., Francisville Subd., Brgy. Mambugan, Antipolo City, Rizal 
 Contact Number: 09456732289
 11/02/2022
@@ -28,7 +28,7 @@ Gender: Didn't Disclose
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
 Is Vaccinated: No
-Charito Lacambra
+Charito Lacambra - 21/03/2022
 Address: #9 Capricorn St., Sierra Vista Subd., Brgy.Cupang, Antipolo City, Rizal
 Contact Number: 09678854674
 21/03/2022
@@ -38,7 +38,7 @@ Gender: Female
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: No
 Is Vaccinated: Yes, Booster
-Estrella Natividad
+Estrella Natividad - 11/08/2021
 Address: #13 Magnolia St., Kingsville Subd., Brgy.Mayamot, Antipolo City, Rizal
 Contact Number: 09954893243
 11/08/2021
@@ -48,7 +48,7 @@ Gender: Female
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
 Is Vaccinated: Yes, Second Dose
-Vanya Dela Cruz
+Vanya Dela Cruz - 12/01/2021
 Address: #23 Brioche St., Filinvest Subd., Brgy. Cainta, Antipolo City, Rizal
 Contact Number: 09877634485
 12/01/2021
@@ -58,7 +58,7 @@ Gender: Transgender Woman
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
 Is Vaccinated: Yes, Second Dose
-Oliver Dela Peña
+Oliver Dela Peña - 08/05/2020
 Address: #45 Cabolog St., Greenheights Newtown One, Brgy. Katipunan, Quezon City, Metro Manila
 Contact Number: 09955468879
 08/05/2020
@@ -68,7 +68,7 @@ Gender: Male
 Has COVID symptoms: No
 Had contact with a COVID positive person: Yes
 Is Vaccinated: No
-Artuto Barreto
+Artuto Barreto - 30/06/2020
 Address: #7 Adjucation St., Breezy Hills Subd., Brgy. Del Monte, Quezon City, Metro Manila
 Contact Number: 09345890134
 30/06/2020
@@ -78,7 +78,7 @@ Gender: Transgender Man
 Has COVID symptoms: No
 Had contact with a COVID positive person: Yes
 Is Vaccinated: Yes, First Dose
-Tricia Madrigal
+Tricia Madrigal - 16/11/2022
 Address: #23 Exeter St., Rancho Estate Subd., Brgy. Concepcion Dos, Marikina City, Metro Manila
 Contact Number: 09543467884
 16/11/2022
@@ -88,7 +88,7 @@ Gender: Female
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
 Is Vaccinated: Yes, Second Dose
-Bea Ortiz
+Bea Ortiz - 12/12/2021
 Address: #15 Ascencion St., Brgy. Tumana, Marikina City, Metro Manila
 Contact Number: 09945672167
 12/12/2021
@@ -98,3 +98,13 @@ Gender: Non-Binary
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
 Is Vaccinated: Yes, Booster
+Alphonse Dimaano - 05/09/2020
+Address: #34 Oxford St., Brgy. Mambugan, Antipolo City, Rizal
+Contact Number: 09874577732
+05/09/2020
+Time Entered: 05:19
+Time Departed: 08:08
+Gender: Didn't Disclose
+Has COVID symptoms: Yes
+Had contact with a COVID positive person: Yes
+Is Vaccinated: No

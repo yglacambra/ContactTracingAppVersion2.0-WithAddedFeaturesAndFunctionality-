@@ -19,6 +19,7 @@ namespace ContactTracingApp
         {
             InitializeComponent();
         }
+        List<string> CustomerInfoList = new List<string>();
         private void ContactTracingInfoDatabaseForm_Load(object sender, EventArgs e)
         {
             int LineCount = 0;
@@ -29,7 +30,12 @@ namespace ContactTracingApp
                 LineCount++;
                 if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
                 {
-                    ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
+                   CustomerInfoList.AddRange(new string[]{LineOnTheTextFile});
+                    foreach (string CustomerInfo in CustomerInfoList)
+                    {
+                        if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
+                        ListBoxCustomerInfo.Items.Add(CustomerInfo);
+                    }
                 }
 
             }
@@ -164,6 +170,18 @@ namespace ContactTracingApp
                             ListBoxCustomerInfo.Items.Clear();
                         }
                     }
+                }
+            }
+        }
+
+        private void BtnFilter_Click(object sender, EventArgs e)
+        {
+            ListBoxCustomerInfo.Items.Clear();
+            foreach (string CustomerInfo in CustomerInfoList)
+            {
+                if (CustomerInfo.Contains(TxtBoxSearchOrFilterDate.Text))
+                {
+                   ListBoxCustomerInfo.Items.Add(CustomerInfo);
                 }
             }
         }
