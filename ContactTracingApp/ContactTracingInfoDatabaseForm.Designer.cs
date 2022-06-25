@@ -35,6 +35,7 @@
             this.LblTo = new System.Windows.Forms.Label();
             this.ListBoxCustomerInfo = new System.Windows.Forms.ListBox();
             this.BtnCheckRecordOrBack = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // LblCustomerNames
@@ -56,12 +57,13 @@
             this.BtnFilterByDate.TabIndex = 4;
             this.BtnFilterByDate.Text = "Filter By Date";
             this.BtnFilterByDate.UseVisualStyleBackColor = true;
+            this.BtnFilterByDate.Click += new System.EventHandler(this.BtnFilterByDate_Click);
             // 
             // LblFrom
             // 
             this.LblFrom.AutoSize = true;
             this.LblFrom.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblFrom.Location = new System.Drawing.Point(211, 73);
+            this.LblFrom.Location = new System.Drawing.Point(210, 73);
             this.LblFrom.Name = "LblFrom";
             this.LblFrom.Size = new System.Drawing.Size(74, 25);
             this.LblFrom.TabIndex = 53;
@@ -98,12 +100,22 @@
             this.BtnCheckRecordOrBack.UseVisualStyleBackColor = true;
             this.BtnCheckRecordOrBack.Click += new System.EventHandler(this.BtnCheckRecordOrBack_Click);
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(210, 107);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(95, 27);
+            this.dateTimePicker2.TabIndex = 60;
+            // 
             // ContactTracingInfoDatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(644, 349);
+            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.BtnCheckRecordOrBack);
             this.Controls.Add(this.ListBoxCustomerInfo);
             this.Controls.Add(this.LblTo);
@@ -133,5 +145,6 @@
         private Label LblTo;
         private ListBox ListBoxCustomerInfo;
         private Button BtnCheckRecordOrBack;
+        private DateTimePicker dateTimePicker2;
     }
 }

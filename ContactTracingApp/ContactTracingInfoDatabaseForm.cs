@@ -15,7 +15,6 @@ namespace ContactTracingApp
 {
     public partial class ContactTracingInfoDatabaseForm : Form
     {
-        string ListBoxColumnDetails = "{0, -50}{1, -30}";
         public ContactTracingInfoDatabaseForm()
         {
             InitializeComponent();
@@ -23,27 +22,21 @@ namespace ContactTracingApp
         private void ContactTracingInfoDatabaseForm_Load(object sender, EventArgs e)
         {
             int LineCount = 0;
-            ListBoxCustomerInfo.Items.Add(string.Format(ListBoxColumnDetails, "Name", "Date"));
             StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
             while (!ContactTracingInfoFileReader.EndOfStream)
             {
                 string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                 LineCount++;
+                int ListBoxItemIndexNumber = ListBoxCustomerInfo.SelectedIndex;
                 if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
                 {
                     ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
-                }
-                if (LineCount == 4 || ((LineCount - 4) % 10 == 0))
-                {
-                    List<string> DateList = new List<string>();
-                    DateList.Add (LineOnTheTextFile);
                 }
             }
             ContactTracingInfoFileReader.Close();
         }
         private void BtnCheckRecordOrBack_Click(object sender, EventArgs e)
         {
-            ListBoxCustomerInfo.Items.Add(string.Format(ListBoxColumnDetails, "Name", "Date"));
             int ListBoxItemIndexNumber = ListBoxCustomerInfo.SelectedIndex;
             if (ListBoxCustomerInfo.SelectedIndex == -1 && BtnCheckRecordOrBack.Text == "Check Record")
             {
@@ -137,7 +130,6 @@ namespace ContactTracingApp
         }
         private void ChangeBtnTextToBack()
         {
-            ListBoxCustomerInfo.Items.Add(string.Format(ListBoxColumnDetails, "Name", "Date"));
             if (BtnCheckRecordOrBack.Text == "Check Record")
             {
                 BtnCheckRecordOrBack.Text = "Back";
@@ -146,6 +138,12 @@ namespace ContactTracingApp
                     ListBoxCustomerInfo.Items.Clear();
                 }
             }
+        }
+
+        private void BtnFilterByDate_Click(object sender, EventArgs e)
+        {
+        
+
         }
     }        
 }

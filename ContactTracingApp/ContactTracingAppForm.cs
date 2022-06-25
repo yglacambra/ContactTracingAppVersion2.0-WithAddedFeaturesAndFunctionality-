@@ -7,68 +7,23 @@ namespace ContactTracingApp
             InitializeComponent();
         }
         //changes the month (in ascending order) when the button is pressed
+        private byte MonthVisited = 1;
         private void BtnMonthVisited_Click(object sender, EventArgs e)
         {
-            byte MonthVisited = 1;
-            if (BtnMonthVisited.Text == "January")
+            if (MonthVisited < 9)
             {
-                BtnMonthVisited.Text = "February";
-                ++MonthVisited;
+                MonthVisited++;
+                BtnMonthVisited.Text = "0" + MonthVisited.ToString();
             }
-            else if (BtnMonthVisited.Text == "February")
+            else if (MonthVisited <= 11 && !(MonthVisited < 9))
             {
-                BtnMonthVisited.Text = "March";
-                ++MonthVisited;
+                MonthVisited++;
+                BtnMonthVisited.Text = MonthVisited.ToString();
             }
-            else if (BtnMonthVisited.Text == "March")
+            else if (MonthVisited == 12)
             {
-                BtnMonthVisited.Text = "April";
-                ++MonthVisited;
-            }
-            else if (BtnMonthVisited.Text == "April")
-            {
-                BtnMonthVisited.Text = "May";
-                ++MonthVisited;
-            }
-            else if (BtnMonthVisited.Text == "May")
-            {
-                BtnMonthVisited.Text = "June";
-                ++MonthVisited;
-            }
-            else if (BtnMonthVisited.Text == "June")
-            {
-                BtnMonthVisited.Text = "July";
-                ++MonthVisited;
-            }
-            else if (BtnMonthVisited.Text == "July")
-            {
-                BtnMonthVisited.Text = "August";
-                ++MonthVisited;
-            }
-            else if (BtnMonthVisited.Text == "August")
-            {
-                BtnMonthVisited.Text = "September";
-                ++MonthVisited;
-            }
-            else if (BtnMonthVisited.Text == "September")
-            {
-                BtnMonthVisited.Text = "October";
-                ++MonthVisited;
-            }
-            else if (BtnMonthVisited.Text == "October")
-            {
-                BtnMonthVisited.Text = "November";
-                ++MonthVisited;
-            }
-            else if (BtnMonthVisited.Text == "November")
-            {
-                BtnMonthVisited.Text = "December";
-                ++MonthVisited;
-            }
-            else
-            {
-                BtnMonthVisited.Text = "January";
-                ++MonthVisited;
+                BtnMonthVisited.Text = "01";
+                MonthVisited = 1;
             }
         }
 
@@ -126,7 +81,12 @@ namespace ContactTracingApp
         private byte Day = 0;
         private void BtnDayVisited_Click(object sender, EventArgs e)
         {
-            if (Day < 31)
+            if (Day < 9)
+            {
+                Day++;
+                BtnDayVisited.Text = "0" + Day.ToString();
+            }
+            else if (!(Day < 9) && Day <= 30)
             {
                 Day++;
                 BtnDayVisited.Text = Day.ToString();

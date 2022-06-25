@@ -576,7 +576,7 @@
             // 
             this.LblForwardSlash2.AutoSize = true;
             this.LblForwardSlash2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblForwardSlash2.Location = new System.Drawing.Point(574, 131);
+            this.LblForwardSlash2.Location = new System.Drawing.Point(523, 135);
             this.LblForwardSlash2.Name = "LblForwardSlash2";
             this.LblForwardSlash2.Size = new System.Drawing.Size(18, 23);
             this.LblForwardSlash2.TabIndex = 18;
@@ -585,7 +585,7 @@
             // TxtBoxYearVisited
             // 
             this.TxtBoxYearVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxYearVisited.Location = new System.Drawing.Point(590, 130);
+            this.TxtBoxYearVisited.Location = new System.Drawing.Point(539, 134);
             this.TxtBoxYearVisited.Name = "TxtBoxYearVisited";
             this.TxtBoxYearVisited.Size = new System.Drawing.Size(59, 27);
             this.TxtBoxYearVisited.TabIndex = 20;
@@ -596,7 +596,7 @@
             // 
             this.BtnDayVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnDayVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnDayVisited.Location = new System.Drawing.Point(542, 129);
+            this.BtnDayVisited.Location = new System.Drawing.Point(491, 133);
             this.BtnDayVisited.Name = "BtnDayVisited";
             this.BtnDayVisited.Size = new System.Drawing.Size(35, 29);
             this.BtnDayVisited.TabIndex = 47;
@@ -609,7 +609,7 @@
             this.LblForwardSlash1.AutoSize = true;
             this.LblForwardSlash1.BackColor = System.Drawing.Color.Transparent;
             this.LblForwardSlash1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblForwardSlash1.Location = new System.Drawing.Point(529, 131);
+            this.LblForwardSlash1.Location = new System.Drawing.Point(478, 135);
             this.LblForwardSlash1.Name = "LblForwardSlash1";
             this.LblForwardSlash1.Size = new System.Drawing.Size(18, 23);
             this.LblForwardSlash1.TabIndex = 41;
@@ -619,11 +619,11 @@
             // 
             this.BtnMonthVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMonthVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMonthVisited.Location = new System.Drawing.Point(429, 128);
+            this.BtnMonthVisited.Location = new System.Drawing.Point(443, 132);
             this.BtnMonthVisited.Name = "BtnMonthVisited";
-            this.BtnMonthVisited.Size = new System.Drawing.Size(101, 29);
+            this.BtnMonthVisited.Size = new System.Drawing.Size(38, 29);
             this.BtnMonthVisited.TabIndex = 17;
-            this.BtnMonthVisited.Text = "January";
+            this.BtnMonthVisited.Text = "01";
             this.BtnMonthVisited.UseVisualStyleBackColor = true;
             this.BtnMonthVisited.Click += new System.EventHandler(this.BtnMonthVisited_Click);
             // 
