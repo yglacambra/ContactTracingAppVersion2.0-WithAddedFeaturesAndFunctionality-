@@ -596,11 +596,11 @@
             // 
             this.BtnDayVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnDayVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnDayVisited.Location = new System.Drawing.Point(491, 133);
+            this.BtnDayVisited.Location = new System.Drawing.Point(432, 132);
             this.BtnDayVisited.Name = "BtnDayVisited";
             this.BtnDayVisited.Size = new System.Drawing.Size(35, 29);
             this.BtnDayVisited.TabIndex = 47;
-            this.BtnDayVisited.Text = "0";
+            this.BtnDayVisited.Text = "00";
             this.BtnDayVisited.UseVisualStyleBackColor = true;
             this.BtnDayVisited.Click += new System.EventHandler(this.BtnDayVisited_Click);
             // 
@@ -609,7 +609,7 @@
             this.LblForwardSlash1.AutoSize = true;
             this.LblForwardSlash1.BackColor = System.Drawing.Color.Transparent;
             this.LblForwardSlash1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblForwardSlash1.Location = new System.Drawing.Point(478, 135);
+            this.LblForwardSlash1.Location = new System.Drawing.Point(469, 135);
             this.LblForwardSlash1.Name = "LblForwardSlash1";
             this.LblForwardSlash1.Size = new System.Drawing.Size(18, 23);
             this.LblForwardSlash1.TabIndex = 41;
@@ -619,7 +619,7 @@
             // 
             this.BtnMonthVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMonthVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMonthVisited.Location = new System.Drawing.Point(443, 132);
+            this.BtnMonthVisited.Location = new System.Drawing.Point(486, 132);
             this.BtnMonthVisited.Name = "BtnMonthVisited";
             this.BtnMonthVisited.Size = new System.Drawing.Size(38, 29);
             this.BtnMonthVisited.TabIndex = 17;
