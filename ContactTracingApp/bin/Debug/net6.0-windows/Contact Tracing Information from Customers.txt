@@ -1,7 +1,7 @@
 Lawrence Olivier
 Address: #3 Marqueses St., Golden Apple Subdivision, Brgy. Pio Del Pilar, Makati City
 Contact Number: 09775496982
-June 5,2022
+05/06/2022
 Time Entered: 03:08
 Time Departed: 06:24
 Gender: Male
@@ -11,7 +11,7 @@ Is Vaccinated: Yes, Second Dose
 Yuan Gabriel S. Lacambra
 Address: #9 Capricorn St., Sierra Vista, Brgy.Cupang, Antipolo City, Rizal
 Contact Number: 09878856435
-April 13,2022
+13/04/2022
 Time Entered: 04:05
 Time Departed: 09:15
 Gender: Male
@@ -21,7 +21,7 @@ Is Vaccinated: Yes, Booster
 Andres Delos Reyes
 Address: #3 Oriole St., Francisville Subd., Brgy. Mambugan, Antipolo City, Rizal 
 Contact Number: 09456732289
-February 11,2022
+11/02/2022
 Time Entered: 09:04
 Time Departed: 05:47
 Gender: Didn't Disclose
@@ -31,7 +31,7 @@ Is Vaccinated: No
 Charito Lacambra
 Address: #9 Capricorn St., Sierra Vista Subd., Brgy.Cupang, Antipolo City, Rizal
 Contact Number: 09678854674
-March 21,2022
+21/03/2022
 Time Entered: 01:42
 Time Departed: 05:10
 Gender: Female
@@ -41,7 +41,7 @@ Is Vaccinated: Yes, Booster
 Estrella Natividad
 Address: #13 Magnolia St., Kingsville Subd., Brgy.Mayamot, Antipolo City, Rizal
 Contact Number: 09954893243
-August 11,2021
+11/08/2021
 Time Entered: 05:05
 Time Departed: 09:14
 Gender: Female
@@ -51,7 +51,7 @@ Is Vaccinated: Yes, Second Dose
 Vanya Dela Cruz
 Address: #23 Brioche St., Filinvest Subd., Brgy. Cainta, Antipolo City, Rizal
 Contact Number: 09877634485
-January 12,2021
+12/01/2021
 Time Entered: 02:14
 Time Departed: 03:26
 Gender: Transgender Woman
@@ -61,7 +61,7 @@ Is Vaccinated: Yes, Second Dose
 Oliver Dela Peña
 Address: #45 Cabolog St., Greenheights Newtown One, Brgy. Katipunan, Quezon City, Metro Manila
 Contact Number: 09955468879
-May 8,2020
+08/05/2020
 Time Entered: 09:11
 Time Departed: 01:43
 Gender: Male
@@ -71,7 +71,7 @@ Is Vaccinated: No
 Artuto Barreto
 Address: #7 Adjucation St., Breezy Hills Subd., Brgy. Del Monte, Quezon City, Metro Manila
 Contact Number: 09345890134
-June 30,2020
+30/06/2020
 Time Entered: 08:02
 Time Departed: 10:26
 Gender: Transgender Man
@@ -81,7 +81,7 @@ Is Vaccinated: Yes, First Dose
 Tricia Madrigal
 Address: #23 Exeter St., Rancho Estate Subd., Brgy. Concepcion Dos, Marikina City, Metro Manila
 Contact Number: 09543467884
-November 16,2022
+16/11/2022
 Time Entered: 12:06
 Time Departed: 05:35
 Gender: Female
@@ -91,7 +91,7 @@ Is Vaccinated: Yes, Second Dose
 Bea Ortiz
 Address: #15 Ascencion St., Brgy. Tumana, Marikina City, Metro Manila
 Contact Number: 09945672167
-December 12,2021
+12/12/2021
 Time Entered: 06:10
 Time Departed: 09:15
 Gender: Non-Binary
