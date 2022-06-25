@@ -39,6 +39,7 @@ namespace ContactTracingApp
         }
         private void BtnCheckRecordOrBack_Click(object sender, EventArgs e)
         {
+            List<string> FirstCustomerInfoList = new List<string>();
             int ListBoxItemIndexNumber = ListBoxCustomerInfo.SelectedIndex;
             if (ListBoxCustomerInfo.SelectedIndex == -1 && BtnCheckRecordOrBack.Text == "Check Record")
             {
@@ -56,11 +57,12 @@ namespace ContactTracingApp
                     LineCount++;
                     if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount < 11 && !(LineCount == 4))
                     {
+                        FirstCustomerInfoList.Add(LineOnTheTextFile);
                         ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
                     }
                     else if (LineCount == 4)
                     {
-                        ListBoxCustomerInfo.Items.Add("Date Visited: " + LineOnTheTextFile);
+                        FirstCustomerInfoList.Add("Date Visited: " + LineOnTheTextFile);
                     }
                 }
                 ContactTracingInfoFileReader.Close();
@@ -143,33 +145,6 @@ namespace ContactTracingApp
                 }
             }
         }
-
-        private void BtnFilterByDate_Click(object sender, EventArgs e)
-        {
-            ListBoxCustomerInfo.Items.Clear();
-            int LineCount = 0;
-            int TotalItems = ListBoxCustomerInfo.Items.Count;
-            StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
-            while (!ContactTracingInfoFileReader.EndOfStream)
-            {
-                string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
-                LineCount++;
-                if (LineCount == 4 || (((LineCount - 4) % 10 == 0)))
-                {
-                    ListBoxCustomerInfo.Items.Add((LineOnTheTextFile));
-                    for (int i = 0; i < TotalItems; ++i)
-                    {
-                        string ListBoxItemIndexString = ListBoxCustomerInfo.Items[i].ToString();
-                        if (ListBoxItemIndexString.Contains(TxtBoxSearchOrFilterDate.Text))
-                        {
-                            int Dateindex = i;
-                            ListBoxCustomerInfo.Items.Clear();
-                        }
-                    }
-                }
-            }
-        }
-
         private void BtnFilter_Click(object sender, EventArgs e)
         {
             ListBoxCustomerInfo.Items.Clear();

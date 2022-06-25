@@ -108,3 +108,23 @@ Gender: Didn't Disclose
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
 Is Vaccinated: No
+Adorno Bigarnia - 09/05/2022
+Address: #56 Alfonso St., Brgy. Parang, Marikina City
+Contact Number: 09398854456
+09/05/2022
+Time Entered: 02:07
+Time Departed: 04:16
+Gender: Male
+Has COVID symptoms: No
+Had contact with a COVID positive person: No
+Is Vaccinated: Yes, Second Dose
+Manny Velasco - 04/10/2023
+Address: #45 Ansueno St., Mayopa Subd., San Mateo, Antipolo City
+Contact Number: 09546789334
+04/10/2023
+Time Entered: 09:27
+Time Departed: 01:24
+Gender: Male
+Has COVID symptoms: Yes
+Had contact with a COVID positive person: Yes
+Is Vaccinated: No

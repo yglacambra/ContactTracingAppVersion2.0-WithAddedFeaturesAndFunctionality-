@@ -241,7 +241,7 @@
             // 
             this.LblQuestion1.AutoSize = true;
             this.LblQuestion1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblQuestion1.Location = new System.Drawing.Point(418, 346);
+            this.LblQuestion1.Location = new System.Drawing.Point(418, 366);
             this.LblQuestion1.Name = "LblQuestion1";
             this.LblQuestion1.Size = new System.Drawing.Size(449, 19);
             this.LblQuestion1.TabIndex = 33;
@@ -300,7 +300,7 @@
             // 
             this.PnlQ1YesNo.Controls.Add(this.RdioBtnQ1No);
             this.PnlQ1YesNo.Controls.Add(this.RdioBtnQ1Yes);
-            this.PnlQ1YesNo.Location = new System.Drawing.Point(418, 370);
+            this.PnlQ1YesNo.Location = new System.Drawing.Point(418, 390);
             this.PnlQ1YesNo.Name = "PnlQ1YesNo";
             this.PnlQ1YesNo.Size = new System.Drawing.Size(65, 63);
             this.PnlQ1YesNo.TabIndex = 39;
@@ -464,7 +464,7 @@
             // 
             this.BtnTimeDepartedAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnTimeDepartedAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(554, 292);
+            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(554, 319);
             this.BtnTimeDepartedAMPM.Name = "BtnTimeDepartedAMPM";
             this.BtnTimeDepartedAMPM.Size = new System.Drawing.Size(46, 29);
             this.BtnTimeDepartedAMPM.TabIndex = 54;
@@ -476,7 +476,7 @@
             // 
             this.BtnMinuteDeparted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMinuteDeparted.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMinuteDeparted.Location = new System.Drawing.Point(513, 292);
+            this.BtnMinuteDeparted.Location = new System.Drawing.Point(513, 319);
             this.BtnMinuteDeparted.Name = "BtnMinuteDeparted";
             this.BtnMinuteDeparted.Size = new System.Drawing.Size(35, 29);
             this.BtnMinuteDeparted.TabIndex = 50;
@@ -488,7 +488,7 @@
             // 
             this.LblTLColon.AutoSize = true;
             this.LblTLColon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTLColon.Location = new System.Drawing.Point(492, 292);
+            this.LblTLColon.Location = new System.Drawing.Point(492, 319);
             this.LblTLColon.Name = "LblTLColon";
             this.LblTLColon.Size = new System.Drawing.Size(15, 23);
             this.LblTLColon.TabIndex = 13;
@@ -498,7 +498,7 @@
             // 
             this.BtnHourDeparted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnHourDeparted.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnHourDeparted.Location = new System.Drawing.Point(451, 292);
+            this.BtnHourDeparted.Location = new System.Drawing.Point(451, 319);
             this.BtnHourDeparted.Name = "BtnHourDeparted";
             this.BtnHourDeparted.Size = new System.Drawing.Size(35, 29);
             this.BtnHourDeparted.TabIndex = 49;
@@ -510,7 +510,7 @@
             // 
             this.LblTimeDeparted.AutoSize = true;
             this.LblTimeDeparted.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTimeDeparted.Location = new System.Drawing.Point(418, 262);
+            this.LblTimeDeparted.Location = new System.Drawing.Point(418, 289);
             this.LblTimeDeparted.Name = "LblTimeDeparted";
             this.LblTimeDeparted.Size = new System.Drawing.Size(157, 23);
             this.LblTimeDeparted.TabIndex = 12;
@@ -520,7 +520,7 @@
             // 
             this.BtnTimeEnteredAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnTimeEnteredAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnTimeEnteredAMPM.Location = new System.Drawing.Point(554, 228);
+            this.BtnTimeEnteredAMPM.Location = new System.Drawing.Point(554, 243);
             this.BtnTimeEnteredAMPM.Name = "BtnTimeEnteredAMPM";
             this.BtnTimeEnteredAMPM.Size = new System.Drawing.Size(46, 29);
             this.BtnTimeEnteredAMPM.TabIndex = 52;
@@ -532,7 +532,7 @@
             // 
             this.BtnMinuteEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMinuteEntered.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMinuteEntered.Location = new System.Drawing.Point(513, 228);
+            this.BtnMinuteEntered.Location = new System.Drawing.Point(513, 243);
             this.BtnMinuteEntered.Name = "BtnMinuteEntered";
             this.BtnMinuteEntered.Size = new System.Drawing.Size(35, 29);
             this.BtnMinuteEntered.TabIndex = 51;
@@ -544,7 +544,7 @@
             // 
             this.LbllTEColon.AutoSize = true;
             this.LbllTEColon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LbllTEColon.Location = new System.Drawing.Point(492, 228);
+            this.LbllTEColon.Location = new System.Drawing.Point(492, 243);
             this.LbllTEColon.Name = "LbllTEColon";
             this.LbllTEColon.Size = new System.Drawing.Size(15, 23);
             this.LbllTEColon.TabIndex = 9;
@@ -554,7 +554,7 @@
             // 
             this.BtnHourEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnHourEntered.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnHourEntered.Location = new System.Drawing.Point(451, 228);
+            this.BtnHourEntered.Location = new System.Drawing.Point(451, 243);
             this.BtnHourEntered.Name = "BtnHourEntered";
             this.BtnHourEntered.Size = new System.Drawing.Size(35, 29);
             this.BtnHourEntered.TabIndex = 48;
@@ -566,7 +566,7 @@
             // 
             this.LblTimeEntered.AutoSize = true;
             this.LblTimeEntered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTimeEntered.Location = new System.Drawing.Point(418, 198);
+            this.LblTimeEntered.Location = new System.Drawing.Point(418, 213);
             this.LblTimeEntered.Name = "LblTimeEntered";
             this.LblTimeEntered.Size = new System.Drawing.Size(144, 23);
             this.LblTimeEntered.TabIndex = 6;
