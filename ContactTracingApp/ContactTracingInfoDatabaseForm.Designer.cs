@@ -49,7 +49,7 @@
             // BtnCheckRecordOrBack
             // 
             this.BtnCheckRecordOrBack.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCheckRecordOrBack.Location = new System.Drawing.Point(175, 311);
+            this.BtnCheckRecordOrBack.Location = new System.Drawing.Point(174, 271);
             this.BtnCheckRecordOrBack.Name = "BtnCheckRecordOrBack";
             this.BtnCheckRecordOrBack.Size = new System.Drawing.Size(113, 26);
             this.BtnCheckRecordOrBack.TabIndex = 58;
@@ -60,7 +60,7 @@
             // TxtBoxSearchOrFilterDate
             // 
             this.TxtBoxSearchOrFilterDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxSearchOrFilterDate.Location = new System.Drawing.Point(123, 105);
+            this.TxtBoxSearchOrFilterDate.Location = new System.Drawing.Point(122, 65);
             this.TxtBoxSearchOrFilterDate.Name = "TxtBoxSearchOrFilterDate";
             this.TxtBoxSearchOrFilterDate.Size = new System.Drawing.Size(179, 31);
             this.TxtBoxSearchOrFilterDate.TabIndex = 59;
@@ -70,7 +70,7 @@
             this.ListBoxCustomerInfo.FormattingEnabled = true;
             this.ListBoxCustomerInfo.HorizontalScrollbar = true;
             this.ListBoxCustomerInfo.ItemHeight = 15;
-            this.ListBoxCustomerInfo.Location = new System.Drawing.Point(42, 141);
+            this.ListBoxCustomerInfo.Location = new System.Drawing.Point(41, 101);
             this.ListBoxCustomerInfo.Name = "ListBoxCustomerInfo";
             this.ListBoxCustomerInfo.Size = new System.Drawing.Size(390, 154);
             this.ListBoxCustomerInfo.TabIndex = 57;
@@ -78,7 +78,7 @@
             // BtnFilter
             // 
             this.BtnFilter.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnFilter.Location = new System.Drawing.Point(42, 108);
+            this.BtnFilter.Location = new System.Drawing.Point(41, 68);
             this.BtnFilter.Name = "BtnFilter";
             this.BtnFilter.Size = new System.Drawing.Size(75, 26);
             this.BtnFilter.TabIndex = 60;
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(496, 349);
+            this.ClientSize = new System.Drawing.Size(496, 307);
             this.Controls.Add(this.BtnFilter);
             this.Controls.Add(this.TxtBoxSearchOrFilterDate);
             this.Controls.Add(this.BtnCheckRecordOrBack);

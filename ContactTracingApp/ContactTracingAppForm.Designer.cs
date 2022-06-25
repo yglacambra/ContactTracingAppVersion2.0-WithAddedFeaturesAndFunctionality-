@@ -93,7 +93,7 @@
             this.LblName.BackColor = System.Drawing.Color.LightSalmon;
             this.LblName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LblName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LblName.Location = new System.Drawing.Point(12, 100);
+            this.LblName.Location = new System.Drawing.Point(13, 139);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(72, 23);
             this.LblName.TabIndex = 0;
@@ -102,7 +102,7 @@
             // TxtBoxName
             // 
             this.TxtBoxName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxName.Location = new System.Drawing.Point(23, 126);
+            this.TxtBoxName.Location = new System.Drawing.Point(24, 165);
             this.TxtBoxName.Name = "TxtBoxName";
             this.TxtBoxName.Size = new System.Drawing.Size(283, 27);
             this.TxtBoxName.TabIndex = 1;
@@ -112,7 +112,7 @@
             // 
             this.LblHomeAddress.AutoSize = true;
             this.LblHomeAddress.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblHomeAddress.Location = new System.Drawing.Point(12, 164);
+            this.LblHomeAddress.Location = new System.Drawing.Point(13, 203);
             this.LblHomeAddress.Name = "LblHomeAddress";
             this.LblHomeAddress.Size = new System.Drawing.Size(155, 23);
             this.LblHomeAddress.TabIndex = 2;
@@ -121,7 +121,7 @@
             // TxtBoxHomeAddress
             // 
             this.TxtBoxHomeAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxHomeAddress.Location = new System.Drawing.Point(23, 190);
+            this.TxtBoxHomeAddress.Location = new System.Drawing.Point(24, 229);
             this.TxtBoxHomeAddress.Name = "TxtBoxHomeAddress";
             this.TxtBoxHomeAddress.Size = new System.Drawing.Size(283, 27);
             this.TxtBoxHomeAddress.TabIndex = 3;
@@ -130,7 +130,7 @@
             // 
             this.LblContactNum.AutoSize = true;
             this.LblContactNum.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblContactNum.Location = new System.Drawing.Point(12, 225);
+            this.LblContactNum.Location = new System.Drawing.Point(13, 264);
             this.LblContactNum.Name = "LblContactNum";
             this.LblContactNum.Size = new System.Drawing.Size(173, 23);
             this.LblContactNum.TabIndex = 4;
@@ -139,7 +139,7 @@
             // TxtBoxContactNum
             // 
             this.TxtBoxContactNum.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxContactNum.Location = new System.Drawing.Point(23, 251);
+            this.TxtBoxContactNum.Location = new System.Drawing.Point(24, 290);
             this.TxtBoxContactNum.Name = "TxtBoxContactNum";
             this.TxtBoxContactNum.Size = new System.Drawing.Size(283, 27);
             this.TxtBoxContactNum.TabIndex = 5;
@@ -150,7 +150,7 @@
             // 
             this.LblGender.AutoSize = true;
             this.LblGender.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblGender.Location = new System.Drawing.Point(12, 303);
+            this.LblGender.Location = new System.Drawing.Point(13, 342);
             this.LblGender.Name = "LblGender";
             this.LblGender.Size = new System.Drawing.Size(85, 23);
             this.LblGender.TabIndex = 23;
@@ -241,7 +241,7 @@
             // 
             this.LblQuestion1.AutoSize = true;
             this.LblQuestion1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblQuestion1.Location = new System.Drawing.Point(410, 303);
+            this.LblQuestion1.Location = new System.Drawing.Point(418, 346);
             this.LblQuestion1.Name = "LblQuestion1";
             this.LblQuestion1.Size = new System.Drawing.Size(449, 19);
             this.LblQuestion1.TabIndex = 33;
@@ -251,7 +251,7 @@
             // 
             this.LblQuestion2.AutoSize = true;
             this.LblQuestion2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblQuestion2.Location = new System.Drawing.Point(410, 395);
+            this.LblQuestion2.Location = new System.Drawing.Point(418, 480);
             this.LblQuestion2.Name = "LblQuestion2";
             this.LblQuestion2.Size = new System.Drawing.Size(496, 19);
             this.LblQuestion2.TabIndex = 34;
@@ -262,7 +262,7 @@
             this.BtnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BtnSubmit.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.BtnSubmit.Location = new System.Drawing.Point(422, 616);
+            this.BtnSubmit.Location = new System.Drawing.Point(397, 617);
             this.BtnSubmit.Name = "BtnSubmit";
             this.BtnSubmit.Size = new System.Drawing.Size(113, 36);
             this.BtnSubmit.TabIndex = 37;
@@ -278,7 +278,7 @@
             this.PnlGender.Controls.Add(this.RdioBtnOtherGenders);
             this.PnlGender.Controls.Add(this.RdioBtnFemale);
             this.PnlGender.Controls.Add(this.RdioBtnMale);
-            this.PnlGender.Location = new System.Drawing.Point(19, 327);
+            this.PnlGender.Location = new System.Drawing.Point(20, 366);
             this.PnlGender.Name = "PnlGender";
             this.PnlGender.Size = new System.Drawing.Size(284, 140);
             this.PnlGender.TabIndex = 38;
@@ -300,7 +300,7 @@
             // 
             this.PnlQ1YesNo.Controls.Add(this.RdioBtnQ1No);
             this.PnlQ1YesNo.Controls.Add(this.RdioBtnQ1Yes);
-            this.PnlQ1YesNo.Location = new System.Drawing.Point(410, 327);
+            this.PnlQ1YesNo.Location = new System.Drawing.Point(418, 370);
             this.PnlQ1YesNo.Name = "PnlQ1YesNo";
             this.PnlQ1YesNo.Size = new System.Drawing.Size(65, 63);
             this.PnlQ1YesNo.TabIndex = 39;
@@ -310,7 +310,7 @@
             this.PnlQ2YesNo.BackColor = System.Drawing.Color.LightSalmon;
             this.PnlQ2YesNo.Controls.Add(this.RdioBtnQ2No);
             this.PnlQ2YesNo.Controls.Add(this.RdioBtnQ2Yes);
-            this.PnlQ2YesNo.Location = new System.Drawing.Point(410, 422);
+            this.PnlQ2YesNo.Location = new System.Drawing.Point(418, 507);
             this.PnlQ2YesNo.Name = "PnlQ2YesNo";
             this.PnlQ2YesNo.Size = new System.Drawing.Size(65, 63);
             this.PnlQ2YesNo.TabIndex = 40;
@@ -344,7 +344,7 @@
             this.LblMallName.AutoSize = true;
             this.LblMallName.Font = new System.Drawing.Font("Sylfaen", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.LblMallName.ForeColor = System.Drawing.Color.IndianRed;
-            this.LblMallName.Location = new System.Drawing.Point(0, 38);
+            this.LblMallName.Location = new System.Drawing.Point(0, 61);
             this.LblMallName.Name = "LblMallName";
             this.LblMallName.Size = new System.Drawing.Size(231, 62);
             this.LblMallName.TabIndex = 55;
@@ -354,7 +354,7 @@
             // 
             this.PicBoxPalmTree.Enabled = false;
             this.PicBoxPalmTree.Image = global::ContactTracingApp.Properties.Resources.fd6323c1bde78172ef5f9c3b509e0b2f;
-            this.PicBoxPalmTree.Location = new System.Drawing.Point(237, 29);
+            this.PicBoxPalmTree.Location = new System.Drawing.Point(237, 52);
             this.PicBoxPalmTree.Name = "PicBoxPalmTree";
             this.PicBoxPalmTree.Size = new System.Drawing.Size(84, 71);
             this.PicBoxPalmTree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -393,7 +393,7 @@
             // 
             this.LblQuestion3.AutoSize = true;
             this.LblQuestion3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblQuestion3.Location = new System.Drawing.Point(351, 507);
+            this.LblQuestion3.Location = new System.Drawing.Point(20, 524);
             this.LblQuestion3.Name = "LblQuestion3";
             this.LblQuestion3.Size = new System.Drawing.Size(148, 19);
             this.LblQuestion3.TabIndex = 58;
@@ -407,7 +407,7 @@
             this.PanelQ3VaccinationQuestion.Controls.Add(this.RdioBtnQ3No);
             this.PanelQ3VaccinationQuestion.Controls.Add(this.RdioBtnQ3YesSecondDose);
             this.PanelQ3VaccinationQuestion.Controls.Add(this.RdioBtnQ3YesFirstDose);
-            this.PanelQ3VaccinationQuestion.Location = new System.Drawing.Point(353, 529);
+            this.PanelQ3VaccinationQuestion.Location = new System.Drawing.Point(22, 546);
             this.PanelQ3VaccinationQuestion.Name = "PanelQ3VaccinationQuestion";
             this.PanelQ3VaccinationQuestion.Size = new System.Drawing.Size(275, 71);
             this.PanelQ3VaccinationQuestion.TabIndex = 41;
@@ -464,7 +464,7 @@
             // 
             this.BtnTimeDepartedAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnTimeDepartedAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(546, 258);
+            this.BtnTimeDepartedAMPM.Location = new System.Drawing.Point(554, 292);
             this.BtnTimeDepartedAMPM.Name = "BtnTimeDepartedAMPM";
             this.BtnTimeDepartedAMPM.Size = new System.Drawing.Size(46, 29);
             this.BtnTimeDepartedAMPM.TabIndex = 54;
@@ -476,7 +476,7 @@
             // 
             this.BtnMinuteDeparted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMinuteDeparted.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMinuteDeparted.Location = new System.Drawing.Point(505, 258);
+            this.BtnMinuteDeparted.Location = new System.Drawing.Point(513, 292);
             this.BtnMinuteDeparted.Name = "BtnMinuteDeparted";
             this.BtnMinuteDeparted.Size = new System.Drawing.Size(35, 29);
             this.BtnMinuteDeparted.TabIndex = 50;
@@ -488,7 +488,7 @@
             // 
             this.LblTLColon.AutoSize = true;
             this.LblTLColon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTLColon.Location = new System.Drawing.Point(484, 258);
+            this.LblTLColon.Location = new System.Drawing.Point(492, 292);
             this.LblTLColon.Name = "LblTLColon";
             this.LblTLColon.Size = new System.Drawing.Size(15, 23);
             this.LblTLColon.TabIndex = 13;
@@ -498,7 +498,7 @@
             // 
             this.BtnHourDeparted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnHourDeparted.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnHourDeparted.Location = new System.Drawing.Point(443, 258);
+            this.BtnHourDeparted.Location = new System.Drawing.Point(451, 292);
             this.BtnHourDeparted.Name = "BtnHourDeparted";
             this.BtnHourDeparted.Size = new System.Drawing.Size(35, 29);
             this.BtnHourDeparted.TabIndex = 49;
@@ -510,7 +510,7 @@
             // 
             this.LblTimeDeparted.AutoSize = true;
             this.LblTimeDeparted.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTimeDeparted.Location = new System.Drawing.Point(410, 228);
+            this.LblTimeDeparted.Location = new System.Drawing.Point(418, 262);
             this.LblTimeDeparted.Name = "LblTimeDeparted";
             this.LblTimeDeparted.Size = new System.Drawing.Size(157, 23);
             this.LblTimeDeparted.TabIndex = 12;
@@ -520,7 +520,7 @@
             // 
             this.BtnTimeEnteredAMPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnTimeEnteredAMPM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnTimeEnteredAMPM.Location = new System.Drawing.Point(546, 194);
+            this.BtnTimeEnteredAMPM.Location = new System.Drawing.Point(554, 228);
             this.BtnTimeEnteredAMPM.Name = "BtnTimeEnteredAMPM";
             this.BtnTimeEnteredAMPM.Size = new System.Drawing.Size(46, 29);
             this.BtnTimeEnteredAMPM.TabIndex = 52;
@@ -532,7 +532,7 @@
             // 
             this.BtnMinuteEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMinuteEntered.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMinuteEntered.Location = new System.Drawing.Point(505, 194);
+            this.BtnMinuteEntered.Location = new System.Drawing.Point(513, 228);
             this.BtnMinuteEntered.Name = "BtnMinuteEntered";
             this.BtnMinuteEntered.Size = new System.Drawing.Size(35, 29);
             this.BtnMinuteEntered.TabIndex = 51;
@@ -544,7 +544,7 @@
             // 
             this.LbllTEColon.AutoSize = true;
             this.LbllTEColon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LbllTEColon.Location = new System.Drawing.Point(484, 194);
+            this.LbllTEColon.Location = new System.Drawing.Point(492, 228);
             this.LbllTEColon.Name = "LbllTEColon";
             this.LbllTEColon.Size = new System.Drawing.Size(15, 23);
             this.LbllTEColon.TabIndex = 9;
@@ -554,7 +554,7 @@
             // 
             this.BtnHourEntered.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnHourEntered.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnHourEntered.Location = new System.Drawing.Point(443, 194);
+            this.BtnHourEntered.Location = new System.Drawing.Point(451, 228);
             this.BtnHourEntered.Name = "BtnHourEntered";
             this.BtnHourEntered.Size = new System.Drawing.Size(35, 29);
             this.BtnHourEntered.TabIndex = 48;
@@ -566,7 +566,7 @@
             // 
             this.LblTimeEntered.AutoSize = true;
             this.LblTimeEntered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTimeEntered.Location = new System.Drawing.Point(410, 164);
+            this.LblTimeEntered.Location = new System.Drawing.Point(418, 198);
             this.LblTimeEntered.Name = "LblTimeEntered";
             this.LblTimeEntered.Size = new System.Drawing.Size(144, 23);
             this.LblTimeEntered.TabIndex = 6;
@@ -576,7 +576,7 @@
             // 
             this.LblForwardSlash2.AutoSize = true;
             this.LblForwardSlash2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblForwardSlash2.Location = new System.Drawing.Point(523, 135);
+            this.LblForwardSlash2.Location = new System.Drawing.Point(531, 169);
             this.LblForwardSlash2.Name = "LblForwardSlash2";
             this.LblForwardSlash2.Size = new System.Drawing.Size(18, 23);
             this.LblForwardSlash2.TabIndex = 18;
@@ -585,7 +585,7 @@
             // TxtBoxYearVisited
             // 
             this.TxtBoxYearVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxYearVisited.Location = new System.Drawing.Point(539, 134);
+            this.TxtBoxYearVisited.Location = new System.Drawing.Point(547, 168);
             this.TxtBoxYearVisited.Name = "TxtBoxYearVisited";
             this.TxtBoxYearVisited.Size = new System.Drawing.Size(59, 27);
             this.TxtBoxYearVisited.TabIndex = 20;
@@ -596,7 +596,7 @@
             // 
             this.BtnDayVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnDayVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnDayVisited.Location = new System.Drawing.Point(432, 132);
+            this.BtnDayVisited.Location = new System.Drawing.Point(441, 166);
             this.BtnDayVisited.Name = "BtnDayVisited";
             this.BtnDayVisited.Size = new System.Drawing.Size(35, 29);
             this.BtnDayVisited.TabIndex = 47;
@@ -609,7 +609,7 @@
             this.LblForwardSlash1.AutoSize = true;
             this.LblForwardSlash1.BackColor = System.Drawing.Color.Transparent;
             this.LblForwardSlash1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblForwardSlash1.Location = new System.Drawing.Point(469, 135);
+            this.LblForwardSlash1.Location = new System.Drawing.Point(477, 169);
             this.LblForwardSlash1.Name = "LblForwardSlash1";
             this.LblForwardSlash1.Size = new System.Drawing.Size(18, 23);
             this.LblForwardSlash1.TabIndex = 41;
@@ -619,7 +619,7 @@
             // 
             this.BtnMonthVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMonthVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMonthVisited.Location = new System.Drawing.Point(486, 132);
+            this.BtnMonthVisited.Location = new System.Drawing.Point(494, 166);
             this.BtnMonthVisited.Name = "BtnMonthVisited";
             this.BtnMonthVisited.Size = new System.Drawing.Size(38, 29);
             this.BtnMonthVisited.TabIndex = 17;
@@ -631,7 +631,7 @@
             // 
             this.LblDateVisited.AutoSize = true;
             this.LblDateVisited.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblDateVisited.Location = new System.Drawing.Point(410, 100);
+            this.LblDateVisited.Location = new System.Drawing.Point(418, 139);
             this.LblDateVisited.Name = "LblDateVisited";
             this.LblDateVisited.Size = new System.Drawing.Size(133, 23);
             this.LblDateVisited.TabIndex = 16;

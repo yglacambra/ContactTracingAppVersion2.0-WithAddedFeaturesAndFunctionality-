@@ -28,14 +28,10 @@ namespace ContactTracingApp
             {
                 string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                 LineCount++;
-                if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
+                if ((LineCount == 1 || ((LineCount - 1) % 10 == 0)))
                 {
-                   CustomerInfoList.AddRange(new string[]{LineOnTheTextFile});
-                    foreach (string CustomerInfo in CustomerInfoList)
-                    {
-                        if (LineCount == 1 || ((LineCount - 1) % 10 == 0))
-                        ListBoxCustomerInfo.Items.Add(CustomerInfo);
-                    }
+                    ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
+                    CustomerInfoList.Add(LineOnTheTextFile);
                 }
 
             }
@@ -58,7 +54,7 @@ namespace ContactTracingApp
                 {
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount < 11 && !(LineCount==4))
+                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount < 11 && !(LineCount == 4))
                     {
                         ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
                     }
@@ -122,12 +118,12 @@ namespace ContactTracingApp
                 {
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if ((!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((ListBoxItemIndexNumber + 1) * 10)) && (LineCount > ((ListBoxItemIndexNumber * 11) - (ListBoxItemIndexNumber - 1))) 
+                    if ((!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((ListBoxItemIndexNumber + 1) * 10)) && (LineCount > ((ListBoxItemIndexNumber * 11) - (ListBoxItemIndexNumber - 1)))
                         && !(ListBoxItemIndexNumber == 1) && !((LineCount - 4) % 10 == 0))
                     {
                         ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
                     }
-                    if (((LineCount - 4) % 10 == 0) && (!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((ListBoxItemIndexNumber + 1) * 10)) 
+                    if (((LineCount - 4) % 10 == 0) && (!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((ListBoxItemIndexNumber + 1) * 10))
                         && (LineCount > ((ListBoxItemIndexNumber * 11) - (ListBoxItemIndexNumber - 1))))
                     {
                         ListBoxCustomerInfo.Items.Add("Date Visited: " + LineOnTheTextFile);
@@ -177,15 +173,29 @@ namespace ContactTracingApp
         private void BtnFilter_Click(object sender, EventArgs e)
         {
             ListBoxCustomerInfo.Items.Clear();
-            foreach (string CustomerInfo in CustomerInfoList)
+            if (TxtBoxSearchOrFilterDate.Text == "")
             {
-                if (CustomerInfo.Contains(TxtBoxSearchOrFilterDate.Text))
+                string NoInputtedMsg = "You have not inputted anything on the textbox. Please type the date you want to search for";
+                MessageBox.Show(NoInputtedMsg, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                int LineCount = 0;
+                StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
+                while (!ContactTracingInfoFileReader.EndOfStream)
                 {
-                   ListBoxCustomerInfo.Items.Add(CustomerInfo);
+                    string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
+                    LineCount++;
+                    if ((LineCount == 1 || ((LineCount - 1) % 10 == 0)))
+                    {
+                        ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
+                    }
                 }
             }
+            foreach (string CustomerInfo in CustomerInfoList)
+                if (CustomerInfo.Contains(TxtBoxSearchOrFilterDate.Text))
+                {
+                    ListBoxCustomerInfo.Items.Add(CustomerInfo);
+                }
         }
-    }           
+    }
 }
           
         
