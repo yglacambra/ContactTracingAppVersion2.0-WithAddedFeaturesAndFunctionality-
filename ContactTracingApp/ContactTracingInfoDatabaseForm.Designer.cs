@@ -34,6 +34,7 @@
             this.TxtBoxSearchOrFilterDate = new System.Windows.Forms.TextBox();
             this.ListBoxCustomerInfo = new System.Windows.Forms.ListBox();
             this.BtnFilter = new System.Windows.Forms.Button();
+            this.LblNoteOfFormatOfListBox = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblCustomerNames
@@ -49,7 +50,7 @@
             // BtnCheckRecordOrBack
             // 
             this.BtnCheckRecordOrBack.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCheckRecordOrBack.Location = new System.Drawing.Point(174, 271);
+            this.BtnCheckRecordOrBack.Location = new System.Drawing.Point(176, 299);
             this.BtnCheckRecordOrBack.Name = "BtnCheckRecordOrBack";
             this.BtnCheckRecordOrBack.Size = new System.Drawing.Size(113, 26);
             this.BtnCheckRecordOrBack.TabIndex = 58;
@@ -70,7 +71,7 @@
             this.ListBoxCustomerInfo.FormattingEnabled = true;
             this.ListBoxCustomerInfo.HorizontalScrollbar = true;
             this.ListBoxCustomerInfo.ItemHeight = 15;
-            this.ListBoxCustomerInfo.Location = new System.Drawing.Point(41, 101);
+            this.ListBoxCustomerInfo.Location = new System.Drawing.Point(41, 111);
             this.ListBoxCustomerInfo.Name = "ListBoxCustomerInfo";
             this.ListBoxCustomerInfo.Size = new System.Drawing.Size(390, 154);
             this.ListBoxCustomerInfo.TabIndex = 57;
@@ -86,12 +87,23 @@
             this.BtnFilter.UseVisualStyleBackColor = true;
             this.BtnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
             // 
+            // LblNoteOfFormatOfListBox
+            // 
+            this.LblNoteOfFormatOfListBox.AutoSize = true;
+            this.LblNoteOfFormatOfListBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblNoteOfFormatOfListBox.Location = new System.Drawing.Point(31, 274);
+            this.LblNoteOfFormatOfListBox.Name = "LblNoteOfFormatOfListBox";
+            this.LblNoteOfFormatOfListBox.Size = new System.Drawing.Size(415, 19);
+            this.LblNoteOfFormatOfListBox.TabIndex = 61;
+            this.LblNoteOfFormatOfListBox.Text = "(Note: The format of the listbox is \"Name\" + \"Date Visited\")";
+            // 
             // ContactTracingInfoDatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(496, 307);
+            this.ClientSize = new System.Drawing.Size(496, 343);
+            this.Controls.Add(this.LblNoteOfFormatOfListBox);
             this.Controls.Add(this.BtnFilter);
             this.Controls.Add(this.TxtBoxSearchOrFilterDate);
             this.Controls.Add(this.BtnCheckRecordOrBack);
@@ -119,5 +131,6 @@
         private TextBox TxtBoxSearchOrFilterDate;
         private ListBox ListBoxCustomerInfo;
         private Button BtnFilter;
+        private Label LblNoteOfFormatOfListBox;
     }
 }

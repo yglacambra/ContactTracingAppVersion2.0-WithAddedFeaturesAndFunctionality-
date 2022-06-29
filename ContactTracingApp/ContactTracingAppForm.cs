@@ -371,10 +371,10 @@ namespace ContactTracingApp
         {
             StreamWriter ContactTracingFormInfoFileWriter;
             ContactTracingFormInfoFileWriter = File.AppendText("Contact Tracing Information from Customers.txt");
-            ContactTracingFormInfoFileWriter.WriteLine(TxtBoxName.Text +" - " + BtnMonthVisited.Text + "/" + BtnDayVisited.Text + "/" + TxtBoxYearVisited.Text);
+            ContactTracingFormInfoFileWriter.WriteLine(TxtBoxName.Text + " - " + BtnMonthVisited.Text + "/" + BtnDayVisited.Text + "/" + TxtBoxYearVisited.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Address: " + TxtBoxHomeAddress.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
-            ContactTracingFormInfoFileWriter.WriteLine("Date Visited:" + BtnMonthVisited.Text + "/" + BtnDayVisited.Text + "/" + TxtBoxYearVisited.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Date Visited: " + BtnMonthVisited.Text + "/" + BtnDayVisited.Text + "/" + TxtBoxYearVisited.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text);
             // to determine what gender is to be inputted on the text file
