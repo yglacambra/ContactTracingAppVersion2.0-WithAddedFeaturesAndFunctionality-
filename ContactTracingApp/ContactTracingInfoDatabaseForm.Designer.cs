@@ -60,7 +60,7 @@
             // TxtBoxSearchOrFilterDate
             // 
             this.TxtBoxSearchOrFilterDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxSearchOrFilterDate.Location = new System.Drawing.Point(122, 65);
+            this.TxtBoxSearchOrFilterDate.Location = new System.Drawing.Point(41, 64);
             this.TxtBoxSearchOrFilterDate.Name = "TxtBoxSearchOrFilterDate";
             this.TxtBoxSearchOrFilterDate.Size = new System.Drawing.Size(179, 31);
             this.TxtBoxSearchOrFilterDate.TabIndex = 59;
@@ -78,11 +78,11 @@
             // BtnFilter
             // 
             this.BtnFilter.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnFilter.Location = new System.Drawing.Point(41, 68);
+            this.BtnFilter.Location = new System.Drawing.Point(226, 67);
             this.BtnFilter.Name = "BtnFilter";
             this.BtnFilter.Size = new System.Drawing.Size(75, 26);
             this.BtnFilter.TabIndex = 60;
-            this.BtnFilter.Text = "Filter:";
+            this.BtnFilter.Text = "Filter";
             this.BtnFilter.UseVisualStyleBackColor = true;
             this.BtnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
             // 

@@ -58,14 +58,10 @@ namespace ContactTracingApp
                     List<string> FirstCustomerInfoList = new List<string>();
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount < 11 && !(LineCount == 4))
+                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount < 11)
                     {
                         FirstCustomerInfoList.Add(LineOnTheTextFile);
                         ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
-                    }
-                    else if (LineCount == 4)
-                    {
-                        FirstCustomerInfoList.Add("Date Visited: " + LineOnTheTextFile);
                     }
                 }
                 ContactTracingInfoFileReader.Close();
@@ -79,13 +75,9 @@ namespace ContactTracingApp
                 {
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
-                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount > 11 && LineCount < 21 && !((LineCount - 4) % 10 == 0))
+                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount > 11 && LineCount < 21)
                     {
                         ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
-                    }
-                    if ((!(LineCount == 1 || ((LineCount - 1) % 10 == 0))) && LineCount > 11 && LineCount < 21 && ((LineCount - 4) % 10 == 0))
-                    {
-                        ListBoxCustomerInfo.Items.Add("Date Visited: " + LineOnTheTextFile);
                     }
                 }
                 ContactTracingInfoFileReader.Close();
@@ -125,14 +117,9 @@ namespace ContactTracingApp
                     string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
                     LineCount++;
                     if ((!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((ListBoxItemIndexNumber + 1) * 10)) && (LineCount > ((ListBoxItemIndexNumber * 11) - (ListBoxItemIndexNumber - 1)))
-                        && !(ListBoxItemIndexNumber == 1) && !((LineCount - 4) % 10 == 0))
+                        && !(ListBoxItemIndexNumber == 1))
                     {
                         ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
-                    }
-                    if (((LineCount - 4) % 10 == 0) && (!(LineCount == 1 || (((LineCount - 1) % 10 == 0)))) && (LineCount <= ((ListBoxItemIndexNumber + 1) * 10))
-                        && (LineCount > ((ListBoxItemIndexNumber * 11) - (ListBoxItemIndexNumber - 1))))
-                    {
-                        ListBoxCustomerInfo.Items.Add("Date Visited: " + LineOnTheTextFile);
                     }
                 }
                 ContactTracingInfoFileReader.Close();

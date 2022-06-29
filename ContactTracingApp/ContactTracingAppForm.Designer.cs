@@ -398,7 +398,6 @@
             this.LblQuestion3.Size = new System.Drawing.Size(148, 19);
             this.LblQuestion3.TabIndex = 58;
             this.LblQuestion3.Text = "Are you vaccinated?";
-            this.LblQuestion3.Click += new System.EventHandler(this.LblQuestion3_Click);
             // 
             // PanelQ3VaccinationQuestion
             // 
@@ -596,11 +595,11 @@
             // 
             this.BtnDayVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnDayVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnDayVisited.Location = new System.Drawing.Point(441, 166);
+            this.BtnDayVisited.Location = new System.Drawing.Point(494, 167);
             this.BtnDayVisited.Name = "BtnDayVisited";
             this.BtnDayVisited.Size = new System.Drawing.Size(35, 29);
             this.BtnDayVisited.TabIndex = 47;
-            this.BtnDayVisited.Text = "00";
+            this.BtnDayVisited.Text = "01";
             this.BtnDayVisited.UseVisualStyleBackColor = true;
             this.BtnDayVisited.Click += new System.EventHandler(this.BtnDayVisited_Click);
             // 
@@ -619,7 +618,7 @@
             // 
             this.BtnMonthVisited.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnMonthVisited.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMonthVisited.Location = new System.Drawing.Point(494, 166);
+            this.BtnMonthVisited.Location = new System.Drawing.Point(441, 167);
             this.BtnMonthVisited.Name = "BtnMonthVisited";
             this.BtnMonthVisited.Size = new System.Drawing.Size(38, 29);
             this.BtnMonthVisited.TabIndex = 17;
