@@ -2,8 +2,8 @@ Lawrence Olivier - 06/05/2022
 Address: #3 Marqueses St., Golden Apple Subdivision, Brgy. Pio Del Pilar, Makati City
 Contact Number: 09775496982
 Date Visited: 06/05/2022
-Time Entered: 03:08
-Time Departed: 06:24
+Time Entered: 03:08 P.M.
+Time Departed: 06:24 P.M.
 Gender: Male
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
@@ -12,8 +12,8 @@ Yuan Gabriel S. Lacambra - 04/13/2022
 Address: #9 Capricorn St., Sierra Vista, Brgy.Cupang, Antipolo City, Rizal
 Contact Number: 09878856435
 Date Visited:04/13/2022
-Time Entered: 04:05
-Time Departed: 09:15
+Time Entered: 04:05 P.M.
+Time Departed: 09:15 P.M.
 Gender: Male
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: No
@@ -22,8 +22,8 @@ Andres Delos Reyes - 02/11/2022
 Address: #3 Oriole St., Francisville Subd., Brgy. Mambugan, Antipolo City, Rizal 
 Contact Number: 09456732289
 Date Visited: 02/11/2022
-Time Entered: 09:04
-Time Departed: 05:47
+Time Entered: 09:04 A.M.
+Time Departed: 05:47 P.M.
 Gender: Didn't Disclose
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
@@ -32,8 +32,8 @@ Charito Lacambra - 03/21/2022
 Address: #9 Capricorn St., Sierra Vista Subd., Brgy.Cupang, Antipolo City, Rizal
 Contact Number: 09678854674
 Date Visited: 03/21/2022
-Time Entered: 01:42
-Time Departed: 05:10
+Time Entered: 01:42 P.M.
+Time Departed: 05:10 P.M.
 Gender: Female
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: No
@@ -42,8 +42,8 @@ Estrella Natividad - 08/11/2021
 Address: #13 Magnolia St., Kingsville Subd., Brgy.Mayamot, Antipolo City, Rizal
 Contact Number: 09954893243
 Date Visited: 08/11/2021
-Time Entered: 05:05
-Time Departed: 09:14
+Time Entered: 05:05 P.M.
+Time Departed: 09:14 P.M.
 Gender: Female
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
@@ -52,8 +52,8 @@ Vanya Dela Cruz - 01/12/2021
 Address: #23 Brioche St., Filinvest Subd., Brgy. Cainta, Antipolo City, Rizal
 Contact Number: 09877634485
 Date Visited: 01/12/2021
-Time Entered: 02:14
-Time Departed: 03:26
+Time Entered: 02:14 P.M.
+Time Departed: 03:26 P.M.
 Gender: Transgender Woman
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
@@ -62,8 +62,8 @@ Oliver Dela Peña - 05/08/2020
 Address: #45 Cabolog St., Greenheights Newtown One, Brgy. Katipunan, Quezon City, Metro Manila
 Contact Number: 09955468879
 Date Visited: 05/08/2020
-Time Entered: 09:11
-Time Departed: 01:43
+Time Entered: 09:11 A.M.
+Time Departed: 01:43 P.M.
 Gender: Male
 Has COVID symptoms: No
 Had contact with a COVID positive person: Yes
@@ -72,8 +72,8 @@ Artuto Barreto - 06/30/2020
 Address: #7 Adjucation St., Breezy Hills Subd., Brgy. Del Monte, Quezon City, Metro Manila
 Contact Number: 09345890134
 Date Visited: 06/30/2020
-Time Entered: 08:02
-Time Departed: 10:26
+Time Entered: 08:02 A.M.
+Time Departed: 10:26 A.M.
 Gender: Transgender Man
 Has COVID symptoms: No
 Had contact with a COVID positive person: Yes
@@ -82,8 +82,8 @@ Tricia Madrigal - 11/16/2022
 Address: #23 Exeter St., Rancho Estate Subd., Brgy. Concepcion Dos, Marikina City, Metro Manila
 Contact Number: 09543467884
 Date Visited: 11/16/2022
-Time Entered: 12:06
-Time Departed: 05:35
+Time Entered: 12:06 P.M.
+Time Departed: 05:35 P.M.
 Gender: Female
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
@@ -92,8 +92,8 @@ Bea Ortiz - 12/12/2021
 Address: #15 Ascencion St., Brgy. Tumana, Marikina City, Metro Manila
 Contact Number: 09945672167
 Date Visited: 12/12/2021
-Time Entered: 06:10
-Time Departed: 09:15
+Time Entered: 06:10 P.M.
+Time Departed: 09:15 P.M.
 Gender: Non-Binary
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
@@ -102,8 +102,8 @@ Alphonse Dimaano - 09/05/2020
 Address: #34 Oxford St., Brgy. Mambugan, Antipolo City, Rizal
 Contact Number: 09874577732
 Date Visited: 09/05/2020
-Time Entered: 05:19
-Time Departed: 08:08
+Time Entered: 05:19 P.M.
+Time Departed: 08:08 P.M.
 Gender: Didn't Disclose
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
@@ -112,8 +112,8 @@ Adorno Bigarnia - 05/09/2022
 Address: #56 Alfonso St., Brgy. Parang, Marikina City
 Contact Number: 09398854456
 Date Visited: 05/09/2022
-Time Entered: 02:07
-Time Departed: 04:16
+Time Entered: 02:07 P.M.
+Time Departed: 04:16 P.M.
 Gender: Male
 Has COVID symptoms: No
 Had contact with a COVID positive person: No
@@ -122,8 +122,8 @@ Manny Velasco - 10/04/2023
 Address: #45 Ansueno St., Mayopa Subd., San Mateo, Antipolo City
 Contact Number: 09546789334
 Date Visited: 10/04/2023
-Time Entered: 09:27
-Time Departed: 01:24
+Time Entered: 09:27 A.M.
+Time Departed: 01:24 P.M.
 Gender: Male
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes

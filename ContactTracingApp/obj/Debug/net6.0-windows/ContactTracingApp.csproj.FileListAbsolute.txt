@@ -18,3 +18,4 @@ C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6
 C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.Properties.Resources.resources
 C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.PasswordForm.resources
 C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.ContactTracingInfoDatabaseForm.resources
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.QRCodeDecoderForm.resources

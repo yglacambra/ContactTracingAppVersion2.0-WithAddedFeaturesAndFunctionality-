@@ -200,24 +200,24 @@ namespace ContactTracingApp
         //changes Am to Pm and vice versa when the button is pressed
         private void BtnTimeEnteredAMPM_Click(object sender, EventArgs e)
         {
-            if (BtnTimeEnteredAMPM.Text == "AM")
+            if (BtnTimeEnteredAMPM.Text == "A.M.")
             {
-                BtnTimeEnteredAMPM.Text = "PM";
+                BtnTimeEnteredAMPM.Text = "P.M.";
             }
             else
             {
-                BtnTimeEnteredAMPM.Text = "AM";
+                BtnTimeEnteredAMPM.Text = "A.M.";
             }
         }
         private void BtnTimeDepartedAMPM_Click(object sender, EventArgs e)
         {
-            if (BtnTimeDepartedAMPM.Text == "AM")
+            if (BtnTimeDepartedAMPM.Text == "A.M.")
             {
-                BtnTimeDepartedAMPM.Text = "PM";
+                BtnTimeDepartedAMPM.Text = "P.M.";
             }
             else
             {
-                BtnTimeDepartedAMPM.Text = "AM";
+                BtnTimeDepartedAMPM.Text = "A.M.";
             }
         }
 
@@ -375,8 +375,8 @@ namespace ContactTracingApp
             ContactTracingFormInfoFileWriter.WriteLine("Address: " + TxtBoxHomeAddress.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Date Visited: " + BtnMonthVisited.Text + "/" + BtnDayVisited.Text + "/" + TxtBoxYearVisited.Text);
-            ContactTracingFormInfoFileWriter.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text);
-            ContactTracingFormInfoFileWriter.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text + BtnTimeEnteredAMPM.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text + BtnTimeDepartedAMPM.Text);
             // to determine what gender is to be inputted on the text file
             if (RdioBtnMale.Checked == true)
             {
@@ -444,9 +444,11 @@ namespace ContactTracingApp
             }
         }
 
-        private void LblQuestion3_Click(object sender, EventArgs e)
+        private void BtnAutoFill_Click(object sender, EventArgs e)
         {
-
+            QRCodeDecoderForm Form4 = new();
+            Form4.Show();
+            this.Visible = false;
         }
     }
 }
