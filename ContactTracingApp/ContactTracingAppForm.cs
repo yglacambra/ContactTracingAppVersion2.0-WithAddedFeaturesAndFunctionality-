@@ -431,7 +431,7 @@ namespace ContactTracingApp
             }
             ContactTracingFormInfoFileWriter.Close();
         }
-
+        
         private void BtnAccessTheDatabase_Click(object sender, EventArgs e)
         {
             string AuthorizationQuestionMsg = "Do you have the appropriate authorization to access this?";
@@ -440,7 +440,7 @@ namespace ContactTracingApp
             {
                 PasswordForm Form2 = new();
                 Form2.Show();
-                this.Visible = false;  
+                this.Visible = false;
             }
         }
 
@@ -448,6 +448,31 @@ namespace ContactTracingApp
         {
             QRCodeScannerForm Form4 = new();
             Form4.Show();
+            this.Visible = false;
+        }
+
+        public bool ThereIsAResultFromTheQRCodeScannerForm = false;
+        private void ContactTracingAppForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (ThereIsAResultFromTheQRCodeScannerForm == true)
+            {
+                int LineCount = 0;
+                StreamReader InfoToBeAutoFilledOnTheFormFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Information that will be used to fill up the Form automatically.txt");
+                while (!InfoToBeAutoFilledOnTheFormFileReader.EndOfStream)
+                {
+                    string LineOnTheTextFile = InfoToBeAutoFilledOnTheFormFileReader.ReadLine();
+                    LineCount++;
+                    if (LineCount == 1)
+                    {
+                        LineOnTheTextFile = TxtBoxName.Text;
+                    }
+                    if (LineCount == 2)
+                    {
+                        LineOnTheTextFile = TxtBoxHomeAddress.Text;
+                    }
+                }
+                InfoToBeAutoFilledOnTheFormFileReader.Close();
+            }
         }
     }
 }
