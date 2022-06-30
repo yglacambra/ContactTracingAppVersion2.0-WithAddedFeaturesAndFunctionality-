@@ -48,6 +48,7 @@
             this.BtnStartScan.TabIndex = 60;
             this.BtnStartScan.Text = "Start Scan";
             this.BtnStartScan.UseVisualStyleBackColor = false;
+            this.BtnStartScan.Click += new System.EventHandler(this.BtnStartScan_Click);
             // 
             // button1
             // 
@@ -100,6 +101,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QRCodeScannerForm";
             this.Text = "QRCodeScannerForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QRCodeScannerForm_FormClosing);
             this.Load += new System.EventHandler(this.QRCodeScannerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxCameraVideo)).EndInit();
             this.ResumeLayout(false);

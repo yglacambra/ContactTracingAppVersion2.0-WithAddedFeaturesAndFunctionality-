@@ -30,5 +30,25 @@ namespace ContactTracingApp
             }
             ComboBoxVideoCaptureDevice.SelectedIndex = 0;
         }
+
+        private void BtnStartScan_Click(object sender, EventArgs e)
+        {
+            VidCaptureDevice = new VideoCaptureDevice(FilterInformationCollection[ComboBoxVideoCaptureDevice.SelectedIndex].MonikerString);
+            VidCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            VidCaptureDevice.Start();
+        }
+
+        private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            PictureBoxCameraVideo.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+
+        private void QRCodeScannerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (VidCaptureDevice.IsRunning)
+            {
+                VidCaptureDevice.Stop();
+            }
+        }
     }
 }
