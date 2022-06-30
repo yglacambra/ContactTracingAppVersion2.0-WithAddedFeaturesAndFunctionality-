@@ -63,10 +63,16 @@ namespace ContactTracingApp
                 if (QRCodeResult != null)
                 {
                     QRCodeReadingTimer.Stop();
+                    StreamWriter InfoToBeAutoFilledOnTheFormFileWriter;
+                    InfoToBeAutoFilledOnTheFormFileWriter = File.AppendText("Information that will be used to fill up the Form automatically.txt");
+                    InfoToBeAutoFilledOnTheFormFileWriter.WriteLine(QRCodeResult);
+                    InfoToBeAutoFilledOnTheFormFileWriter.Close();
+                    File.SetAttributes("Information that will be used to fill up the Form automatically.txt", FileAttributes.Hidden);
                     if (VidCaptureDevice.IsRunning)
                     {
                         VidCaptureDevice.Stop();
                     }
+                    this.Close();
                 }
             }
         }

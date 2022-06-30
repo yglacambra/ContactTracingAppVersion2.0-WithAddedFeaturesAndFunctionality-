@@ -448,7 +448,6 @@ namespace ContactTracingApp
         {
             QRCodeScannerForm Form4 = new();
             Form4.Show();
-            this.Visible = false;
         }
     }
 }

@@ -210,6 +210,16 @@ namespace ContactTracingApp
                     ListBoxCustomerInfo.Items.Add(CustomerNameWithDateVisited);
                 }
         }
+
+        private void TxtBoxSearchOrFilterDate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar)
+              && e.KeyChar != '/' && e.KeyChar != ' ')
+            {
+                string InvalidCharactersInputtedMsg = "Only numbers and slashes are accepted in this textbox.";
+                MessageBox.Show(InvalidCharactersInputtedMsg, "Invalid Characters", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
           

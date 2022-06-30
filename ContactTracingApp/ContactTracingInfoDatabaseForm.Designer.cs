@@ -65,6 +65,7 @@
             this.TxtBoxSearchOrFilterDate.Name = "TxtBoxSearchOrFilterDate";
             this.TxtBoxSearchOrFilterDate.Size = new System.Drawing.Size(179, 31);
             this.TxtBoxSearchOrFilterDate.TabIndex = 59;
+            this.TxtBoxSearchOrFilterDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxSearchOrFilterDate_KeyPress);
             // 
             // ListBoxCustomerInfo
             // 
