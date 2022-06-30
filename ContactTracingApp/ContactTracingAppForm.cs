@@ -496,13 +496,134 @@ namespace ContactTracingApp
                     }
                     if (LineCount == 9)
                     {
-                        LineOnTheTextFile = BtnHourDeparted.Text;
+                        LineOnTheTextFile = BtnTimeEnteredAMPM.Text;
                     }
                     if (LineCount == 10)
                     {
+                        LineOnTheTextFile = BtnHourDeparted.Text;
+                    }
+                    if (LineCount == 11)
+                    {
                         LineOnTheTextFile = BtnMinuteDeparted.Text;
                     }
-                    InfoToBeAutoFilledOnTheFormFileReader.Close();
+                    if (LineCount == 12)
+                    {
+                        LineOnTheTextFile = BtnTimeDepartedAMPM.Text;
+                    }
+                    if (LineCount == 13)
+                    {
+                        if (LineOnTheTextFile == "Male")
+                        {
+                            RdioBtnMale.Checked = true;
+                        }
+                        else if (LineOnTheTextFile == "Female")
+                        {
+                            RdioBtnFemale.Checked = true;
+                        }
+                        else if (LineOnTheTextFile == "Others")
+                        {
+                            RdioBtnOtherGenders.Checked = true;
+                        }
+                    }
+                    if (LineCount == 14)
+                    {
+                        if (RdioBtnOtherGenders.Checked == true)
+                        {
+                           LineOnTheTextFile = TxtBoxOtherGenders.Text;
+                        }
+                        else
+                        {
+                            if (LineOnTheTextFile == "Yes")
+                            {
+                                RdioBtnQ1Yes.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "No")
+                            {
+                                RdioBtnQ1No.Checked = true;
+                            }
+                        }
+                    }
+                    if (LineCount == 15)
+                    {
+                        if (RdioBtnOtherGenders.Checked == true)
+                        {
+                            if (LineOnTheTextFile == "Yes")
+                            {
+                                RdioBtnQ1Yes.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "No")
+                            {
+                                RdioBtnQ1No.Checked = true;
+                            }
+                        }
+                        else
+                        {
+                            if (LineOnTheTextFile == "Yes")
+                            {
+                              RdioBtnQ2Yes.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "No")
+                            {
+                              RdioBtnQ2No.Checked = true;
+                            }
+                        }
+                    }
+                    if (LineCount == 16)
+                    {
+                        if (RdioBtnOtherGenders.Checked == true)
+                        {
+                            if (LineOnTheTextFile == "Yes")
+                            {
+                                RdioBtnQ2Yes.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "No")
+                            {
+                                RdioBtnQ2No.Checked = true;
+                            }
+                        }
+                        else
+                        {
+                            if (LineOnTheTextFile == "First Dose")
+                            {
+                                RdioBtnQ3YesFirstDose.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "Second Dose")
+                            {
+                                RdioBtnQ3YesSecondDose.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "Booster")
+                            {
+                                RdioBtnQ3YesBooster.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "No")
+                            {
+                                RdioBtnQ3No.Checked = true;
+                            }
+                        }
+                    }
+                    if (LineCount == 17)
+                    {
+                        if (RdioBtnOtherGenders.Checked == true)
+                        {
+                            if (LineOnTheTextFile == "First Dose")
+                            {
+                                RdioBtnQ3YesFirstDose.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "Second Dose")
+                            {
+                                RdioBtnQ3YesSecondDose.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "Booster")
+                            {
+                                RdioBtnQ3YesBooster.Checked = true;
+                            }
+                            else if (LineOnTheTextFile == "No")
+                            {
+                                RdioBtnQ3No.Checked = true;
+                            }
+                        }
+                    }
+                        InfoToBeAutoFilledOnTheFormFileReader.Close();
                 }
             }
         }
