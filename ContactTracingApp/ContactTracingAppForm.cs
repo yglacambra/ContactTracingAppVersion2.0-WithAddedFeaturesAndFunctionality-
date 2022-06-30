@@ -446,7 +446,7 @@ namespace ContactTracingApp
 
         private void BtnAutoFill_Click(object sender, EventArgs e)
         {
-            QRCodeDecoderForm Form4 = new();
+            QRCodeScannerForm Form4 = new();
             Form4.Show();
             this.Visible = false;
         }
