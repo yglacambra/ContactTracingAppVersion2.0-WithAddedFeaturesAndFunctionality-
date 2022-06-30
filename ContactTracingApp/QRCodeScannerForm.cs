@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using ZXing;
+
 
 namespace ContactTracingApp
 {
@@ -26,7 +28,7 @@ namespace ContactTracingApp
             FilterInformationCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo FilterInformation in FilterInformationCollection)
             {
-                ComboBoxVideoCaptureDevice.Items.Add(FilterInformation.MonikerString);
+                ComboBoxVideoCaptureDevice.Items.Add(FilterInformation.Name);
             }
             ComboBoxVideoCaptureDevice.SelectedIndex = 0;
         }
@@ -36,6 +38,7 @@ namespace ContactTracingApp
             VidCaptureDevice = new VideoCaptureDevice(FilterInformationCollection[ComboBoxVideoCaptureDevice.SelectedIndex].MonikerString);
             VidCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
             VidCaptureDevice.Start();
+            QRCodeReadingTimer.Start();
         }
 
         private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -48,6 +51,23 @@ namespace ContactTracingApp
             if (VidCaptureDevice.IsRunning)
             {
                 VidCaptureDevice.Stop();
+            }
+        }
+
+        private void QRCodeReadingTimer_Tick(object sender, EventArgs e)
+        {
+            if (PictureBoxCameraVideo.Image != null)
+            {
+                BarcodeReader QRCodeReader = new BarcodeReader();
+                Result QRCodeResult = QRCodeReader.Decode((Bitmap)PictureBoxCameraVideo.Image);
+                if (QRCodeResult != null)
+                {
+                    QRCodeReadingTimer.Stop();
+                    if (VidCaptureDevice.IsRunning)
+                    {
+                        VidCaptureDevice.Stop();
+                    }
+                }
             }
         }
     }

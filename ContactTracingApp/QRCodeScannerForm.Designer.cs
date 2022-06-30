@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QRCodeScannerForm));
             this.BtnStartScan = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.PictureBoxCameraVideo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ComboBoxVideoCaptureDevice = new System.Windows.Forms.ComboBox();
+            this.QRCodeReadingTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxCameraVideo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +89,11 @@
             this.ComboBoxVideoCaptureDevice.Size = new System.Drawing.Size(465, 29);
             this.ComboBoxVideoCaptureDevice.TabIndex = 64;
             // 
+            // QRCodeReadingTimer
+            // 
+            this.QRCodeReadingTimer.Interval = 1000;
+            this.QRCodeReadingTimer.Tick += new System.EventHandler(this.QRCodeReadingTimer_Tick);
+            // 
             // QRCodeScannerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -116,5 +123,6 @@
         private PictureBox PictureBoxCameraVideo;
         private Label label1;
         private ComboBox ComboBoxVideoCaptureDevice;
+        private System.Windows.Forms.Timer QRCodeReadingTimer;
     }
 }

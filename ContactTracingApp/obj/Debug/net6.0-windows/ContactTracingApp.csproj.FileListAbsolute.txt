@@ -18,4 +18,9 @@ C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6
 C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.Properties.Resources.resources
 C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.PasswordForm.resources
 C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.ContactTracingInfoDatabaseForm.resources
-C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.QRCodeDecoderForm.resources
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\AForge.dll
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\AForge.Video.dll
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\AForge.Video.DirectShow.dll
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\zxing.dll
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.QRCodeScannerForm.resources
+C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\obj\Debug\net6.0-windows\ContactTracingApp.csproj.CopyComplete
