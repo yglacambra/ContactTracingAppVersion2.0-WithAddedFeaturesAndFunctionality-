@@ -444,7 +444,7 @@ namespace ContactTracingApp
             }
         }
 
-        private void BtnAutoFill_Click(object sender, EventArgs e)
+        private void BtnScanQRCode_Click(object sender, EventArgs e)
         {
             QRCodeScannerForm Form4 = new();
             Form4.Show();
@@ -453,7 +453,7 @@ namespace ContactTracingApp
 
         public bool ThereIsAResultFromTheQRCodeScannerForm = false;
 
-        private void ContactTracingAppForm_VisibleChanged(object sender, EventArgs e)
+        private void BtnAutoFill_Click(object sender, EventArgs e)
         {
             if (ThereIsAResultFromTheQRCodeScannerForm == true)
             {
@@ -625,9 +625,11 @@ namespace ContactTracingApp
                             }
                         }
                     }
+                    InfoToBeAutoFilledOnTheFormFileReader.Close();
                 }
             }
         }
+
     }
 }
 

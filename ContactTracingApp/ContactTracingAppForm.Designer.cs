@@ -73,13 +73,14 @@
             this.LbllTEColon = new System.Windows.Forms.Label();
             this.BtnHourEntered = new System.Windows.Forms.Button();
             this.LblTimeEntered = new System.Windows.Forms.Label();
-            this.BtnAutoFill = new System.Windows.Forms.Button();
+            this.BtnScanQRCode = new System.Windows.Forms.Button();
             this.BtnDayVisited = new System.Windows.Forms.Button();
             this.LblForwardSlash1 = new System.Windows.Forms.Label();
             this.TxtBoxYearVisited = new System.Windows.Forms.TextBox();
             this.LblForwardSlash2 = new System.Windows.Forms.Label();
             this.BtnMonthVisited = new System.Windows.Forms.Button();
             this.LblDateVisited = new System.Windows.Forms.Label();
+            this.BtnAutoFill = new System.Windows.Forms.Button();
             this.PnlGender.SuspendLayout();
             this.PnlQ1YesNo.SuspendLayout();
             this.PnlQ2YesNo.SuspendLayout();
@@ -572,18 +573,18 @@
             this.LblTimeEntered.TabIndex = 6;
             this.LblTimeEntered.Text = "Time Entered:";
             // 
-            // BtnAutoFill
+            // BtnScanQRCode
             // 
-            this.BtnAutoFill.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnAutoFill.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnAutoFill.ForeColor = System.Drawing.Color.Black;
-            this.BtnAutoFill.Location = new System.Drawing.Point(418, 634);
-            this.BtnAutoFill.Name = "BtnAutoFill";
-            this.BtnAutoFill.Size = new System.Drawing.Size(113, 36);
-            this.BtnAutoFill.TabIndex = 59;
-            this.BtnAutoFill.Text = "Auto-Fill";
-            this.BtnAutoFill.UseVisualStyleBackColor = false;
-            this.BtnAutoFill.Click += new System.EventHandler(this.BtnAutoFill_Click);
+            this.BtnScanQRCode.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnScanQRCode.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnScanQRCode.ForeColor = System.Drawing.Color.Black;
+            this.BtnScanQRCode.Location = new System.Drawing.Point(325, 634);
+            this.BtnScanQRCode.Name = "BtnScanQRCode";
+            this.BtnScanQRCode.Size = new System.Drawing.Size(171, 36);
+            this.BtnScanQRCode.TabIndex = 59;
+            this.BtnScanQRCode.Text = "Scan QR Code";
+            this.BtnScanQRCode.UseVisualStyleBackColor = false;
+            this.BtnScanQRCode.Click += new System.EventHandler(this.BtnScanQRCode_Click);
             // 
             // BtnDayVisited
             // 
@@ -646,6 +647,19 @@
             this.LblDateVisited.TabIndex = 60;
             this.LblDateVisited.Text = "Date Visited:";
             // 
+            // BtnAutoFill
+            // 
+            this.BtnAutoFill.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnAutoFill.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnAutoFill.ForeColor = System.Drawing.Color.Black;
+            this.BtnAutoFill.Location = new System.Drawing.Point(502, 634);
+            this.BtnAutoFill.Name = "BtnAutoFill";
+            this.BtnAutoFill.Size = new System.Drawing.Size(113, 36);
+            this.BtnAutoFill.TabIndex = 66;
+            this.BtnAutoFill.Text = "Auto-Fill";
+            this.BtnAutoFill.UseVisualStyleBackColor = false;
+            this.BtnAutoFill.Click += new System.EventHandler(this.BtnAutoFill_Click);
+            // 
             // ContactTracingAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -653,13 +667,14 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(918, 716);
+            this.Controls.Add(this.BtnAutoFill);
             this.Controls.Add(this.BtnDayVisited);
             this.Controls.Add(this.LblForwardSlash1);
             this.Controls.Add(this.TxtBoxYearVisited);
             this.Controls.Add(this.LblForwardSlash2);
             this.Controls.Add(this.BtnMonthVisited);
             this.Controls.Add(this.LblDateVisited);
-            this.Controls.Add(this.BtnAutoFill);
+            this.Controls.Add(this.BtnScanQRCode);
             this.Controls.Add(this.PanelQ3VaccinationQuestion);
             this.Controls.Add(this.LblQuestion3);
             this.Controls.Add(this.MenuToolStrip);
@@ -693,7 +708,6 @@
             this.MaximizeBox = false;
             this.Name = "ContactTracingAppForm";
             this.Text = "YGL Mall Contact Tracing Form";
-            this.VisibleChanged += new System.EventHandler(this.ContactTracingAppForm_VisibleChanged);
             this.PnlGender.ResumeLayout(false);
             this.PnlGender.PerformLayout();
             this.PnlQ1YesNo.ResumeLayout(false);
@@ -756,12 +770,13 @@
         private Label LblTimeEntered;
         private RadioButton RdioBtnQ3YesBooster;
         private RadioButton RdioBtnQ3No;
-        private Button BtnAutoFill;
+        private Button BtnScanQRCode;
         private Button BtnDayVisited;
         private Label LblForwardSlash1;
         private TextBox TxtBoxYearVisited;
         private Label LblForwardSlash2;
         private Button BtnMonthVisited;
         private Label LblDateVisited;
+        private Button BtnAutoFill;
     }
 }
