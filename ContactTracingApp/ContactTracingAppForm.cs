@@ -444,11 +444,8 @@ namespace ContactTracingApp
             }
         }
 
-        private bool BtnScanQRCodeClicked = false;
-
         private void BtnScanQRCode_Click(object sender, EventArgs e)
         {
-            BtnScanQRCodeClicked = true;
             QRCodeScannerForm Form4 = new();
             Form4.Show();
             this.Visible = false;
@@ -460,7 +457,7 @@ namespace ContactTracingApp
         {
             if (ThereIsAResultFromTheQRCodeScannerForm == false)
             {
-                string Message = "You have not yet scanned a QR Code. Scan a QR Code first";
+                string Message = "You have not yet scanned a QR Code. Scan a QR Code first.";
                 MessageBox.Show(Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             if (ThereIsAResultFromTheQRCodeScannerForm == true)
@@ -636,7 +633,6 @@ namespace ContactTracingApp
                 }
                 InfoToBeAutoFilledOnTheFormFileReader.Close();
                 File.Delete("Information that will be used to fill up the Form automatically.txt");
-              
             }
         }
     }
