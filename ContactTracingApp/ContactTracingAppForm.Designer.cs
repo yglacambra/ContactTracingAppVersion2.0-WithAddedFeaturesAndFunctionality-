@@ -708,6 +708,7 @@
             this.MaximizeBox = false;
             this.Name = "ContactTracingAppForm";
             this.Text = "YGL Mall Contact Tracing Form";
+            this.Load += new System.EventHandler(this.ContactTracingAppForm_Load);
             this.PnlGender.ResumeLayout(false);
             this.PnlGender.PerformLayout();
             this.PnlQ1YesNo.ResumeLayout(false);

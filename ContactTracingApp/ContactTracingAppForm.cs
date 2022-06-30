@@ -431,7 +431,7 @@ namespace ContactTracingApp
             }
             ContactTracingFormInfoFileWriter.Close();
         }
-        
+
         private void BtnAccessTheDatabase_Click(object sender, EventArgs e)
         {
             string AuthorizationQuestionMsg = "Do you have the appropriate authorization to access this?";
@@ -444,8 +444,11 @@ namespace ContactTracingApp
             }
         }
 
+        private bool BtnScanQRCodeClicked = false;
+
         private void BtnScanQRCode_Click(object sender, EventArgs e)
         {
+            BtnScanQRCodeClicked = true;
             QRCodeScannerForm Form4 = new();
             Form4.Show();
             this.Visible = false;
@@ -455,9 +458,14 @@ namespace ContactTracingApp
 
         private void BtnAutoFill_Click(object sender, EventArgs e)
         {
+            if (ThereIsAResultFromTheQRCodeScannerForm == false)
+            {
+                string Message = "You have not yet scanned a QR Code. Scan a QR Code first";
+                MessageBox.Show(Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             if (ThereIsAResultFromTheQRCodeScannerForm == true)
             {
-                MessageBox.Show("Yay!");
+                ThereIsAResultFromTheQRCodeScannerForm = false;
                 int LineCount = 0;
                 StreamReader InfoToBeAutoFilledOnTheFormFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Information that will be used to fill up the Form automatically.txt");
                 while (!InfoToBeAutoFilledOnTheFormFileReader.EndOfStream)
@@ -625,11 +633,12 @@ namespace ContactTracingApp
                             }
                         }
                     }
-                    InfoToBeAutoFilledOnTheFormFileReader.Close();
                 }
+                InfoToBeAutoFilledOnTheFormFileReader.Close();
+                File.Delete("Information that will be used to fill up the Form automatically.txt");
+              
             }
         }
-
     }
 }
 
