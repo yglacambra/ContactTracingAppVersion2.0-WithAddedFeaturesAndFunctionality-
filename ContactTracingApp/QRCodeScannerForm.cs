@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ContactTracingApp
 {
-    public partial class QRCodeDecoderForm : Form
+    public partial class QRCodeScannerForm : Form
     {
-        public QRCodeDecoderForm()
+        public QRCodeScannerForm()
         {
             InitializeComponent();
         }
