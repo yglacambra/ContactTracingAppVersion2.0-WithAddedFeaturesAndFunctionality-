@@ -31,9 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QRCodeScannerForm));
             this.BtnStartScan = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.PictureBoxCameraVideo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblCamera = new System.Windows.Forms.Label();
             this.ComboBoxVideoCaptureDevice = new System.Windows.Forms.ComboBox();
             this.QRCodeReadingTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxCameraVideo)).BeginInit();
@@ -52,15 +51,6 @@
             this.BtnStartScan.UseVisualStyleBackColor = false;
             this.BtnStartScan.Click += new System.EventHandler(this.BtnStartScan_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(420, 449);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(8, 8);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // PictureBoxCameraVideo
             // 
             this.PictureBoxCameraVideo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -70,15 +60,15 @@
             this.PictureBoxCameraVideo.TabIndex = 62;
             this.PictureBoxCameraVideo.TabStop = false;
             // 
-            // label1
+            // LblCamera
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(18, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 21);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Camera:";
+            this.LblCamera.AutoSize = true;
+            this.LblCamera.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblCamera.Location = new System.Drawing.Point(18, 21);
+            this.LblCamera.Name = "LblCamera";
+            this.LblCamera.Size = new System.Drawing.Size(67, 21);
+            this.LblCamera.TabIndex = 63;
+            this.LblCamera.Text = "Camera:";
             // 
             // ComboBoxVideoCaptureDevice
             // 
@@ -101,9 +91,8 @@
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(641, 466);
             this.Controls.Add(this.ComboBoxVideoCaptureDevice);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblCamera);
             this.Controls.Add(this.PictureBoxCameraVideo);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnStartScan);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QRCodeScannerForm";
@@ -119,9 +108,8 @@
         #endregion
 
         private Button BtnStartScan;
-        private Button button1;
         private PictureBox PictureBoxCameraVideo;
-        private Label label1;
+        private Label LblCamera;
         private ComboBox ComboBoxVideoCaptureDevice;
         private System.Windows.Forms.Timer QRCodeReadingTimer;
     }

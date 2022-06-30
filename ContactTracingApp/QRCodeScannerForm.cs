@@ -50,7 +50,7 @@ namespace ContactTracingApp
         {
             if (VidCaptureDevice.IsRunning)
             {
-               
+                VidCaptureDevice.Stop();
             }
         }
 
@@ -70,7 +70,7 @@ namespace ContactTracingApp
                     File.SetAttributes("Information that will be used to fill up the Form automatically.txt", FileAttributes.Hidden);
                     if (VidCaptureDevice.IsRunning)
                     {
-                     
+                     VidCaptureDevice.Stop();
                     }
                     ContactTracingAppForm Form1 = new ContactTracingAppForm();
                     Form1.Visible = true;
