@@ -470,8 +470,40 @@ namespace ContactTracingApp
                     {
                         LineOnTheTextFile = TxtBoxHomeAddress.Text;
                     }
+                    if (LineCount == 3)
+                    {
+                        LineOnTheTextFile = TxtBoxContactNum.Text;
+                    }
+                    if (LineCount == 4)
+                    {
+                        LineOnTheTextFile = BtnMonthVisited.Text;
+                    }
+                    if (LineCount == 5)
+                    {
+                        LineOnTheTextFile = BtnDayVisited.Text;
+                    }
+                    if (LineCount == 6)
+                    {
+                        LineOnTheTextFile = TxtBoxYearVisited.Text;
+                    }
+                    if (LineCount == 7)
+                    {
+                        LineOnTheTextFile = BtnHourEntered.Text;
+                    }
+                    if (LineCount == 8)
+                    {
+                        LineOnTheTextFile = BtnMinuteEntered.Text;
+                    }
+                    if (LineCount == 9)
+                    {
+                        LineOnTheTextFile = BtnHourDeparted.Text;
+                    }
+                    if (LineCount == 10)
+                    {
+                        LineOnTheTextFile = BtnMinuteDeparted.Text;
+                    }
+                    InfoToBeAutoFilledOnTheFormFileReader.Close();
                 }
-                InfoToBeAutoFilledOnTheFormFileReader.Close();
             }
         }
     }
