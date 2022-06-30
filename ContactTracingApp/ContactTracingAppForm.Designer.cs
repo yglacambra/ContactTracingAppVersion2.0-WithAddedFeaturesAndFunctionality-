@@ -577,7 +577,7 @@
             this.BtnAutoFill.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BtnAutoFill.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnAutoFill.ForeColor = System.Drawing.Color.Black;
-            this.BtnAutoFill.Location = new System.Drawing.Point(417, 634);
+            this.BtnAutoFill.Location = new System.Drawing.Point(418, 634);
             this.BtnAutoFill.Name = "BtnAutoFill";
             this.BtnAutoFill.Size = new System.Drawing.Size(113, 36);
             this.BtnAutoFill.TabIndex = 59;
@@ -693,7 +693,6 @@
             this.MaximizeBox = false;
             this.Name = "ContactTracingAppForm";
             this.Text = "YGL Mall Contact Tracing Form";
-            this.Load += new System.EventHandler(this.ContactTracingAppForm_Load);
             this.VisibleChanged += new System.EventHandler(this.ContactTracingAppForm_VisibleChanged);
             this.PnlGender.ResumeLayout(false);
             this.PnlGender.PerformLayout();

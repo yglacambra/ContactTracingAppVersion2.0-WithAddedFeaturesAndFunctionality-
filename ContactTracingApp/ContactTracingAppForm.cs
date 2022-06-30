@@ -452,10 +452,12 @@ namespace ContactTracingApp
         }
 
         public bool ThereIsAResultFromTheQRCodeScannerForm = false;
+
         private void ContactTracingAppForm_VisibleChanged(object sender, EventArgs e)
         {
             if (ThereIsAResultFromTheQRCodeScannerForm == true)
             {
+                MessageBox.Show("Yay!");
                 int LineCount = 0;
                 StreamReader InfoToBeAutoFilledOnTheFormFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Information that will be used to fill up the Form automatically.txt");
                 while (!InfoToBeAutoFilledOnTheFormFileReader.EndOfStream)
@@ -464,53 +466,53 @@ namespace ContactTracingApp
                     LineCount++;
                     if (LineCount == 1)
                     {
-                        LineOnTheTextFile = TxtBoxName.Text;
+                        TxtBoxName.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 2)
+                    else if (LineCount == 2)
                     {
-                        LineOnTheTextFile = TxtBoxHomeAddress.Text;
+                        TxtBoxHomeAddress.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 3)
+                    else if (LineCount == 3)
                     {
-                        LineOnTheTextFile = TxtBoxContactNum.Text;
+                        TxtBoxContactNum.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 4)
+                    else if (LineCount == 4)
                     {
-                        LineOnTheTextFile = BtnMonthVisited.Text;
+                        BtnMonthVisited.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 5)
+                    else if (LineCount == 5)
                     {
-                        LineOnTheTextFile = BtnDayVisited.Text;
+                        BtnDayVisited.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 6)
+                    else if (LineCount == 6)
                     {
-                        LineOnTheTextFile = TxtBoxYearVisited.Text;
+                        TxtBoxYearVisited.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 7)
+                    else if (LineCount == 7)
                     {
-                        LineOnTheTextFile = BtnHourEntered.Text;
+                        BtnHourEntered.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 8)
+                    else if (LineCount == 8)
                     {
-                        LineOnTheTextFile = BtnMinuteEntered.Text;
+                        BtnMinuteEntered.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 9)
+                    else if (LineCount == 9)
                     {
-                        LineOnTheTextFile = BtnTimeEnteredAMPM.Text;
+                        BtnTimeEnteredAMPM.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 10)
+                    else if (LineCount == 10)
                     {
-                        LineOnTheTextFile = BtnHourDeparted.Text;
+                        BtnHourDeparted.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 11)
+                    else if (LineCount == 11)
                     {
-                        LineOnTheTextFile = BtnMinuteDeparted.Text;
+                        BtnMinuteDeparted.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 12)
+                    else if (LineCount == 12)
                     {
-                        LineOnTheTextFile = BtnTimeDepartedAMPM.Text;
+                        BtnTimeDepartedAMPM.Text = LineOnTheTextFile;
                     }
-                    if (LineCount == 13)
+                    else if (LineCount == 13)
                     {
                         if (LineOnTheTextFile == "Male")
                         {
@@ -525,11 +527,11 @@ namespace ContactTracingApp
                             RdioBtnOtherGenders.Checked = true;
                         }
                     }
-                    if (LineCount == 14)
+                    else if (LineCount == 14)
                     {
                         if (RdioBtnOtherGenders.Checked == true)
                         {
-                           LineOnTheTextFile = TxtBoxOtherGenders.Text;
+                            LineOnTheTextFile = TxtBoxOtherGenders.Text;
                         }
                         else
                         {
@@ -543,7 +545,7 @@ namespace ContactTracingApp
                             }
                         }
                     }
-                    if (LineCount == 15)
+                    else if (LineCount == 15)
                     {
                         if (RdioBtnOtherGenders.Checked == true)
                         {
@@ -560,15 +562,15 @@ namespace ContactTracingApp
                         {
                             if (LineOnTheTextFile == "Yes")
                             {
-                              RdioBtnQ2Yes.Checked = true;
+                                RdioBtnQ2Yes.Checked = true;
                             }
                             else if (LineOnTheTextFile == "No")
                             {
-                              RdioBtnQ2No.Checked = true;
+                                RdioBtnQ2No.Checked = true;
                             }
                         }
                     }
-                    if (LineCount == 16)
+                    else if (LineCount == 16)
                     {
                         if (RdioBtnOtherGenders.Checked == true)
                         {
@@ -601,7 +603,7 @@ namespace ContactTracingApp
                             }
                         }
                     }
-                    if (LineCount == 17)
+                    else if (LineCount == 17)
                     {
                         if (RdioBtnOtherGenders.Checked == true)
                         {
@@ -623,7 +625,6 @@ namespace ContactTracingApp
                             }
                         }
                     }
-                        InfoToBeAutoFilledOnTheFormFileReader.Close();
                 }
             }
         }

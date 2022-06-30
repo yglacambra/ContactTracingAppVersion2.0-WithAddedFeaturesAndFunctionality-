@@ -50,7 +50,7 @@ namespace ContactTracingApp
         {
             if (VidCaptureDevice.IsRunning)
             {
-                VidCaptureDevice.Stop();
+         
             }
         }
 
@@ -64,17 +64,17 @@ namespace ContactTracingApp
                 {
                     QRCodeReadingTimer.Stop();
                     StreamWriter InfoToBeAutoFilledOnTheFormFileWriter;
-                    InfoToBeAutoFilledOnTheFormFileWriter = File.CreateText("Information that will be used to fill up the Form automatically.txt");
-                    InfoToBeAutoFilledOnTheFormFileWriter.Write(QRCodeResult);
+                    InfoToBeAutoFilledOnTheFormFileWriter = File.AppendText("Information that will be used to fill up the Form automatically.txt");
+                    InfoToBeAutoFilledOnTheFormFileWriter.WriteLine(QRCodeResult);
                     InfoToBeAutoFilledOnTheFormFileWriter.Close();
                     File.SetAttributes("Information that will be used to fill up the Form automatically.txt", FileAttributes.Hidden);
                     if (VidCaptureDevice.IsRunning)
                     {
-                        VidCaptureDevice.Stop();
+                   
                     }
-                    bool ThereIsAResultFromTheQRCodeScannerForm = true;
                     ContactTracingAppForm Form1 = new ContactTracingAppForm();
-                    Form1.Visible = true; 
+                    Form1.Visible = true;
+                    Form1.ThereIsAResultFromTheQRCodeScannerForm = true;
                     this.Close();
                 }
             }
