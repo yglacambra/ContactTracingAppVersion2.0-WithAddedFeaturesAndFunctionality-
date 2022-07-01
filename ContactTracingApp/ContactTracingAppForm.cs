@@ -356,16 +356,19 @@ namespace ContactTracingApp
         private void RdioBtnMale_CheckedChanged(object sender, EventArgs e)
         {
             TxtBoxOtherGenders.Enabled = false;
+            TxtBoxOtherGenders.Text = "";
         }
 
         private void RdioBtnFemale_CheckedChanged(object sender, EventArgs e)
         {
             TxtBoxOtherGenders.Enabled = false;
+            TxtBoxOtherGenders.Text = "";
         }
 
         private void RdioBtnDidntDisclose_CheckedChanged(object sender, EventArgs e)
         {
             TxtBoxOtherGenders.Enabled = false;
+            TxtBoxOtherGenders.Text = "";
         }
         private void WriteTheInfoCollectedOnTheTextFile()
         {
@@ -540,7 +543,7 @@ namespace ContactTracingApp
                     {
                         if (RdioBtnOtherGenders.Checked == true)
                         {
-                            LineOnTheTextFile = TxtBoxOtherGenders.Text;
+                            TxtBoxOtherGenders.Text = LineOnTheTextFile;
                         }
                         else
                         {
@@ -643,6 +646,14 @@ namespace ContactTracingApp
         private void ContactTracingAppForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             File.Delete("Information that will be used to fill up the Form automatically.txt");
+        }
+
+        private void ContactTracingAppForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (ThereIsAResultFromTheQRCodeScannerForm == true)
+            {
+                TxtBoxOtherGenders.Enabled = true;
+            }
         }
     }
 }
