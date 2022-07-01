@@ -378,8 +378,8 @@ namespace ContactTracingApp
             ContactTracingFormInfoFileWriter.WriteLine("Address: " + TxtBoxHomeAddress.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Contact Number: " + TxtBoxContactNum.Text);
             ContactTracingFormInfoFileWriter.WriteLine("Date Visited: " + BtnMonthVisited.Text + "/" + BtnDayVisited.Text + "/" + TxtBoxYearVisited.Text);
-            ContactTracingFormInfoFileWriter.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text + BtnTimeEnteredAMPM.Text);
-            ContactTracingFormInfoFileWriter.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text + BtnTimeDepartedAMPM.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Time Entered: " + BtnHourEntered.Text + ":" + BtnMinuteEntered.Text + "" + BtnTimeEnteredAMPM.Text);
+            ContactTracingFormInfoFileWriter.WriteLine("Time Departed: " + BtnHourDeparted.Text + ":" + BtnMinuteDeparted.Text + "" + BtnTimeDepartedAMPM.Text);
             // to determine what gender is to be inputted on the text file
             if (RdioBtnMale.Checked == true)
             {

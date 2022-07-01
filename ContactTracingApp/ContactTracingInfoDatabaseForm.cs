@@ -135,37 +135,18 @@ namespace ContactTracingApp
                         if (CustomerNameWithDateVisited.Contains(ListBoxItemName))
                         {
                             int CustomerNameListItemIndex = CustomerNameList.IndexOf(CustomerNameWithDateVisited);
-                            if (CustomerNameListItemIndex == 0)
+                            int LineCount = 0;
+                            StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
+                            while (!ContactTracingInfoFileReader.EndOfStream)
                             {
-                                int LineCount = 0;
-                                StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
-                                while (!ContactTracingInfoFileReader.EndOfStream)
+                                string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
+                                LineCount++;
+                                if (LineCount > ((CustomerNameListItemIndex * 10) + 1) && LineCount < ((CustomerNameListItemIndex * 10) + 11))
                                 {
-                                    string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
-                                    LineCount++;
-                                    if (LineCount > 1 && LineCount < 10)
-                                    {
-                                        ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
-                                    }
+                                    ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
                                 }
-                                ContactTracingInfoFileReader.Close();
                             }
-                            else if (CustomerNameListItemIndex > 0)
-                            {
-                                int LineCount = 0;
-                                StreamReader ContactTracingInfoFileReader = new StreamReader(@"C:\Users\Stefani\source\repos\ContactTracingApp\ContactTracingApp\bin\Debug\net6.0-windows\Contact Tracing Information from Customers.txt");
-                                while (!ContactTracingInfoFileReader.EndOfStream)
-                                {
-                                    string LineOnTheTextFile = ContactTracingInfoFileReader.ReadLine();
-                                    LineCount++;
-                                    if (LineCount > (CustomerNameListItemIndex * 10) && LineCount < ((CustomerNameListItemIndex * 10) + 10))
-                                    {
-                                        ListBoxCustomerInfo.Items.Add(LineOnTheTextFile);
-                                    }
-                                }
-                                ContactTracingInfoFileReader.Close();
-                            }
-
+                            ContactTracingInfoFileReader.Close();
                         }
                     }
                 }

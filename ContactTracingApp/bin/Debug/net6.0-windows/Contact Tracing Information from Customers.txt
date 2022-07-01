@@ -128,3 +128,4 @@ Gender: Male
 Has COVID symptoms: Yes
 Had contact with a COVID positive person: Yes
 Is Vaccinated: No
+
