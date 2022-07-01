@@ -635,6 +635,11 @@ namespace ContactTracingApp
                 File.Delete("Information that will be used to fill up the Form automatically.txt");
             }
         }
+
+        private void ContactTracingAppForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            File.Delete("Information that will be used to fill up the Form automatically.txt");
+        }
     }
 }
 

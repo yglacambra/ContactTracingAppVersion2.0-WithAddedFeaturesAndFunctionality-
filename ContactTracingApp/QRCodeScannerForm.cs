@@ -36,7 +36,7 @@ namespace ContactTracingApp
         private void BtnStartScan_Click(object sender, EventArgs e)
         {
             VidCaptureDevice = new VideoCaptureDevice(FilterInformationCollection[ComboBoxVideoCaptureDevice.SelectedIndex].MonikerString);
-            VidCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            VidCaptureDevice.NewFrame += new NewFrameEventHandler(VideoCaptureDevice_NewFrame);
             VidCaptureDevice.Start();
             QRCodeReadingTimer.Start();
         }
@@ -50,16 +50,19 @@ namespace ContactTracingApp
         {
             if (VidCaptureDevice.IsRunning)
             {
-                VidCaptureDevice.Stop();
+                VidCaptureDevice.SignalToStop();
+                VidCaptureDevice.WaitForStop();
             }
         }
 
         private void QRCodeReadingTimer_Tick(object sender, EventArgs e)
         {
+
             if (PictureBoxCameraVideo.Image != null)
             {
                 BarcodeReader QRCodeReader = new BarcodeReader();
                 Result QRCodeResult = QRCodeReader.Decode((Bitmap)PictureBoxCameraVideo.Image);
+
                 if (QRCodeResult != null)
                 {
                     QRCodeReadingTimer.Stop();
@@ -68,16 +71,18 @@ namespace ContactTracingApp
                     InfoToBeAutoFilledOnTheFormFileWriter.WriteLine(QRCodeResult);
                     InfoToBeAutoFilledOnTheFormFileWriter.Close();
                     File.SetAttributes("Information that will be used to fill up the Form automatically.txt", FileAttributes.Hidden);
-                    if (VidCaptureDevice.IsRunning)
-                    {
-                     VidCaptureDevice.Stop();
-                    }
                     ContactTracingAppForm Form1 = new ContactTracingAppForm();
                     Form1.Visible = true;
                     Form1.ThereIsAResultFromTheQRCodeScannerForm = true;
+                    if (VidCaptureDevice.IsRunning)
+                    {
+                        VidCaptureDevice.SignalToStop();
+                        VidCaptureDevice.WaitForStop();
+                    }
                     this.Close();
                 }
             }
+        
         }
     }
 }

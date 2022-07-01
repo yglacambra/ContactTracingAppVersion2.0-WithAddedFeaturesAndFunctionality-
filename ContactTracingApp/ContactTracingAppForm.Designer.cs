@@ -264,7 +264,7 @@
             this.BtnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BtnSubmit.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.BtnSubmit.Location = new System.Drawing.Point(417, 676);
+            this.BtnSubmit.Location = new System.Drawing.Point(421, 676);
             this.BtnSubmit.Name = "BtnSubmit";
             this.BtnSubmit.Size = new System.Drawing.Size(113, 36);
             this.BtnSubmit.TabIndex = 37;
@@ -578,7 +578,7 @@
             this.BtnScanQRCode.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BtnScanQRCode.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnScanQRCode.ForeColor = System.Drawing.Color.Black;
-            this.BtnScanQRCode.Location = new System.Drawing.Point(325, 634);
+            this.BtnScanQRCode.Location = new System.Drawing.Point(329, 634);
             this.BtnScanQRCode.Name = "BtnScanQRCode";
             this.BtnScanQRCode.Size = new System.Drawing.Size(171, 36);
             this.BtnScanQRCode.TabIndex = 59;
@@ -652,7 +652,7 @@
             this.BtnAutoFill.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BtnAutoFill.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnAutoFill.ForeColor = System.Drawing.Color.Black;
-            this.BtnAutoFill.Location = new System.Drawing.Point(502, 634);
+            this.BtnAutoFill.Location = new System.Drawing.Point(506, 634);
             this.BtnAutoFill.Name = "BtnAutoFill";
             this.BtnAutoFill.Size = new System.Drawing.Size(113, 36);
             this.BtnAutoFill.TabIndex = 66;
@@ -708,6 +708,7 @@
             this.MaximizeBox = false;
             this.Name = "ContactTracingAppForm";
             this.Text = "YGL Mall Contact Tracing Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContactTracingAppForm_FormClosing);
             this.Load += new System.EventHandler(this.ContactTracingAppForm_Load);
             this.PnlGender.ResumeLayout(false);
             this.PnlGender.PerformLayout();
