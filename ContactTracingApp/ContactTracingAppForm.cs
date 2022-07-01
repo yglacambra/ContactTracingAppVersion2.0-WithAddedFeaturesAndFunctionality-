@@ -446,6 +446,10 @@ namespace ContactTracingApp
 
         private void BtnScanQRCode_Click(object sender, EventArgs e)
         {
+            if (ThereIsAResultFromTheQRCodeScannerForm == true)
+            {
+                File.Delete("Information that will be used to fill up the Form automatically.txt");
+            }
             QRCodeScannerForm Form4 = new();
             Form4.Show();
             this.Visible = false;

@@ -31,13 +31,13 @@ namespace ContactTracingApp
                 ComboBoxVideoCaptureDevice.Items.Add(FilterInformation.Name);
             }
             ComboBoxVideoCaptureDevice.SelectedIndex = 0;
+            VidCaptureDevice = new VideoCaptureDevice(FilterInformationCollection[ComboBoxVideoCaptureDevice.SelectedIndex].MonikerString);
+            VidCaptureDevice.NewFrame += new NewFrameEventHandler(VideoCaptureDevice_NewFrame);
+            VidCaptureDevice.Start();
         }
 
         private void BtnStartScan_Click(object sender, EventArgs e)
         {
-            VidCaptureDevice = new VideoCaptureDevice(FilterInformationCollection[ComboBoxVideoCaptureDevice.SelectedIndex].MonikerString);
-            VidCaptureDevice.NewFrame += new NewFrameEventHandler(VideoCaptureDevice_NewFrame);
-            VidCaptureDevice.Start();
             QRCodeReadingTimer.Start();
         }
 
